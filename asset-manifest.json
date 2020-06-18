@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.5f361e03.chunk.css",
-    "main.js": "/static/js/main.f985dc30.chunk.js",
-    "main.js.map": "/static/js/main.f985dc30.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.2c8f192d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.2c8f192d.js.map",
-    "static/css/2.af3c1da9.chunk.css": "/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.d5304168.chunk.js": "/static/js/2.d5304168.chunk.js",
-    "static/js/2.d5304168.chunk.js.map": "/static/js/2.d5304168.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.61912cf9337b0782c93750d5167e4e87.js": "/precache-manifest.61912cf9337b0782c93750d5167e4e87.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.af3c1da9.chunk.css.map": "/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.5f361e03.chunk.css.map": "/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.d5304168.chunk.js.LICENSE.txt": "/static/js/2.d5304168.chunk.js.LICENSE.txt"
+    "main.css": "/HappyLabor/static/css/main.5f361e03.chunk.css",
+    "main.js": "/HappyLabor/static/js/main.190970ec.chunk.js",
+    "main.js.map": "/HappyLabor/static/js/main.190970ec.chunk.js.map",
+    "runtime-main.js": "/HappyLabor/static/js/runtime-main.2d3c7d78.js",
+    "runtime-main.js.map": "/HappyLabor/static/js/runtime-main.2d3c7d78.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/HappyLabor/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.186578da.chunk.js": "/HappyLabor/static/js/2.186578da.chunk.js",
+    "static/js/2.186578da.chunk.js.map": "/HappyLabor/static/js/2.186578da.chunk.js.map",
+    "index.html": "/HappyLabor/index.html",
+    "precache-manifest.ab20dd22d5d834d1da496ec98b419d47.js": "/HappyLabor/precache-manifest.ab20dd22d5d834d1da496ec98b419d47.js",
+    "service-worker.js": "/HappyLabor/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/HappyLabor/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.5f361e03.chunk.css.map": "/HappyLabor/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.186578da.chunk.js.LICENSE.txt": "/HappyLabor/static/js/2.186578da.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2c8f192d.js",
+    "static/js/runtime-main.2d3c7d78.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.d5304168.chunk.js",
+    "static/js/2.186578da.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.f985dc30.chunk.js"
+    "static/js/main.190970ec.chunk.js"
   ]
 }
