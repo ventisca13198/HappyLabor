@@ -14,6 +14,7 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { FaLinkedinIn, FaFacebookF, FaLine } from "react-icons/fa";
 
 const Styles = styled.div`
   .text-nav {
@@ -137,8 +138,42 @@ export default class Footer extends Component {
               <Row>
                 <Col>info@jobsinjapan.com</Col>
               </Row>
-              <Row>
-                <Col>icon face ,line</Col>
+              <Row style={{ marginTop: 20 }}>
+                <Col>
+                  <div
+                    style={{
+                      backgroundColor: "#fff",
+                      display: "inline-grid",
+                      padding: 10,
+                      borderRadius: 50,
+                      marginRight: 10,
+                    }}
+                  >
+                    <FaFacebookF color={"#003b5a"} size={20} />
+                  </div>
+                  <div
+                    style={{
+                      backgroundColor: "#fff",
+                      display: "inline-grid",
+                      padding: 10,
+                      borderRadius: 50,
+                      marginRight: 10,
+                    }}
+                  >
+                    <FaLinkedinIn color={"#003b5a"} size={20} />
+                  </div>
+                  <div
+                    style={{
+                      backgroundColor: "#fff",
+                      display: "inline-grid",
+                      padding: 10,
+                      borderRadius: 50,
+                      marginRight: 10,
+                    }}
+                  >
+                    <FaLine color={"#003b5a"} size={20} />
+                  </div>
+                </Col>
               </Row>
             </Col>
             <Col lg={2}></Col>
