@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/HappyLabor/static/css/main.523f09c5.chunk.css",
-    "main.js": "/HappyLabor/static/js/main.14982a0b.chunk.js",
-    "main.js.map": "/HappyLabor/static/js/main.14982a0b.chunk.js.map",
+    "main.js": "/HappyLabor/static/js/main.0292319f.chunk.js",
+    "main.js.map": "/HappyLabor/static/js/main.0292319f.chunk.js.map",
     "runtime-main.js": "/HappyLabor/static/js/runtime-main.2d3c7d78.js",
     "runtime-main.js.map": "/HappyLabor/static/js/runtime-main.2d3c7d78.js.map",
     "static/css/2.af3c1da9.chunk.css": "/HappyLabor/static/css/2.af3c1da9.chunk.css",
     "static/js/2.69afd03c.chunk.js": "/HappyLabor/static/js/2.69afd03c.chunk.js",
     "static/js/2.69afd03c.chunk.js.map": "/HappyLabor/static/js/2.69afd03c.chunk.js.map",
     "index.html": "/HappyLabor/index.html",
-    "precache-manifest.9a847d5521fb4c2790167793d07a556a.js": "/HappyLabor/precache-manifest.9a847d5521fb4c2790167793d07a556a.js",
+    "precache-manifest.b3b811be28de366915e0f23247f45c25.js": "/HappyLabor/precache-manifest.b3b811be28de366915e0f23247f45c25.js",
     "service-worker.js": "/HappyLabor/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/HappyLabor/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.523f09c5.chunk.css.map": "/HappyLabor/static/css/main.523f09c5.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.69afd03c.chunk.js",
     "static/css/main.523f09c5.chunk.css",
-    "static/js/main.14982a0b.chunk.js"
+    "static/js/main.0292319f.chunk.js"
   ]
 }
