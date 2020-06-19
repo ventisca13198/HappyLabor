@@ -118,7 +118,11 @@ export default class NavigationBar extends Component {
             </Row>
           </div>
 
-          <Navbar expand="lg">
+          <Navbar
+            expand="lg"
+            // fixed="top"
+            // className="navbar navbar-default navbar-fixed-top"
+          >
             <Navbar.Brand>
               <Link to="/home">
                 <Image src="./images/logo.png" rounded />
