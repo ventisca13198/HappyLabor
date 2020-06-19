@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "182acbbe8daf462943784cf02e9762a1",
+    "revision": "75f6cb6d7c5f4d99ed54b0bdc7f65220",
     "url": "/HappyLabor/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/HappyLabor/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "495ff1425602c1ca4834",
+    "revision": "6f12b88fd209f64c9fac",
     "url": "/HappyLabor/static/css/main.523f09c5.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/HappyLabor/static/js/2.69afd03c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "495ff1425602c1ca4834",
-    "url": "/HappyLabor/static/js/main.951d8e40.chunk.js"
+    "revision": "6f12b88fd209f64c9fac",
+    "url": "/HappyLabor/static/js/main.4a1576a6.chunk.js"
   },
   {
     "revision": "ea401651c122c8f6af4a",
