@@ -5,6 +5,7 @@ import Home from "./screens/Home";
 import Detail from "./screens/Detail";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
+import * as data from "./data.js";
 
 function App() {
   return (
