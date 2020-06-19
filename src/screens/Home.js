@@ -64,8 +64,8 @@ const Styles = styled.div`
 `;
 
 const properties = {
-  duration: 500000,
-  transitionDuration: 1500,
+  duration: 5000,
+  transitionDuration: 2000,
   infinite: true,
   indicators: false,
   arrows: false,
@@ -102,17 +102,28 @@ export default class Home extends Component {
                   }}
                 >
                   <Row style={{}}>
-                    <Col style={{ fontSize: 46, fontWeight: "bold" }}>
-                      Find your job in Japan now!
+                    <Col
+                      style={{
+                        fontSize: 46,
+                        fontWeight: "bold",
+                        backgroundColor: "rgba(0,0,0,0.8)",
+                      }}
+                    >
+                      Find your job in Thailand now!
                     </Col>
                   </Row>
                   <Row style={{ marginBottom: 15 }}>
-                    <Col style={{ fontSize: 22 }}>
+                    <Col
+                      style={{
+                        fontSize: 22,
+                        backgroundColor: "rgba(0,0,0,0.8)",
+                      }}
+                    >
                       Foreigner friendly jobs across all industries
                     </Col>
                   </Row>
 
-                  <Form>
+                  <Form style={{ paddingLeft: "10%", paddingRight: "10%" }}>
                     <Row style={{}}>
                       <Col></Col>
                       <Col
@@ -284,8 +295,9 @@ export default class Home extends Component {
                     <Image
                       src={job.banner}
                       style={{
-                        overflow: "hidden",
-                        maxHeight: 100,
+                        display: "block",
+                        width: "100%",
+                        height: "auto",
                       }}
                     />
                     <div
@@ -396,7 +408,7 @@ export default class Home extends Component {
                     style={{ width: "100%", height: "auto" }}
                   />
                   <div className="text-news">
-                    Dealing With Loneliness in Japan
+                    Dealing With Loneliness in Thailand
                   </div>
                 </Card>
                 <Card style={{ alignSelf: "center", marginTop: 20 }}>
@@ -405,7 +417,7 @@ export default class Home extends Component {
                     style={{ width: "100%", height: "auto" }}
                   />
                   <div className="text-news">
-                    What Salary Can You Make Teaching English in Japan
+                    What Salary Can You Make Teaching English in Thailand
                   </div>
                 </Card>
                 <Card style={{ alignSelf: "center", marginTop: 20 }}>
@@ -414,7 +426,7 @@ export default class Home extends Component {
                     style={{ width: "100%", height: "auto" }}
                   />
                   <div className="text-news">
-                    (Podcast) Being a Scaffolding Erector in Japan
+                    (Podcast) Being a Scaffolding Erector in Thailand
                   </div>
                 </Card>
                 <Button style={{ alignSelf: "center", marginTop: 15 }}>
@@ -445,7 +457,7 @@ export default class Home extends Component {
                 <div
                   className="populay-jobs"
                   style={{
-                    backgroundImage: `url(../images/jobRec4.jpg) `,
+                    backgroundImage: `url(images/jobRec4.jpg) `,
                   }}
                 >
                   <span>Hospitality, Hotel, Restaurant</span>
@@ -455,7 +467,7 @@ export default class Home extends Component {
                 <div
                   className="populay-jobs"
                   style={{
-                    backgroundImage: `url(../images/jobRec5.jpg) `,
+                    backgroundImage: `url(images/jobRec5.jpg) `,
                   }}
                 >
                   <span>Sales, Planning, Business Development</span>
@@ -465,7 +477,7 @@ export default class Home extends Component {
                 <div
                   className="populay-jobs"
                   style={{
-                    backgroundImage: `url(../images/jobRec6.jpg) `,
+                    backgroundImage: `url(images/jobRec6.jpg) `,
                   }}
                 >
                   <span>General Business</span>
@@ -495,7 +507,7 @@ export default class Home extends Component {
                 <div
                   className="populay-jobs"
                   style={{
-                    backgroundImage: `url(../images/jobRec1.jpg) `,
+                    backgroundImage: `url(images/jobRec1.jpg) `,
                   }}
                 >
                   <span>Education, Teaching, Training</span>
@@ -505,7 +517,7 @@ export default class Home extends Component {
                 <div
                   className="populay-jobs"
                   style={{
-                    backgroundImage: `url(../images/jobRec2.jpg) `,
+                    backgroundImage: `url(images/jobRec2.jpg) `,
                   }}
                 >
                   <span>Information Technology</span>
@@ -515,7 +527,7 @@ export default class Home extends Component {
                 <div
                   className="populay-jobs"
                   style={{
-                    backgroundImage: `url(../images/jobRec3.jpg) `,
+                    backgroundImage: `url(images/jobRec3.jpg) `,
                   }}
                 >
                   <span>Entry Level, New Graduate</span>

@@ -72,6 +72,7 @@ export default class NavigationBar extends Component {
               width: "100%",
               paddingLeft: "10%",
               paddingRight: "10%",
+              paddingLeft: "10%", paddingRight: "10%" 
             }}
           >
             <Row>
@@ -122,13 +123,14 @@ export default class NavigationBar extends Component {
 
           <Navbar
             expand="lg"
+            style={{paddingLeft: "11%", paddingRight: "11%" }}
             // fixed="top"
             // className="navbar navbar-default navbar-fixed-top"
           >
             <Navbar.Brand>
               <Link to="/home">
                 <Image
-                  src="images/logo5_cr.png"
+                  src="images/logo6.png"
                   rounded
                   style={{ height: "70px" }}
                 />

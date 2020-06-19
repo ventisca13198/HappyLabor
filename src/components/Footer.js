@@ -42,7 +42,7 @@ export default class Footer extends Component {
             <Col lg style={{ marginRight: 50, marginLeft: 50, marginTop: 40 }}>
               <Link to="/home">
                 <Image
-                  src="images/logo5_cr.png"
+                  src="images/logo6.png"
                   style={{ marginBottom: 25, height: "40px" }}
                 />
               </Link>
