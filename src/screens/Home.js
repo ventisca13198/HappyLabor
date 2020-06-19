@@ -14,10 +14,10 @@ import {
 } from "react-bootstrap";
 import { Fade, Zoom } from "react-slideshow-image";
 var images = [
-  "../images/bg1.jpg",
-  "../images/bg2.jpg",
-  "../images/bg3.jpg",
-  "../images/bg4.jpg",
+  "images/bg1.jpg",
+  "images/bg2.jpg",
+  "images/bg3.jpg",
+  "images/bg4.jpg",
 ];
 
 const properties = {
@@ -76,7 +76,7 @@ export default class Home extends Component {
                   </Col>
                 </Row>
 
-                <Form>
+                <Form style={{ paddingLeft: "10%", paddingRight: "10%" }}>
                   <Row>
                     <Col></Col>
                     <Col md style={{ paddingLeft: 5, paddingRight: 5 }}>

@@ -42,8 +42,8 @@ export default class Footer extends Component {
             <Col lg style={{ marginRight: 50, marginLeft: 50, marginTop: 40 }}>
               <Link to="/home">
                 <Image
-                  src="./images/logo2.jpg"
-                  style={{ marginBottom: 25, width: 200 }}
+                  src="images/logo5_cr.png"
+                  style={{ marginBottom: 25, height: "40px" }}
                 />
               </Link>
               <div>
@@ -51,7 +51,7 @@ export default class Footer extends Component {
               </div>
               <div>
                 Jobs in Thailand has been a key resource for foreigners looking for
-                work in Thailand since 1998.
+                work in Thailand since 2020.
               </div>
             </Col>
             <Col lg style={{ marginTop: 40 }}>
@@ -106,7 +106,7 @@ export default class Footer extends Component {
                 <Col>Prices</Col>
               </Row>
               <Row>
-                <Col>Users Guide to JobsinJapan.com</Col>
+                <Col>Users Guide to HappyWorker.com</Col>
               </Row>
               <Row>
                 <Col>Website Terms of Use</Col>

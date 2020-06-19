@@ -59,7 +59,7 @@ export default class NavigationBar extends Component {
       <Styles>
         <div
           style={{
-            backgroundColor: "rgba(255,255,255,0)",
+            backgroundColor: "rgba(0,0,0,0)",
             position: "absolute",
             top: 0,
             width: "100%",
@@ -70,6 +70,8 @@ export default class NavigationBar extends Component {
             style={{
               backgroundColor: "rgba(0,0,0,0.2)",
               width: "100%",
+              paddingLeft: "10%",
+              paddingRight: "10%",
             }}
           >
             <Row>
@@ -118,10 +120,17 @@ export default class NavigationBar extends Component {
             </Row>
           </div>
 
-          <Navbar expand="lg">
+          <Navbar
+            expand="lg"
+            style={{ paddingLeft: "11%", paddingRight: "11%" }}
+          >
             <Navbar.Brand>
               <Link to="/home">
-                <Image src="./images/logo2.jpg" rounded style={{height:100}}/>
+                <Image
+                  src="images/logo5_cr.png"
+                  rounded
+                  style={{ height: "70px" }}
+                />
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -138,7 +147,7 @@ export default class NavigationBar extends Component {
                 </Nav.Link>
                 <Nav.Link>
                   <Link to="/company" className="text-nav">
-                    OWNER
+                    BUSINESS-OWNER
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
