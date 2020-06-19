@@ -7,18 +7,26 @@ import { FaBookmark, FaRegCalendarAlt } from 'react-icons/fa';
 import { GrMapLocation } from 'react-icons/gr';
 import { MdLocationOn } from 'react-icons/md'
 import { GiWhiteBook } from 'react-icons/gi'
+import {BsFillPersonFill} from 'react-icons/bs'
 const Styles = styled.div`
 .container-boxed {
 
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
 }
 .row {
   width=100%;
+
 }
-.width33.Col {
-  width: 33%;
+.job-overview {
+  padding: 5px;
 }
+
+.job-overview-value {
+  color: #404040;
+  font-weight: bold;
+}
+
 `;
 
 const job = jobs.find(element => (element.jobId == '0001'))
@@ -38,7 +46,7 @@ export default class Detail extends Component {
     return (
       <Styles>
         <div style={{ position: "relative", height: "154px", width: "100%" }} />
-        <Row style={{ backgroundColor: 'rgb(235,238,239)' }}>
+        <Row style={{ backgroundColor: 'rgb(235,238,239)', margin:'0px'}}>
           <div className='container-boxed' style={{ width: '100%', color: '#444444' }}>
             <h1>{job.position}</h1>
             <p>
@@ -56,12 +64,38 @@ export default class Detail extends Component {
         <Row className='row container-boxed' >
           <Col md={8}>
             <h3>Job Overview</h3>
-            <Row className='row'>
+            <Row round className='row' style={{backgroundColor:'#DBF6F7', borderRadius:10,padding: '20px', fontSize:'0.95em', color: '#232323'}} >
            
-                <Col md={4}>Employer Type</Col>
-                <Col md={4}>Employer Type</Col>
-                <Col md={4}>Employer Type</Col>
-                <Col md={4}>Employer Type</Col>
+                <Col className = 'job-overview' md={4} >
+                  <BsFillPersonFill size={28} color={'#00b0ff'}/>
+                  <span className='job-overview-value'>Employer Type</span> <br />
+                  {job.jobOverview.employerType}
+                </Col>
+                <Col className = 'job-overview' md={4}>
+                  <BsFillPersonFill size={28} color={'#00b0ff'}/>
+                  <span className='job-overview-value'>Industry</span> <br />
+                  {job.jobOverview.industry}
+                </Col>
+                <Col className = 'job-overview' md={4}>
+                  <BsFillPersonFill size={28} color={'#00b0ff'}/>
+                  <span className='job-overview-value'>Salary</span> <br />
+                  {job.jobOverview.salary}
+                </Col>
+                <Col className = 'job-overview' md={4}>
+                  <BsFillPersonFill size={28} color={'#00b0ff'}/>
+                  <span className='job-overview-value'>Thai Level</span> <br />
+                  {job.jobOverview.thaiLevel}
+                </Col>
+                <Col className = 'job-overview' md={4}>
+                  <BsFillPersonFill size={28} color={'#00b0ff'}/>
+                  <span className='job-overview-value'>Restricted to Domestic Applicants?</span> <br />
+                  {job.jobOverview.restrictedApplicants}
+                </Col>
+                <Col className = 'job-overview' md={4}>
+                  <BsFillPersonFill size={28} color={'#00b0ff'}/>
+                  <span className='job-overview-value'>Visa Sponsorship</span> <br />
+                  {job.jobOverview.visa}
+                </Col>
             </Row>
           </Col>
           <Col md={4}>
