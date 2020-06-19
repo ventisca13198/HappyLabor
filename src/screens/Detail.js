@@ -8,6 +8,13 @@ import { GrMapLocation } from 'react-icons/gr';
 import { MdLocationOn } from 'react-icons/md'
 import { GiWhiteBook } from 'react-icons/gi'
 import { BsFillPersonFill } from 'react-icons/bs'
+// import ImageGallery from 'react-image-gallery';
+
+// import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+
+//  import "./image-gallery.scss";
+
 const Styles = styled.div`
 .container-boxed {
 
@@ -26,23 +33,17 @@ const Styles = styled.div`
   color: #404040;
   font-weight: bold;
 }
- 
+
+
 `;
 
 const job = jobs.find(element => (element.jobId == '0001'))
 export default class Detail extends Component {
 
-  componentDidMount() {
-    const script = document.createElement("script");
-    script.src = "../data.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }
-
 
   render() {
-    console.log(jobs)
-    console.log(job)
+    console.log('ahhhhhhhhhhhhhhh')
+    console.log(job.gallery.map(element=>({src:element})))
     return (
       <Styles>
         <div style={{ position: "relative", height: "154px", width: "100%" }} />
@@ -98,6 +99,9 @@ export default class Detail extends Component {
               </Col>
             </Row>
             <Row>
+              {job.info}
+            </Row>
+            <Row>
 
               {
                 job.discription.map((element, index) => {
@@ -110,6 +114,12 @@ export default class Detail extends Component {
                 })
               }
             </Row>
+
+            {/* <Lightbox showImageModifiers={false} thumbnailWidth='150px' thumbnailHeight='150px' images={job.gallery.map(element=>({src:element,title:'',description:''}))}/> */}
+            {/* <Carousel views={job.gallery.map(element=>({source:element}))} /> */}
+            {/* <ImageGallery items={job.gallery.map(element=>({original:element,thumbnail:element}))} /> */}
+
+
             <Row>
               <strong>Login to apply for this job. </strong>
 
@@ -122,7 +132,12 @@ export default class Detail extends Component {
           </Col>
           <Col md={4}>
             {/* company info */}
-            <h4>{job.companyName}</h4>
+            <h4>{job.companyName}</h4><br/>
+            <strong>Company Profile</strong> <br/>
+            {job.profile}
+            <br/>
+            <strong><a >Post a Review </a></strong> 
+            If you have worked or interviewed at the company, we and other job seekers would to hear about your experience
           </Col>
         </Row>
       </Styles>
