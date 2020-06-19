@@ -108,7 +108,7 @@ export default class NavigationBar extends Component {
                       <span className="text-country">ລາວ</span>
                     </Dropdown.Item>
                     <Dropdown.Item href="#/action-4">
-                      <ReactCountryFlag countryCode="MY" svg />
+                      <ReactCountryFlag countryCode="MM" svg />
                       <span className="text-country">မြန်မာဘာသာ</span>
                     </Dropdown.Item>
                     <Dropdown.Item href="#/action-5">
@@ -154,7 +154,7 @@ export default class NavigationBar extends Component {
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/detail" className="text-nav">
+                  <Link to="/news" className="text-nav">
                     NEWS
                   </Link>
                 </Nav.Link>

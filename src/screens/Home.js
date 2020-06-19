@@ -13,6 +13,7 @@ import {
   Dropdown,
   Card,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { Fade, Zoom } from "react-slideshow-image";
 import styled from "styled-components";
 import { BsBookmarkFill, BsGeoAlt } from "react-icons/bs";
@@ -362,9 +363,11 @@ export default class Home extends Component {
                         <span className="iconBottom">Share</span>
                       </Col>
                       <Col style={{ textAlign: "end" }}>
-                        <Button size={"md"} style={{ fontWeight: "bold" }}>
-                          Detail
-                        </Button>
+                        <Link to="/detail">
+                          <Button size={"md"} style={{ fontWeight: "bold" }}>
+                            Detail
+                          </Button>
+                        </Link>
                         <div style={{ fontSize: 12 }}>6 hours ago</div>
                       </Col>
                     </Row>

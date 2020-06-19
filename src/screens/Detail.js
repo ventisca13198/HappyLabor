@@ -45,6 +45,7 @@ export default class Detail extends Component {
     console.log(job)
     return (
       <Styles>
+        <div style={{ backgroundColor:"gray",height:"150px" }} />
         <div style={{ position: "relative", height: "154px", width: "100%" }} />
         <Row style={{ backgroundColor: 'rgb(235,238,239)', margin: '0px' }}>
           <div className='container-boxed' style={{ width: '100%', color: '#444444' }}>
