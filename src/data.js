@@ -45,7 +45,7 @@ export const location = [
     id: "0003",
     provinceTh: "นนทบุรี",
     provinceEn: "Nonthaburi",
-  }
+  },
 ];
 
 export const jobs = [
@@ -162,22 +162,21 @@ export const jobs = [
     positionEn: "Trailer truck Driver",
     companyName: "SAIKOU CONSTRUCTION CO.,LTD.",
     jobType: "Full Time",
-    address:
-      "เลขที่ 135/278 หมู่ที่ 2\nต.ไทรม้า , อ.เมือง , จ.นนทบุรี 11100",
+    address: "เลขที่ 135/278 หมู่ที่ 2\nต.ไทรม้า , อ.เมือง , จ.นนทบุรี 11100",
     provinceTh: "นนทบุรี",
     provinceEn: "Nonthaburi",
-    durationPost: "June 17, 2020 - August 14, 2020",
+    durationPost: "June 1, 2020 - August 30, 2020",
     jobCategory: "Construction",
-    logo: "",
-    banner: "images/job2_ban.jpg",
+    logo: "images/job3_ban.png",
+    banner: "",
     gallery: [
-      "images/job2_pic1.jpg",
-      "images/job2_pic2.jpg",
-      "images/job2_pic3.jpg",
+      "images/job3_pic1.jpg",
+      "images/job3_pic2.jpg",
+      "images/job3_pic3.jpg",
     ],
 
     info:
-      "ปิดรับสมัครพนักงานจัดส่ง (พจส.) รถเทรลเลอร์\n(มีประสบการณ์จะพิจารณาเป็นพิเศษ)\nคุณสมบัติ :\n1.ทุกเพศ อายุไม่เกิน 55 ปี\n2.มีใบขับขี่ ท.3 ขึ้นไป\n3.มีประสบการณ์ขับรถเทรลเลอร์มาก่อน\n4.พร้อมเริ่มงานได้ทันที\nติดต่อสอบถามเพิ่มเติม : ฝ่ายบุคคล\nTEL 092-2694429 / 085-111-0976\nสามารถสมัครได้ที่ 280/8 หมู่ที่ 9  ตำบลทับกวาง อำเภอแก่งคอย จังหวัดสระบุรี 18260\nhttps://goo.gl/maps/zZtrM7EPVVSQyTgr6",
+      "รับสมัครพนักงานจัดส่ง (พจส.) รถเทรลเลอร์\n(มีประสบการณ์จะพิจารณาเป็นพิเศษ)\nคุณสมบัติ :\n1.ทุกเพศ อายุไม่เกิน 55 ปี\n2.มีใบขับขี่ ท.3 ขึ้นไป\n3.มีประสบการณ์ขับรถเทรลเลอร์มาก่อน\n4.พร้อมเริ่มงานได้ทันที\nติดต่อสอบถามเพิ่มเติม : ฝ่ายบุคคล\nTEL 092-2694429 / 085-111-0976\nสามารถสมัครได้ที่ 280/8 หมู่ที่ 9  ตำบลทับกวาง อำเภอแก่งคอย จังหวัดสระบุรี 18260\nhttps://goo.gl/maps/zZtrM7EPVVSQyTgr6",
 
     infoEn: "",
 
@@ -189,23 +188,23 @@ export const jobs = [
     jobOverview: {
       employerType: "Direct Hire",
       industry: "Construction",
-      salary: "350-550 baht THB / Day",
-      thaiLevel: "Listening",
-      restrictedApplicants: "Thai,Myanma,Cambodia",
-      visa: "No",
+      salary: "35000 Baht THB/Month",
+      thaiLevel: "Read/Write",
+      restrictedApplicants: "Thai,Loas",
+      visa: "Yes",
     },
     discription: [
       {
-        title: "ทำงานวันละ 8 ชั่วโมง แล้วแต่กะ ทำได้ทุกวัน",
+        title: "รับพนักงานขับรถเทรลเลอร์ มีประสบการณ์จะพิจารณาเป็นพิเศษ",
         detail:
-          "ต้องการคนงาน ทำงานสร้างคอนโดสูง 38 ชั้น \nสามารถทำงานเป็นกะได้ ขั้นต่ำ 8 ชั่วโมงต่อกะ \nค่าแรง 350-550 บาทต่อวัน (เชื่อมเหล็กชำนาญได้เพิ่มอีก 100 บาท)\nมีที่พักฟรี อยู่รวมกัน 4 คน/ห้อง ฟรีน้ำไฟ\nฟรีอาหารกลางวัน\nมีรถรับส่ง \nรับทั้งชายและหญิง ทั้งคนไทย พม่า กัมพูชา มาเป็นคู่ผัวเมียก็รับ",
+          "คุณสมบัติ :\n1.ทุกเพศ อายุไม่เกิน 55 ปี\n2.มีใบขับขี่ ท.3 ขึ้นไป\n3.มีประสบการณ์ขับรถเทรลเลอร์มาก่อน\n4.พร้อมเริ่มงานได้ทันที\n",
         titleEn: "",
         detailEn: "",
       },
       {
-        title: "สนใจติดต่อ",
+        title: "ติดต่อสอบถามเพิ่มเติม",
         detail:
-          "คุณธนพล\nบริษัท ฤทธา จำกัด\n300 ถนนร่มเกล้า\nแขวงคลองสามประเวศ เขตลาดกระบัง กรุงเทพมหานคร 10520\nโทรศัพท์: 02-105-5000 ต่อ 6505, 091-119-1255\nแฟกซ์: 02-105-5000 ต่อ 6102\nเว็บไซต์: http://www.ritta.co.th",
+          "ติดต่อสอบถามเพิ่มเติม : ฝ่ายบุคคล\nTEL 092-2694429 / 085-111-0976\nสามารถสมัครได้ที่ 280/8 หมู่ที่ 9  ตำบลทับกวาง อำเภอแก่งคอย จังหวัดสระบุรี 18260\nhttps://goo.gl/maps/zZtrM7EPVVSQyTgr6",
         titleEn: "",
         detailEn: "",
       },
