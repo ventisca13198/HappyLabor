@@ -121,7 +121,7 @@ export default class NavigationBar extends Component {
           <Navbar expand="lg">
             <Navbar.Brand>
               <Link to="/home">
-                <Image src="./images/logo.png" rounded />
+                <Image src="./images/logo2.jpg" rounded style={{height:100}}/>
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -132,18 +132,18 @@ export default class NavigationBar extends Component {
             >
               <Nav>
                 <Nav.Link>
-                  <Link to="/home" className="text-nav">
+                  <Link to="/jobs" className="text-nav">
                     JOBS
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
                   <Link to="/company" className="text-nav">
-                    COMPANIES
+                    OWNER
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
                   <Link to="/detail" className="text-nav">
-                    DETAIL
+                    NEWS
                   </Link>
                 </Nav.Link>
                 {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">

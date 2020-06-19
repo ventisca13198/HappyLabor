@@ -41,14 +41,17 @@ export default class Footer extends Component {
             <Col lg={2}></Col>
             <Col lg style={{ marginRight: 50, marginLeft: 50, marginTop: 40 }}>
               <Link to="/home">
-                <Image src="./images/logo.png" style={{ marginBottom: 25 }} />
+                <Image
+                  src="./images/logo2.jpg"
+                  style={{ marginBottom: 25, width: 200 }}
+                />
               </Link>
               <div>
                 <strong>“By foreigners for foreigners”</strong>
               </div>
               <div>
-                Jobs in Japan has been a key resource for foreigners looking for
-                work in Japan since 1998.
+                Jobs in Thailand has been a key resource for foreigners looking for
+                work in Thailand since 1998.
               </div>
             </Col>
             <Col lg style={{ marginTop: 40 }}>
@@ -127,16 +130,16 @@ export default class Footer extends Component {
                 <Col>Contact Us</Col>
               </Row>
               <Row>
-                <Col>Spectrum Consulting Japan G.K.</Col>
+                <Col>Chan Wanich Co., Ltd.</Col>
               </Row>
               <Row>
                 <Col>
-                  Tokyo Office: C/O Global Village Media 1-7-20-B2 Yaesu,
-                  Chuo-ku, Tokyo
+                  Kongboonma Building 699 Silom Rd. Bangrak, Bangkok 10500 Tel.
+                  (+66) 2-635-3555 Fax (+66) 2-635-3398
                 </Col>
               </Row>
               <Row>
-                <Col>info@jobsinjapan.com</Col>
+                <Col>http://www.si.chanwanich.com/</Col>
               </Row>
               <Row style={{ marginTop: 20 }}>
                 <Col>

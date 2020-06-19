@@ -42,7 +42,7 @@ export default class Home extends Component {
               style={{
                 backgroundImage: `url(${each}) `,
                 width: "100%",
-                height: 700, 
+                height: 700,
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
@@ -58,12 +58,20 @@ export default class Home extends Component {
                 }}
               >
                 <Row style={{}}>
-                  <Col style={{ fontSize: 46, fontWeight: "bold" }}>
-                    Find your job in Japan now!
+                  <Col
+                    style={{
+                      fontSize: 46,
+                      fontWeight: "bold",
+                      backgroundColor: "rgba(0,0,0,0.8)",
+                    }}
+                  >
+                    Find your job in Thailand now!
                   </Col>
                 </Row>
                 <Row style={{ marginBottom: 15 }}>
-                  <Col style={{ fontSize: 22 }}>
+                  <Col
+                    style={{ fontSize: 22, backgroundColor: "rgba(0,0,0,0.8)" }}
+                  >
                     Foreigner friendly jobs across all industries
                   </Col>
                 </Row>
