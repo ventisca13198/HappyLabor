@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import { jobs } from '../data.js'
 import styled from "styled-components";
 
@@ -26,7 +26,7 @@ const Styles = styled.div`
   color: #404040;
   font-weight: bold;
 }
-
+ 
 `;
 
 const job = jobs.find(element => (element.jobId == '0001'))
@@ -103,15 +103,25 @@ export default class Detail extends Component {
                 job.discription.map((element, index) => {
                   return (
                     <div>
-                      <h3 style={{color:"#0085d0"}}>{element.title}</h3>
+                      <h3 style={{ color: "#0085d0" }}>{element.title}</h3>
                       {element.detail}
                     </div>)
 
                 })
               }
             </Row>
+            <Row>
+              <strong>Login to apply for this job. </strong>
+
+            </Row>
+            <Row><Button variant="primary" size="lg">
+                Login
+              </Button>
+              </Row>
+              
           </Col>
           <Col md={4}>
+            {/* company info */}
             <h4>{job.companyName}</h4>
           </Col>
         </Row>
