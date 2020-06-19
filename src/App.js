@@ -4,6 +4,8 @@ import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./screens/Home";
 import Detail from "./screens/Detail";
 import NavigationBar from "./components/NavigationBar";
+import Footer from "./components/Footer";
+import * as data from "./data.js";
 
 function App() {
   return (
@@ -35,6 +37,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+      <Footer />
     </Router>
   );
 }
