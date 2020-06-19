@@ -122,7 +122,8 @@ export default class NavigationBar extends Component {
 
           <Navbar
             expand="lg"
-            style={{ paddingLeft: "11%", paddingRight: "11%" }}
+            // fixed="top"
+            // className="navbar navbar-default navbar-fixed-top"
           >
             <Navbar.Brand>
               <Link to="/home">
