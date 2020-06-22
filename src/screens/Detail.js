@@ -22,7 +22,7 @@ const Styles = styled.div`
   margin: auto;
 }
 .row {
-  width=100%;
+  width=95%;
 
 }
 .job-overview {
@@ -37,7 +37,7 @@ const Styles = styled.div`
 
 `;
 
-const job = jobs.find(element => (element.jobId == '0001'))
+const job = jobs.find(element => (element.jobId === '0001'))
 export default class Detail extends Component {
 
 

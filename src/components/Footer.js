@@ -1,17 +1,5 @@
 import React, { Component } from "react";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-  Image,
-  Row,
-  Col,
-  DropdownButton,
-  Dropdown,
-} from "react-bootstrap";
+import { Image, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FaLinkedinIn, FaFacebookF, FaLine } from "react-icons/fa";
@@ -50,8 +38,8 @@ export default class Footer extends Component {
                 <strong>“By foreigners for foreigners”</strong>
               </div>
               <div>
-                Jobs in Thailand has been a key resource for foreigners looking for
-                work in Thailand since 2020.
+                Jobs in Thailand has been a key resource for foreigners looking
+                for work in Thailand since 2020.
               </div>
             </Col>
             <Col lg style={{ marginTop: 40 }}>

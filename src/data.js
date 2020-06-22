@@ -15,7 +15,7 @@ export const jobCategory = [
     nameEn: "Logistic",
   },
 ];
-const jobType = [
+export const jobType = [
   {
     id: "001",
     type: "Full Time",
@@ -318,6 +318,56 @@ export const jobs = [
       },
     ],
   },
+  {
+    jobId: "0006",
+    position: "พนักงานขาย (ต่างด้าว)",
+    positionEn: "Sales (Foreign workers)",
+    companyName: "บริษัท สมาร์ท วิชั่น (ไทยแลนด์) จำกัด",
+    companyId: "0006",
+    jobType: "Part Time",
+    address: "1811 1813 จรัญสนิทวงศ์ Bang Phlat, Bangkok 10700",
+    provinceTh: "กรุงเทพ",
+    provinceEn: "Bangkok",
+    durationPost: "June 20, 2020 - August 20, 2020",
+    jobCategory: "Health",
+    logo: "images/job6_logo.png",
+    banner: "images/job6_ban.jpg",
+    gallery: ["images/job6_pic1.jpg,images/job6_pic2.jpg,images/job6_pic3.jpg"],
+
+    info:
+      "ลักษณะการทำงาน\nแนะนำสินค้าแว่นตา ให้ลูกค้าที่มีปัญหาสายตา โดยจะได้รับการสอนและอบรมก่อนการปฏิบัติงาน\nหมวดงาน\nเจ้าหน้าที่ขาย-การตลาด / พนักงานขาย-การตลาด\nอื่นๆ\nณสมบัติผู้สมัคร\n1. มาทำงานเช้าได้\n2. รักในงานขาย มีความตั้งใจ ขยัน อดทน\n3. พูด,อ่านภาษาไทยได้\n4. เขียนภาษาไทยได้จะพิจารณาเป็นพิเศษ",
+
+    infoEn: "",
+
+    profile:
+      "ทางเราเป็นบริษัทนายหน้า ซื้อ ขาย เช่าคอนโดในเขตกรุงเทพมหานคร มีความเชียวชาญและชำนาญในการดูแลลูกค้า  ผู้ซึ่งต้องการหาที่อยู่ในเขตเมือง\nบริษัทมีประสบการณ์ไม่ต่ำกว่า 10 ปี ดังน้นจึงมีฐานลูกค้าอย่างกระจายทั่วถึง",
+
+    profileEn: "",
+
+    jobOverview: {
+      employerType: "Direct Hire",
+      industry: "Construction",
+      salary: "500-600 บาท/ต่อวัน",
+      thaiLevel: "สื่อสารภาษาไทยได้",
+      restrictedApplicants: "Thai,Laos",
+      visa: "Yes",
+    },
+    discription: [
+      {
+        title: "สวัสดิการ / ข้อมูลเพิ่มเติม",
+        detail: "อาหารเช้า,เบี้ยขยัน,คอมมิชชั่น,ชุดฟอร์ม,งานสังสรรค์ และท่องเที่ยวประจำปี,แว่นตา,เงินสะสม",
+        titleEn: "",
+        detailEn: "",
+      },
+      {
+        title: "ติดต่อ - สอบถาม",
+        detail:
+          "บริษัท สมาร์ท วิชั่น (ไทยแลนด์) จำกัด\n1811,1813 ซอย จรัญสนิทวงศ์75 ถนนจรัญสนิทวงศ์\nแขวงบางพลัด เขตบางพลัด\nกรุงเทพมหานคร 10700",
+        titleEn: "",
+        detailEn: "",
+      },
+    ],
+  },
 ];
 
 export const companies = [
@@ -346,4 +396,10 @@ export const companies = [
     name: "Best TWP GROUP (Thailand) Co., Ltd.",
     business: "Service",
   },
+  {
+    id: "0006",
+    name: "บริษัท สมาร์ท วิชั่น (ไทยแลนด์) จำกัด",
+    business: "Health",
+  },
+  
 ];
