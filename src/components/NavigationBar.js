@@ -85,7 +85,7 @@ export default class NavigationBar extends Component {
                     padding: 10,
                   }}
                 >
-                  Employers/จัดหาคนเข้าทำงาน
+                  <Link to="/postJob" className="text-nav">Post Job/หาคนทำงาน</Link>
                 </div>
               </Col>
               <Col style={{ textAlign: "right", right: 20 }}>
@@ -160,8 +160,8 @@ export default class NavigationBar extends Component {
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/postJob">
-                    postJob
+                  <Link to="/postJob" className="text-nav">
+                    POST-JOB
                   </Link>
                 </Nav.Link>
                 {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
