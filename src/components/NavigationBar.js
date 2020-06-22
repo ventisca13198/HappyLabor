@@ -72,7 +72,8 @@ export default class NavigationBar extends Component {
               width: "100%",
               paddingLeft: "10%",
               paddingRight: "10%",
-              paddingLeft: "10%", paddingRight: "10%" 
+              paddingLeft: "10%",
+              paddingRight: "10%",
             }}
           >
             <Row>
@@ -123,7 +124,7 @@ export default class NavigationBar extends Component {
 
           <Navbar
             expand="lg"
-            style={{paddingLeft: "11%", paddingRight: "11%" }}
+            style={{ paddingLeft: "11%", paddingRight: "11%" }}
             // fixed="top"
             // className="navbar navbar-default navbar-fixed-top"
           >
