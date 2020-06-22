@@ -1,16 +1,5 @@
 import React, { Component } from "react";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-  Image,
-  Row,
-  Col,
-  Dropdown,
-} from "react-bootstrap";
+import { Navbar, Nav, Image, Row, Col, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ReactCountryFlag from "react-country-flag";
@@ -54,9 +43,21 @@ const Styles = styled.div`
 `;
 
 export default class NavigationBar extends Component {
+  state = {
+    isTop: true,
+  };
+  componentDidMount() {
+    document.addEventListener('scroll', () => {
+      const isTop = window.scrollY < 100;
+      if (isTop !== this.state.isTop) {
+          this.setState({ isTop })
+      }
+    });
+  }
   render() {
     return (
       <Styles>
+        
         <div
           style={{
             backgroundColor: "rgba(0,0,0,0)",
@@ -72,11 +73,10 @@ export default class NavigationBar extends Component {
               width: "100%",
               paddingLeft: "10%",
               paddingRight: "10%",
-              paddingLeft: "10%",
-              paddingRight: "10%",
             }}
           >
             <Row>
+            {/* <h2 style={{ position: 'fixed', top: 0 ,color:'white'}}>Scroll {this.state.isTop ? 'down' : 'up'}!</h2> */}
               <Col style={{ left: 20, color: "#fff" }}>
                 <div
                   style={{
@@ -85,7 +85,9 @@ export default class NavigationBar extends Component {
                     padding: 10,
                   }}
                 >
-                  <Link to="/postJob" className="text-nav">Post Job/หาคนทำงาน</Link>
+                  <Link to="/postJob" className="text-nav">
+                    Post Job/หาคนทำงาน
+                  </Link>
                 </div>
               </Col>
               <Col style={{ textAlign: "right", right: 20 }}>

@@ -1,20 +1,7 @@
 import React, { Component } from "react";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-  Image,
-  Row,
-  Col,
-  DropdownButton,
-  Dropdown,
-  Card,
-} from "react-bootstrap";
+import { Form, Button, Image, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { Fade, Zoom } from "react-slideshow-image";
+import { Fade } from "react-slideshow-image";
 import styled from "styled-components";
 import { BsBookmarkFill, BsGeoAlt } from "react-icons/bs";
 import {
@@ -38,7 +25,7 @@ const Styles = styled.div`
   }
   .text-job-list {
     font-size: 14px;
-    width: 100%;
+    width: 95%;
     display: inline-flex;
   }
   .iconBottom {
@@ -52,7 +39,7 @@ const Styles = styled.div`
     font-weight: bold;
   }
   .populay-jobs {
-    width: 100%;
+    width: 95%;
     height: 177px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -61,6 +48,16 @@ const Styles = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 15px;
+  }
+  html,
+  body {
+    overflow: hidden;
+  }
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+  ::-webkit-scrollbar {
+    display: none;
   }
 `;
 
@@ -80,7 +77,7 @@ export default class Home extends Component {
   render() {
     return (
       <Styles>
-        <div>
+        <div style={{ overflow: "hidden", width: "100%" }}>
           <Fade {...properties}>
             {images.map((each, index) => (
               <div
@@ -91,6 +88,7 @@ export default class Home extends Component {
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
+                  overflow: "hidden",
                 }}
               >
                 <div
@@ -224,7 +222,7 @@ export default class Home extends Component {
                       <div>
                         <Image
                           src={`images/iconPartTime.png`}
-                          style={{ maxWidth: "100%", height: "auto" }}
+                          style={{ maxwidth: "100%", height: "auto" }}
                         ></Image>
                         <div>Part Time</div>
                       </div>
@@ -233,7 +231,7 @@ export default class Home extends Component {
                       <div>
                         <Image
                           src={`images/iconFullTime.png`}
-                          style={{ maxWidth: "100%", height: "auto" }}
+                          style={{ maxwidth: "100%", height: "auto" }}
                         ></Image>
                         <div>Full Time</div>
                       </div>
@@ -247,7 +245,7 @@ export default class Home extends Component {
                       <div>
                         <Image
                           src={`images/iconVisaOffered.png`}
-                          style={{ maxWidth: "100%", height: "auto" }}
+                          style={{ maxwidth: "100%", height: "auto" }}
                         ></Image>
                         <div>Visa Offered</div>
                       </div>
@@ -256,7 +254,7 @@ export default class Home extends Component {
                       <div>
                         <Image
                           src={`images/OverseasOK.png`}
-                          style={{ maxWidth: "100%", height: "auto" }}
+                          style={{ maxwidth: "100%", height: "auto" }}
                         ></Image>
                         <div>Overseas OK</div>
                       </div>
@@ -298,7 +296,8 @@ export default class Home extends Component {
                       style={{
                         display: "block",
                         width: "100%",
-                        height: "auto",
+
+                        maxHeight: 200,
                       }}
                     />
                     <div
