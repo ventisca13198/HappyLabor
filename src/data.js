@@ -46,6 +46,11 @@ export const location = [
     provinceTh: "นนทบุรี",
     provinceEn: "Nonthaburi",
   },
+  {
+    id: "0004",
+    provinceTh: "เชียงใหม่",
+    provinceEn: "Chiang Mai",
+  },
 ];
 
 export const jobs = [
@@ -54,6 +59,7 @@ export const jobs = [
     position: "คนงานก่อสร้าง",
     positionEn: "Construction Worker",
     companyName: "Khonconcrete Co.,Ltd.",
+    companyId: "0001",
     jobType: "Fulltime",
     address:
       "เลขที่ 371-373 หมู่ 2 ถ.มิตรภาพ ต.ศิลา อ.เมือง จ.ขอนแก่น 40000 โทรศัพท์ 043-342870 อัตโนมัติ 10 เลขหมาย โทรสาร 043-393748",
@@ -107,6 +113,7 @@ export const jobs = [
     position: "คนงานก่อสร้าง",
     positionEn: "Construction Worker",
     companyName: "Ritta Co.,Ltd.",
+    companyId: "0002",
     jobType: "Contract",
     address:
       "300 Romklao Road, Klongsamprawet, Latkrabang, Bangkok 10520, Thailand",
@@ -161,6 +168,7 @@ export const jobs = [
     position: "พนักงานขับรถเทรลเลอร์",
     positionEn: "Trailer truck Driver",
     companyName: "SAIKOU CONSTRUCTION CO.,LTD.",
+    companyId: "0003",
     jobType: "Full Time",
     address: "เลขที่ 135/278 หมู่ที่ 2\nต.ไทรม้า , อ.เมือง , จ.นนทบุรี 11100",
     provinceTh: "นนทบุรี",
@@ -210,6 +218,106 @@ export const jobs = [
       },
     ],
   },
+  {
+    jobId: "0004",
+    position: "ผู้ดูแลฟาร์มโคนม(ใช้แรงงาน+ความรู้ที่จะสอนนิดหน่อย)",
+    positionEn: "Dairy Farm Worker",
+    companyName: "อ.ส.ค. สำนักงานภาคเหนือตอนบน (อิทธิพลฟาร์ม)",
+    companyId: "0004",
+    jobType: "Full Time",
+    address: "122 ถนนห้วยแก้ว ต.ช้างเผือก อ.เมือง จ.เชียงใหม่ 50300",
+    provinceTh: "เชียงใหม่",
+    provinceEn: "Chiang Mai",
+    durationPost: "June 20, 2020 - August 20, 2020",
+    jobCategory: "Agriculture",
+    logo: "images/job4_logo.png",
+    banner: "images/job4_ban.jpg",
+    gallery: ["images/job4_pic1.jpg", "images/job4_pic2.jpg"],
+
+    info:
+      "งานที่ทำ รีดนม2เวลาเช้าเย็น ให้อาหาร4ครั้ง อาบน้ำให้โคตอนบ่าย มั่นดูแลความสะอาดจากมูลโค\nเป็นที่ใช้แรงงานหนัก ต้องสกปรก ต้องแบก งานเกษตรงานกรรมกร\nเพศชาย/หญิง อายุ20ขึ้นไป สัญชาติไทย หรือ พม่า,กัมพูชา ที่สื่อสารภาษาไทยรู้เรื่อง\nเงินเดือนขั้นต่ำหลักพันถึงหมื่น สามารถมาเป็นคู่ กลุ่ม หรือครอบครัวก็ได้ \nเงินเดือนจะแตกต่างกันไป\nมีบ้าน ทีวี ตู้เย็น ค่าไฟค่าน้ำฟรี\nมูลสัตว์แบ่งเจ้าของคนละครึ่ง",
+
+    infoEn: "",
+
+    profile: "ฟาร์มโคนม ขายส่งให้ อ.ส.ค. สำนักงานภาคเหนือตอนบน",
+
+    profileEn: "",
+
+    jobOverview: {
+      employerType: "Direct Hire",
+      industry: "Construction",
+      salary: "400-700 บาท/ต่อวัน ขึ้นอยู่กับความชำนาญ",
+      thaiLevel: "สื่อสารภาษาไทยได้",
+      restrictedApplicants: "Thai,Myanmar,Cambodia",
+      visa: "Yes",
+    },
+    discription: [
+      {
+        title: "สวัสดิการ",
+        detail:
+          "บ้านพัก ทีวีตู้เย็น ค่าน้ำค่าไฟ\nเงินเดือน\nไม่ระบุ\nคุณสมบัติผู้สมัคร\nชาย หรือ หญิง อายุ 20 ถึง - ปี\nวุฒิการศึกษา ต่ำกว่ามัธยมศึกษาตอนปลาย\nไม่ต้องมีประสบการณ์\n1. ขยัน มีวินัย อดทน2. เปิดใจเรียนรู้\n3. เมตตาสัตว์ ไม่ทำร้าย\n4. มีปัญหาอะไรพูดคุยกัน ซื่อสัตย์ต่อกัน\n5. มีพละกำลัง\nร่างกายแข็งแรง\nสถานที่ปฏิบัติงาน\nตามที่อยู่บริษัท",
+        titleEn: "",
+        detailEn: "",
+      },
+      {
+        title: "สนใจติดต่อ",
+        detail:
+          "คุณอิทธิพล 081-960-1461 (ไม่สะดวกทางอีเมล และเว็บ ช่วยโทรติดต่อ)\nขอเพียงขยัน เปิดใจเรียนรู้ เข้าใจสัตว์ ก็เพียงพอแล้ว",
+        titleEn: "",
+        detailEn: "",
+      },
+    ],
+  },
+  {
+    jobId: "0005",
+    position: "แม่บ้าน",
+    positionEn: "Dairy Farm Worker",
+    companyName: "Best TWP GROUP (Thailand) Co., Ltd.",
+    companyId: "0005",
+    jobType: "Part Time",
+    address: "999/9 Central World Building 29Fl. Rama 1 Rd.,",
+    provinceTh: "กรุงเทพ",
+    provinceEn: "Bangkok",
+    durationPost: "June 20, 2020 - August 20, 2020",
+    jobCategory: "Agriculture",
+    logo: "images/job5_logo.png",
+    banner: "images/job5_ban.gif",
+    gallery: ["images/job5_pic1.jpg"],
+
+    info:
+      "รายละเอียดงาน \n- ปฏิบัติงานตามความสามารถ และมีความเหมาะสม\n- งานที่มีความชำนาญและเคยผ่านงานมา\n- งานอื่นๆ ตามที่ได้รับมอบหมายจากผู้บังคับบัญชา\n- ทำงานวันจันทร์-ศุกร์ เวลา 8:00-18.00น.",
+
+    infoEn: "",
+
+    profile:
+      "ทางเราเป็นบริษัทนายหน้า ซื้อ ขาย เช่าคอนโดในเขตกรุงเทพมหานคร มีความเชียวชาญและชำนาญในการดูแลลูกค้า  ผู้ซึ่งต้องการหาที่อยู่ในเขตเมือง\nบริษัทมีประสบการณ์ไม่ต่ำกว่า 10 ปี ดังน้นจึงมีฐานลูกค้าอย่างกระจายทั่วถึง",
+
+    profileEn: "",
+
+    jobOverview: {
+      employerType: "Direct Hire",
+      industry: "Construction",
+      salary: "500-600 บาท/ต่อวัน",
+      thaiLevel: "สื่อสารภาษาไทยได้",
+      restrictedApplicants: "Thai,Laos",
+      visa: "Yes",
+    },
+    discription: [
+      {
+        title: "สวัสดิการ",
+        detail: "เงินเดือน\nที่พักฟรี\nค่าโทรศัพท์\nเครื่องแบบพนักงาน",
+        titleEn: "",
+        detailEn: "",
+      },
+      {
+        title: "สนใจติดต่อ",
+        detail:
+          "คุณอิทธิพล 081-960-1461 (ไม่สะดวกทางอีเมล และเว็บ ช่วยโทรติดต่อ)\"\n\"ขอเพียงขยัน เปิดใจเรียนรู้ เข้าใจสัตว์ ก็เพียงพอแล้ว",
+        titleEn: "",
+        detailEn: "",
+      },
+    ],
+  },
 ];
 
 export const companies = [
@@ -222,5 +330,20 @@ export const companies = [
     id: "0002",
     name: "Ritta Co.,Ltd.",
     business: "Contruction",
+  },
+  {
+    id: "0003",
+    name: "SAIKOU CONSTRUCTION CO.,LTD.",
+    business: "Contruction",
+  },
+  {
+    id: "0004",
+    name: "อ.ส.ค. สำนักงานภาคเหนือตอนบน (อิทธิพลฟาร์ม)",
+    business: "Farm",
+  },
+  {
+    id: "0005",
+    name: "Best TWP GROUP (Thailand) Co., Ltd.",
+    business: "Service",
   },
 ];

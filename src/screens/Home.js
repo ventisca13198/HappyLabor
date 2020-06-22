@@ -350,7 +350,15 @@ export default class Home extends Component {
                           <div>
                             <FaInfo className="icon-job-list" />
                           </div>
-                          <div>{job.info}</div>
+                          <div>
+                            <p
+                              style={{
+                                whiteSpace: "pre-wrap",
+                              }}
+                            >
+                              {job.info}
+                            </p>
+                          </div>
                         </span>
                         <span></span>
                       </p>
