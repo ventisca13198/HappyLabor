@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Navbar, Nav, Image, Row, Col, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ReactCountryFlag from "react-country-flag";
 import NavBarPopup from "./NavBarPopup";
+import ScrollToTop from "./ScrollTotop";
 const Styles = styled.div`
   .text-nav {
     textdecoration: none;
@@ -37,6 +38,23 @@ const Styles = styled.div`
     text-decoration: none;
   }
 
+  .example-enter {
+    opacity: 0.01;
+  }
+
+  .example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 5000ms ease-in;
+  }
+
+  .example-leave {
+    opacity: 1;
+  }
+
+  .example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
   .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
@@ -45,12 +63,24 @@ const Styles = styled.div`
 export default class NavigationBar extends Component {
   state = {
     isTop: true,
+    display: false,
   };
+
   componentDidMount() {
     document.addEventListener("scroll", () => {
-      const isTop = window.scrollY < 300;
-      if (isTop !== this.state.isTop) {
-        this.setState({ isTop });
+      const isTopTemp = window.scrollY < 300;
+      if (isTopTemp !== this.state.isTop) {
+        this.setState({ isTop: isTopTemp });
+      }
+
+      if (isTopTemp == true) {
+        this.setState({
+          display: false,
+        });
+      } else {
+        this.setState({
+          display: true,
+        });
       }
     });
   }
@@ -60,17 +90,21 @@ export default class NavigationBar extends Component {
         {this.state.isTop ? (
           ""
         ) : (
-          <NavBarPopup
-            style={{ zIndex: 10000}}
-          />
+          <div>
+            <NavBarPopup style={{ zIndex: 10000 }} />
+            <div style={{ backgroundColor: "rgba(0,0,0,0)", zIndex: 1100,position:'fixed',bottom:30,right:30 }}>
+              <ScrollToTop />
+            </div>
+          </div>
         )}
+
         <div
           style={{
             backgroundColor: "rgba(0,0,0,0)",
             position: "absolute",
             top: 0,
             width: "100%",
-            zIndex: 99999,
+            zIndex: 1000,
           }}
         >
           <div
@@ -91,7 +125,7 @@ export default class NavigationBar extends Component {
                   }}
                 >
                   <Link to="/postJob" className="text-nav">
-                    Post Job/หาคนทำงาน
+                    PostJob/หาคน
                   </Link>
                 </div>
               </Col>

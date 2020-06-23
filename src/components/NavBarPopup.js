@@ -3,11 +3,11 @@ import { Navbar, Nav, Image, Row, Col, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ReactCountryFlag from "react-country-flag";
-
+import ScrollToTop from "./ScrollTotop";
 const StylesPop = styled.div`
   .text-nav-pop {
     textdecoration: none;
-    color: #000;
+    color: #fff;
     font-size: 1rem;
     font-weight: bold;
   }
@@ -17,7 +17,7 @@ const StylesPop = styled.div`
   }
 
   .text-country-selected-pop {
-    color: #000;
+    color: #fff;
     font-size: 1rem;
     font-weight: bold;
     padding-left: 10px;
@@ -37,8 +37,8 @@ const StylesPop = styled.div`
     text-decoration: none;
   }
 
-  .navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  .navbar-light-pop .navbar-toggler-icon-pop {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 `;
 
@@ -46,26 +46,26 @@ export default class NavBarPopup extends Component {
   render() {
     return (
       <StylesPop>
-        
         <div
+          key={1}
           style={{
-            backgroundColor: "rgba(255,255,255,1)",
+            backgroundColor: "rgba(0,0,0,1)",
             position: "fixed",
             top: 0,
             width: "100%",
-            zIndex: 99999,
+            zIndex: 100,
           }}
         >
           <div
             style={{
-              backgroundColor: "rgba(0,0,0,0.2)",
+              backgroundColor: "rgba(70,70,70,1)",
               width: "100%",
               paddingLeft: "10%",
               paddingRight: "10%",
             }}
           >
             <Row>
-            {/* <h2 style={{ position: 'fixed', top: 0 ,color:'white'}}>Scroll {this.state.isTop ? 'down' : 'up'}!</h2> */}
+              {/* <h2 style={{ position: 'fixed', top: 0 ,color:'white'}}>Scroll {this.state.isTop ? 'down' : 'up'}!</h2> */}
               <Col style={{ left: 20, color: "#fff" }}>
                 <div
                   style={{
@@ -75,7 +75,7 @@ export default class NavBarPopup extends Component {
                   }}
                 >
                   <Link to="/postJob" className="text-nav-pop">
-                    Post Job/หาคนทำงาน
+                    PostJob/หาคน
                   </Link>
                 </div>
               </Col>
@@ -114,6 +114,7 @@ export default class NavBarPopup extends Component {
           </div>
 
           <Navbar
+            className="navbar-dark"
             expand="lg"
             style={{ paddingLeft: "11%", paddingRight: "11%" }}
             // fixed="top"
@@ -128,7 +129,10 @@ export default class NavBarPopup extends Component {
                 />
               </Link>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Toggle
+              className="navbar-toggler-icon-pop"
+              aria-controls="basic-navbar-nav"
+            />
 
             <Navbar.Collapse
               id="basic-navbar-nav"
