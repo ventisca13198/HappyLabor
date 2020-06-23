@@ -60,6 +60,17 @@ const Styles = styled.div`
     justify-content: center;
   }
 
+  .span-title {
+    background-color: rgba(0, 0, 0, 0.5);
+    white-space: pre-wrap;
+    width: 100%;
+    height: 100%;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   html,
   body {
     overflow: hidden;
@@ -116,20 +127,22 @@ export default class Home extends Component {
                       style={{
                         fontSize: 46,
                         fontWeight: "bold",
-                        backgroundColor: "rgba(0,0,0,0.8)",
                       }}
                     >
-                      Find your job in Thailand now!
+                      <span className="span-title">
+                        Find your job in Thailand now!
+                      </span>
                     </Col>
                   </Row>
                   <Row style={{ marginBottom: 15 }}>
                     <Col
                       style={{
                         fontSize: 22,
-                        backgroundColor: "rgba(0,0,0,0.8)",
                       }}
                     >
-                      Foreigner friendly jobs across all industries
+                      <span className="span-title">
+                        Foreigner friendly jobs across all industries
+                      </span>
                     </Col>
                   </Row>
 
@@ -381,7 +394,9 @@ export default class Home extends Component {
                         <span className="iconBottom">Share</span>
                       </Col>
                       <Col style={{ textAlign: "end" }}>
-                        <Link to="/detail">
+                        <Link
+                        to={`/detail/${job.jobId}`}
+                        >
                           <Button size={"md"} style={{ fontWeight: "bold" }}>
                             Detail
                           </Button>

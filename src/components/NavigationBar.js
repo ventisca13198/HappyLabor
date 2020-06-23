@@ -100,7 +100,7 @@ export default class NavigationBar extends Component {
 
         <div
           style={{
-            backgroundColor: "rgba(0,0,0,0)",
+            backgroundColor: "rgba(0,0,0,0.8)",
             position: "absolute",
             top: 0,
             width: "100%",

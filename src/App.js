@@ -20,9 +20,7 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <Route path="/detail">
-              <Detail />
-            </Route>
+            <Route path="/detail/:id" component={Detail}/>
             <Route path="/jobs">
               <Alljobs />
             </Route>
