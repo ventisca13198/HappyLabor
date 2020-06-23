@@ -9,6 +9,8 @@ import SelectPackage from "./SelectPackage";
 import ManageLogo from "./ManageLogo";
 import ManageJobInfomation from "./ManageJobInfomation";
 import PreviewPost from "./PreviewPost";
+import { Link } from "react-router-dom";
+import { useHistory } from "react-router";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -53,7 +55,7 @@ function HorizontalLabelPositionBelowStepper() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
-
+  let history = useHistory();
   const childRef = React.useRef();
 
   const handleNext = async () => {
@@ -70,6 +72,14 @@ function HorizontalLabelPositionBelowStepper() {
 
   const handleReset = () => {
     setActiveStep(0);
+  };
+
+  const handleFinish = async () => {
+    console.log("handleFinish");
+    var isSuccess = await childRef.current.finishStep();
+    if (isSuccess) {
+      await history.push("/home");
+    }
   };
 
   const callChildFunc = (btnEvent) => {
@@ -98,7 +108,11 @@ function HorizontalLabelPositionBelowStepper() {
         break;
       case "PreviewPost":
         console.log("current PreviewPost");
-        isSuccess = true;
+        if (btnEvent == "next") {
+          isSuccess = childRef.current.nextStep();
+        } else {
+          isSuccess = childRef.current.backStep();
+        }
         break;
       default:
         console.log("current default");
@@ -119,9 +133,11 @@ function HorizontalLabelPositionBelowStepper() {
         {activeStep === steps.length ? (
           <div>
             <Typography className={classes.instructions}>
-              All steps completed
+              <div style={{ textAlign: "center" }}>
+                <Link to="/home">กลับหน้าหลัก</Link>
+              </div>
             </Typography>
-            <Button onClick={handleReset}>Reset</Button>
+            {/* <Button onClick={handleReset}>Reset</Button> */}
           </div>
         ) : (
           <div>
@@ -139,9 +155,24 @@ function HorizontalLabelPositionBelowStepper() {
               >
                 Back
               </Button>
-              <Button variant="contained" color="primary" onClick={handleNext}>
-                {activeStep === steps.length - 1 ? "Finish" : "Next"}
-              </Button>
+
+              {activeStep === steps.length - 1 ? (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={handleFinish}
+                >
+                  Finish
+                </Button>
+              ) : (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={handleNext}
+                >
+                  Next
+                </Button>
+              )}
             </div>
           </div>
         )}

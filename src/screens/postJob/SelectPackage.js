@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Card, Form, Button } from "react-bootstrap";
 import { ThemeConsumer } from "styled-components";
+import { postJobData } from "./postJobTempData";
 
 export default class SelectPackage extends Component {
   state = {
@@ -54,6 +55,14 @@ export default class SelectPackage extends Component {
 
   nextStep = () => {
     console.log("SelectPackage nextStep");
+    postJobData.previewData = {
+      logoFileInput: null,
+      bannerFileInput: null,
+      imagepostjob1: null,
+      imagepostjob2: null,
+      imagepostjob3: null,
+      imagepostjob4: null,
+    };
     return true;
   };
 

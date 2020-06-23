@@ -1,19 +1,18 @@
 import React, { Component } from "react";
 import { Card, Form, Button, Row, Col, Container } from "react-bootstrap";
-import { postJobTempData } from "./postJobTempData";
+import { postJobData } from "./postJobTempData";
 
 export default class ManageLogo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      logoFileInput: null,
-      bannerFileInput: null,
-      imagepostjob1: null,
-      imagepostjob2: null,
-      imagepostjob3: null,
-      imagepostjob4: null,
+      logoFileInput: postJobData.previewData.logoFileInput,
+      bannerFileInput: postJobData.previewData.bannerFileInput,
+      imagepostjob1: postJobData.previewData.imagepostjob1,
+      imagepostjob2: postJobData.previewData.imagepostjob2,
+      imagepostjob3: postJobData.previewData.imagepostjob3,
+      imagepostjob4: postJobData.previewData.imagepostjob4,
     };
-
   }
 
   selectImagepostjob(event, index) {
@@ -286,6 +285,15 @@ export default class ManageLogo extends Component {
 
   nextStep = () => {
     console.log("ManageLogo nextStep");
+    postJobData.previewData = {
+      data: "pass Data",
+      logoFileInput: this.state.logoFileInput,
+      bannerFileInput: this.state.bannerFileInput,
+      imagepostjob1: this.state.imagepostjob1,
+      imagepostjob2: this.state.imagepostjob2,
+      imagepostjob3: this.state.imagepostjob3,
+      imagepostjob4: this.state.imagepostjob4,
+    };
     return true;
   };
 
@@ -293,5 +301,4 @@ export default class ManageLogo extends Component {
     console.log("ManageLogo backStep");
     return true;
   };
-
 }
