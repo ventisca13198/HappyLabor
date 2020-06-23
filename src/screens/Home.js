@@ -207,8 +207,7 @@ export default class Home extends Component {
                           type="submit"
                           size="md"
                           block
-                          style={{ maxWidth: 300 ,backgroundColor:"#007fc3"}}
-                          
+                          style={{ maxWidth: 300, backgroundColor: "#007fc3" }}
                         >
                           Search
                         </Button>
@@ -395,10 +394,14 @@ export default class Home extends Component {
                         <span className="iconBottom">Share</span>
                       </Col>
                       <Col style={{ textAlign: "end" }}>
-                        <Link
-                        to={`/detail/${job.jobId}`}
-                        >
-                          <Button size={"md"} style={{ fontWeight: "bold" ,backgroundColor:'#007fc3'}}>
+                        <Link to={`/detail/${job.jobId}`}>
+                          <Button
+                            size={"md"}
+                            style={{
+                              fontWeight: "bold",
+                              backgroundColor: "#007fc3",
+                            }}
+                          >
                             Detail
                           </Button>
                         </Link>
@@ -423,50 +426,61 @@ export default class Home extends Component {
                 <h4>News and Information</h4>
                 <Card style={{ alignSelf: "center", marginTop: 20 }}>
                   <Image
-                    src={`images/news1.jpg`}
+                    src={`images/news1a.jpg`}
                     style={{ width: "100%", height: "auto" }}
                   />
                   <div className="text-news">
-                    (Podcast) The Coronavirus and you w/Forensic Scientist Brian
+                    ประธาน กมธ.แรงงาน วุฒิสภา
+                    ตรวจเยี่ยมศูนย์ปฏิบัติการรองรับสถานการณ์ว่างงานหลังโควิด.
                   </div>
                 </Card>
                 <Card style={{ alignSelf: "center", marginTop: 20 }}>
                   <Image
-                    src={`images/news2.jpg`}
+                    src={`images/news2a.jpg`}
                     style={{ width: "100%", height: "auto" }}
                   />
                   <div className="text-news">
-                    (Podcast) From The JET Program to HR in Hakuba, Nagano
+                    ครม. ผ่อนปรนแรงงานต่างด้าว 3 สัญชาติ
+                    อยู่ในไทยและทำงานต่อได้อีก 2 เดือน
                   </div>
                 </Card>
                 <Card style={{ alignSelf: "center", marginTop: 20 }}>
                   <Image
-                    src={`images/news3.jpg`}
+                    src={`images/news3a.jpg`}
                     style={{ width: "100%", height: "auto" }}
                   />
                   <div className="text-news">
-                    Dealing With Loneliness in Thailand
+                    หางานมาทางนี้ เผยมีนายจ้างต้องการ "คนทำงาน" สูงถึง 55,093
+                    อัตรา
                   </div>
                 </Card>
                 <Card style={{ alignSelf: "center", marginTop: 20 }}>
                   <Image
-                    src={`images/news4.jpg`}
+                    src={`images/news4a.jpg`}
                     style={{ width: "100%", height: "auto" }}
                   />
                   <div className="text-news">
-                    What Salary Can You Make Teaching English in Thailand
+                    ก.แรงงาน ร่วมจิตอาสา จ้างงาน "ฟาร์มตัวอย่าง" สร้างรายได้
+                    คนละ 300 ต่อวัน
                   </div>
                 </Card>
                 <Card style={{ alignSelf: "center", marginTop: 20 }}>
                   <Image
-                    src={`images/news5.jpg`}
+                    src={`images/news5a.jpg`}
                     style={{ width: "100%", height: "auto" }}
                   />
                   <div className="text-news">
-                    (Podcast) Being a Scaffolding Erector in Thailand
+                    ครม. เห็นชอบแรงงานต่างด้าวอยู่ไทยต่อได้ถึง 31 พ.ค.
+                    ช่วงสถานการณ์โควิด-19
                   </div>
                 </Card>
-                <Button style={{ alignSelf: "center", marginTop: 15 ,backgroundColor:'#007fc3'}}>
+                <Button
+                  style={{
+                    alignSelf: "center",
+                    marginTop: 15,
+                    backgroundColor: "#007fc3",
+                  }}
+                >
                   View all
                 </Button>
               </Col>
@@ -478,6 +492,12 @@ export default class Home extends Component {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+
+              marginLeft: 20,
+              marginTop: 20,
+              paddingBottom: 0,
+              paddingTop: 20,
+              textAlign: "center",
             }}
           >
             <Row
@@ -487,7 +507,6 @@ export default class Home extends Component {
                 fontSize: 24,
                 fontWeight: "bold",
                 color: "#fff",
-                textAlign: "center",
               }}
             >
               <Col lg>
@@ -533,6 +552,12 @@ export default class Home extends Component {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+
+              marginLeft: 20,
+              marginTop: 0,
+              paddingBottom: 20,
+              paddingTop: 0,
+              textAlign: "center",
             }}
           >
             <Row
