@@ -13,26 +13,31 @@ export default class ManageJobInfomation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      additionalQuestion:[{question:""}]
+      additionalQuestion: [{ question: "" }],
+      useProfileAddress: true
     };
   }
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.checked });
+  };
 
-  addQuestion=()=>{
+  addQuestion = () => {
     this.setState(prevState => ({
-      additionalQuestion: [...prevState.additionalQuestion, {question:""}]
+      additionalQuestion: [...prevState.additionalQuestion, { question: "" }]
     }))
   }
 
-  popQuestion=()=>{
+
+  popQuestion = () => {
     this.setState(prevState => ({
 
-      additionalQuestion: prevState.additionalQuestion.slice(0,prevState.additionalQuestion.length-1)
+      additionalQuestion: prevState.additionalQuestion.slice(0, prevState.additionalQuestion.length - 1)
     }))
   }
 
   render() {
 
-    return <div>
+    return <div style={{margin:'10px',padding:'10px'}}>
 
       <h3>ข้อมูลผู้ประกอบการ และการลงประกาศ</h3>
       <form noValidate autoComplete="off">
@@ -51,70 +56,111 @@ export default class ManageJobInfomation extends Component {
         <FormControlLabel
           control={
             <Switch
-              name="checkedB"
+            checked={this.state.useProfileAddress}
+            onChange={this.handleChange}
+              name="useProfileAddress"
               color="primary"
-              checked={true}
             />
           }
           label="ที่ทำงานตามที่อยู่ผู้ประกอบการ"
           labelPlacement="start"
         />
 
-        <TextField label="ที่อยู่ที่ทำงาน" defaultValue={'555'} variant="outlined" margin="normal" fullWidth />
-        <TextField label="ซอย" defaultValue={'วัดจันทร์'} variant="outlined" margin="normal" fullWidth />
-        <TextField label="ถนน" defaultValue={'สาธุประดิษฐ์'} variant="outlined" margin="normal" fullWidth />
+        <Row>
+          <Col>
+            <TextField label="ที่อยู่ที่ทำงาน" defaultValue={'555'} variant="outlined" margin="normal" fullWidth disabled={this.state.useProfileAddress}/>
+          </Col>
+          <Col>
+            <TextField label="ซอย" defaultValue={'วัดจันทร์'} variant="outlined" margin="normal" fullWidth disabled={this.state.useProfileAddress}/>
+          </Col>
+        </Row>
 
-        <FormControl variant="outlined" fullWidth margin="normal">
-          <InputLabel htmlFor="outlined-age-native-simple">จังหวัด</InputLabel>
-          <Select
-            native
-            value={1}
-            label="จังหวัด"
+        <Row>
+          <Col>
+            <TextField label="ถนน" defaultValue={'สาธุประดิษฐ์'} variant="outlined" margin="normal" fullWidth disabled={this.state.useProfileAddress}/>
+          </Col>
+          <Col>
+            <FormControl variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}>
+              <InputLabel htmlFor="outlined-age-native-simple">จังหวัด</InputLabel>
+              <Select
+                native
+                value={1}
+                label="จังหวัด"
 
-          >
-            <option aria-label="None" value="" />
-            <option value={1}>กรุงเทพมหานคร</option>
-            <option value={20}>Twenty</option>
-            <option value={30}>Thirty</option>
-          </Select>
-        </FormControl>
+              >
+                <option aria-label="None" value="" />
+                <option value={1}>กรุงเทพมหานคร</option>
+                <option value={20}>Twenty</option>
+                <option value={30}>Thirty</option>
+              </Select>
+            </FormControl>
+          </Col>
+        </Row>
 
-        <FormControl variant="outlined" fullWidth margin="normal">
-          <InputLabel htmlFor="outlined-age-native-simple">ตำบล/แขวง</InputLabel>
-          <Select
-            native
-            value={1}
-            label="ตำบล/แขวง"
+        <Row>
+          <Col>
+            <FormControl variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}>
+              <InputLabel htmlFor="outlined-age-native-simple">ตำบล/แขวง</InputLabel>
+              <Select
+                native
+                value={1}
+                label="ตำบล/แขวง"
 
-          >
-            <option aria-label="None" value="" />
-            <option value={1}>ช่องนนทรี</option>
-            <option value={20}>Twenty</option>
-            <option value={30}>Thirty</option>
-          </Select>
-        </FormControl>
+              >
+                <option aria-label="None" value="" />
+                <option value={1}>ช่องนนทรี</option>
+                <option value={20}>Twenty</option>
+                <option value={30}>Thirty</option>
+              </Select>
+            </FormControl>
+          </Col>
+          <Col>
+            <FormControl variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}>
+              <InputLabel htmlFor="outlined-age-native-simple">อำเภอ/เขต</InputLabel>
+              <Select
+                native
+                value={1}
+                label="อำเภอ/เขต"
 
-        <FormControl variant="outlined" fullWidth margin="normal">
-          <InputLabel htmlFor="outlined-age-native-simple">อำเภอ/เขต</InputLabel>
-          <Select
-            native
-            value={1}
-            label="อำเภอ/เขต"
-
-          >
-            <option aria-label="None" value="" />
-            <option value={1}>ยานนาวา</option>
-            <option value={20}>Twenty</option>
-            <option value={30}>Thirty</option>
-          </Select>
-        </FormControl>
+              >
+                <option aria-label="None" value="" />
+                <option value={1}>ยานนาวา</option>
+                <option value={20}>Twenty</option>
+                <option value={30}>Thirty</option>
+              </Select>
+            </FormControl>
+          </Col>
+        </Row>
 
 
-        <TextField label="สถานที่ใกล้เคียงที่สังเกตได้" defaultValue={'ร้านกวยเตี๋ยวจานยักษ์'} variant="outlined" fullWidth margin="normal" />
-        <TextField label="เบอร์ติดต่อ" defaultValue={'081 315 6485'} variant="outlined" fullWidth margin="normal" />
-        <TextField label="Line ID" defaultValue={'big noodle'} variant="outlined" fullWidth margin="normal" />
-        <TextField label="Facebook ID" defaultValue={'ร้านกวยเตี๋ยวจานยักษ์'} variant="outlined" fullWidth margin="normal" />
-        <Divider />
+        <Row>
+          <Col>
+            <TextField label="สถานที่ใกล้เคียงที่สังเกตได้" defaultValue={'ร้านกวยเตี๋ยวจานยักษ์'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}/>
+          </Col>
+          <Col>
+            <TextField label="เบอร์ติดต่อ" defaultValue={'081 315 6485'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}/>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+            <TextField label="Line ID" defaultValue={'big noodle'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}/>
+          </Col>
+          <Col>
+            <TextField label="Facebook ID" defaultValue={'ร้านกวยเตี๋ยวจานยักษ์'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}/>
+          </Col>
+        </Row>
+
+
+
+
+
+
+
+
+
+
+        <Divider style={{margin:'20px'}}/>
         <h3 >ข้อมูลรายละเอียดตำแหน่งที่ลงประกาศ </h3>
         <Row>
           <Col>
@@ -464,7 +510,7 @@ export default class ManageJobInfomation extends Component {
           </FormControl>
         </Row>
         <TextField multiline rows={3} label="รายละเอียดการทำงาน" defaultValue={'นอกจากเสริฟก๋วยเตี๋ยวแล้ว ก็ล้างจาน เก็บกวาดร้าน ไปช่วยจ่ายตลาดช่วงเช้า 6 โมง'} variant="outlined" margin="normal" size="small" fullWidth />
-        <Divider />
+        <Divider style={{margin:'20px'}}/>
         <h3 >คุณสมบัติของผู้สมัคร และแบบสอบถาม </h3>
         <Row>
           <FormControl component="fieldset" >
@@ -561,26 +607,26 @@ export default class ManageJobInfomation extends Component {
             </RadioGroup>
           </FormControl>
         </Row>
-        <Divider />
-        <MdAddBox size="50px" color="green" onClick={this.addQuestion}/>
-        <FaMinusCircle size="40px" color="red" onClick={this.popQuestion}/>
-        
-        {this.state.additionalQuestion.map(item=>{
+        <Divider style={{margin:'20px'}}/>
+        <MdAddBox size="50px" color="green" onClick={this.addQuestion} />
+        <FaMinusCircle size="40px" color="red" onClick={this.popQuestion} />
+
+        {this.state.additionalQuestion.map(item => {
           return <div id="additional-question-container">
-          <TextField  label="ตั้งคำถามเพิ่มเติมสำหรับผู้สมัคร" defaultValue={''} variant="outlined" margin="normal" size="small" fullWidth />
-          <FormControl component="fieldset" >
-            <FormLabel component="legend">รูปแบบคำตอบที่ต้องการ </FormLabel>
-            <RadioGroup aria-label="socialinsurance" name="exp"  >
-              <FormGroup row>
-                <FormControlLabel value="1" control={<Radio />} label="ใช่ - ไม่ใช่" />
-                <FormControlLabel value="2" control={<Radio />} label="ให้เลือกตอบเป็นระดับ ประกอบด้วย พอใช้ - ปานกลาง - ดี" />
-                <FormControlLabel value="3" control={<Radio />} label="ให้เขียนคำตอบ" />
-              </FormGroup>
-            </RadioGroup>
-          </FormControl>
-        </div>
+            <TextField label="ตั้งคำถามเพิ่มเติมสำหรับผู้สมัคร" defaultValue={''} variant="outlined" margin="normal" size="small" fullWidth />
+            <FormControl component="fieldset" >
+              <FormLabel component="legend">รูปแบบคำตอบที่ต้องการ </FormLabel>
+              <RadioGroup aria-label="socialinsurance" name="exp"  >
+                <FormGroup row>
+                  <FormControlLabel value="1" control={<Radio />} label="ใช่ - ไม่ใช่" />
+                  <FormControlLabel value="2" control={<Radio />} label="ให้เลือกตอบเป็นระดับ ประกอบด้วย พอใช้ - ปานกลาง - ดี" />
+                  <FormControlLabel value="3" control={<Radio />} label="ให้เขียนคำตอบ" />
+                </FormGroup>
+              </RadioGroup>
+            </FormControl>
+          </div>
         })}
-        
+
       </form>
     </div>;
   }
