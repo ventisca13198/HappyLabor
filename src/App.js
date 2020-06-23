@@ -7,13 +7,15 @@ import Alljobs from "./screens/Alljobs";
 import PostJob from "./screens/postJob/PostJob";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
-
+import ScrollToTop from "./components/ScrollTotop";
 function App() {
   return (
     <div style={{ overflowX: "hidden" }}>
       <Router>
         <NavigationBar />
+        
         <div>
+        
           <Switch>
             <Route path="/home">
               <Home />

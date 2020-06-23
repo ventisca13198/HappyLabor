@@ -49,6 +49,17 @@ const Styles = styled.div`
     justify-content: center;
     margin-bottom: 15px;
   }
+  .span-pop {
+    background-color: rgba(0, 0, 0, 0.5);
+    white-space: pre-wrap;
+    width: 100%;
+    height: 100%;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   html,
   body {
     overflow: hidden;
@@ -467,30 +478,36 @@ export default class Home extends Component {
                 <div
                   className="populay-jobs"
                   style={{
-                    backgroundImage: `url(images/jobRec4.jpg) `,
+                    backgroundImage: `url(images/jobRec1a.jpg) `,
                   }}
                 >
-                  <span>Hospitality, Hotel, Restaurant</span>
+                  <span className="span-pop">
+                    {"งานก่อสร้าง\nงานช่าง,งานใช้แรงงาน"}
+                  </span>
                 </div>
               </Col>
               <Col lg>
                 <div
                   className="populay-jobs"
                   style={{
-                    backgroundImage: `url(images/jobRec5.jpg) `,
+                    backgroundImage: `url(images/jobRec2a.jpg) `,
                   }}
                 >
-                  <span>Sales, Planning, Business Development</span>
+                  <span className="span-pop">
+                    {"งานรับใช้ตามบ้าน\nงานแม่บ้าน,คนสวน"}
+                  </span>
                 </div>
               </Col>
               <Col lg>
                 <div
                   className="populay-jobs"
                   style={{
-                    backgroundImage: `url(images/jobRec6.jpg) `,
+                    backgroundImage: `url(images/jobRec3a.jpg) `,
                   }}
                 >
-                  <span>General Business</span>
+                  <span className="span-pop">
+                    {"งานร้านอาหาร\nงานครัว,พนักงานเสิร์ฟ"}
+                  </span>
                 </div>
               </Col>
             </Row>
@@ -517,30 +534,36 @@ export default class Home extends Component {
                 <div
                   className="populay-jobs"
                   style={{
-                    backgroundImage: `url(images/jobRec1.jpg) `,
+                    backgroundImage: `url(images/jobRec4a.jpg) `,
                   }}
                 >
-                  <span>Education, Teaching, Training</span>
+                  <span className="span-pop">
+                    {"งานดูแลเด็ก\nงานดูแลผู้สูงอายุ\nงานดูแลคนป่วย"}
+                  </span>
                 </div>
               </Col>
               <Col lg>
                 <div
                   className="populay-jobs"
                   style={{
-                    backgroundImage: `url(images/jobRec2.jpg) `,
+                    backgroundImage: `url(images/jobRec5a.jpg) `,
                   }}
                 >
-                  <span>Information Technology</span>
+                  <span className="span-pop">
+                    {"งานเกษตรกรรม\nงานในฟาร์ม,ดูแลสัตว์"}
+                  </span>
                 </div>
               </Col>
               <Col lg>
                 <div
                   className="populay-jobs"
                   style={{
-                    backgroundImage: `url(images/jobRec3.jpg) `,
+                    backgroundImage: `url(images/jobRec6a.jpg) `,
                   }}
                 >
-                  <span>Entry Level, New Graduate</span>
+                  <span className="span-pop">
+                    {"งานพนักงานโรงงาน\nงานการผลิต"}
+                  </span>
                 </div>
               </Col>
             </Row>

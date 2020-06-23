@@ -1,12 +1,11 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import { Navbar, Nav, Image, Row, Col, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ReactCountryFlag from "react-country-flag";
-import NavBarPopup from "./NavBarPopup";
 import ScrollToTop from "./ScrollTotop";
-const Styles = styled.div`
-  .text-nav {
+const StylesPop = styled.div`
+  .text-nav-pop {
     textdecoration: none;
     color: #fff;
     font-size: 1rem;
@@ -17,7 +16,7 @@ const Styles = styled.div`
     border: 1px solid white;
   }
 
-  .text-country-selected {
+  .text-country-selected-pop {
     color: #fff;
     font-size: 1rem;
     font-weight: bold;
@@ -38,84 +37,35 @@ const Styles = styled.div`
     text-decoration: none;
   }
 
-  .example-enter {
-    opacity: 0.01;
-  }
-
-  .example-enter.example-enter-active {
-    opacity: 1;
-    transition: opacity 5000ms ease-in;
-  }
-
-  .example-leave {
-    opacity: 1;
-  }
-
-  .example-leave.example-leave-active {
-    opacity: 0.01;
-    transition: opacity 300ms ease-in;
-  }
-  .navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  .navbar-light-pop .navbar-toggler-icon-pop {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 `;
 
-export default class NavigationBar extends Component {
-  state = {
-    isTop: true,
-    display: false,
-  };
-
-  componentDidMount() {
-    document.addEventListener("scroll", () => {
-      const isTopTemp = window.scrollY < 300;
-      if (isTopTemp !== this.state.isTop) {
-        this.setState({ isTop: isTopTemp });
-      }
-
-      if (isTopTemp == true) {
-        this.setState({
-          display: false,
-        });
-      } else {
-        this.setState({
-          display: true,
-        });
-      }
-    });
-  }
+export default class NavBarPopup extends Component {
   render() {
     return (
-      <Styles>
-        {this.state.isTop ? (
-          ""
-        ) : (
-          <div>
-            <NavBarPopup style={{ zIndex: 10000 }} />
-            <div style={{ backgroundColor: "rgba(0,0,0,0)", zIndex: 1100,position:'fixed',bottom:30,right:30 }}>
-              <ScrollToTop />
-            </div>
-          </div>
-        )}
-
+      <StylesPop>
         <div
+          key={1}
           style={{
-            backgroundColor: "rgba(0,0,0,0)",
-            position: "absolute",
+            backgroundColor: "rgba(0,0,0,1)",
+            position: "fixed",
             top: 0,
             width: "100%",
-            zIndex: 1000,
+            zIndex: 100,
           }}
         >
           <div
             style={{
-              backgroundColor: "rgba(0,0,0,0.2)",
+              backgroundColor: "rgba(70,70,70,1)",
               width: "100%",
               paddingLeft: "10%",
               paddingRight: "10%",
             }}
           >
             <Row>
+              {/* <h2 style={{ position: 'fixed', top: 0 ,color:'white'}}>Scroll {this.state.isTop ? 'down' : 'up'}!</h2> */}
               <Col style={{ left: 20, color: "#fff" }}>
                 <div
                   style={{
@@ -124,7 +74,7 @@ export default class NavigationBar extends Component {
                     padding: 10,
                   }}
                 >
-                  <Link to="/postJob" className="text-nav">
+                  <Link to="/postJob" className="text-nav-pop">
                     PostJob/หาคน
                   </Link>
                 </div>
@@ -133,7 +83,7 @@ export default class NavigationBar extends Component {
                 <Dropdown>
                   <Dropdown.Toggle variant="link" id="dropdown-basic">
                     <ReactCountryFlag countryCode="TH" svg />
-                    <span className="text-country-selected">ไทย</span>
+                    <span className="text-country-selected-pop">ไทย</span>
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
@@ -164,6 +114,7 @@ export default class NavigationBar extends Component {
           </div>
 
           <Navbar
+            className="navbar-dark"
             expand="lg"
             style={{ paddingLeft: "11%", paddingRight: "11%" }}
             // fixed="top"
@@ -174,11 +125,14 @@ export default class NavigationBar extends Component {
                 <Image
                   src="images/logo6.png"
                   rounded
-                  style={{ height: "70px" }}
+                  style={{ height: "30px" }}
                 />
               </Link>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Toggle
+              className="navbar-toggler-icon-pop"
+              aria-controls="basic-navbar-nav"
+            />
 
             <Navbar.Collapse
               id="basic-navbar-nav"
@@ -186,22 +140,22 @@ export default class NavigationBar extends Component {
             >
               <Nav>
                 <Nav.Link>
-                  <Link to="/jobs" className="text-nav">
+                  <Link to="/jobs" className="text-nav-pop">
                     JOBS
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/company" className="text-nav">
+                  <Link to="/company" className="text-nav-pop">
                     BUSINESS-OWNER
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/news" className="text-nav">
+                  <Link to="/news" className="text-nav-pop">
                     NEWS
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/postJob" className="text-nav">
+                  <Link to="/postJob" className="text-nav-pop">
                     POST-JOB
                   </Link>
                 </Nav.Link>
@@ -222,7 +176,7 @@ export default class NavigationBar extends Component {
             </Navbar.Collapse>
           </Navbar>
         </div>
-      </Styles>
+      </StylesPop>
     );
   }
 }
