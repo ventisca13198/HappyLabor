@@ -5,14 +5,32 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import { Row, Col } from "react-bootstrap";
 
+import { MdAddBox } from 'react-icons/md';
+import { FaMinusCircle } from 'react-icons/fa';
 
 
 export default class ManageJobInfomation extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      additionalQuestion:[{question:""}]
+    };
+  }
+
+  addQuestion=()=>{
+    this.setState(prevState => ({
+      additionalQuestion: [...prevState.additionalQuestion, {question:""}]
+    }))
+  }
+
+  popQuestion=()=>{
+    this.setState(prevState => ({
+
+      additionalQuestion: prevState.additionalQuestion.slice(0,prevState.additionalQuestion.length-1)
+    }))
+  }
 
   render() {
-
-
-
 
     return <div>
 
@@ -440,12 +458,12 @@ export default class ManageJobInfomation extends Component {
                 control={<Checkbox checked={false} />}
                 label="อาหาร 3 มื้อ"
               />
-              
+
             </FormGroup>
 
           </FormControl>
         </Row>
-        <TextField multiline rows={3} label="รายละเอียดการทำงาน" defaultValue={'นอกจากเสริฟก๋วยเตี๋ยวแล้ว ก็ล้างจาน เก็บกวาดร้าน ไปช่วยจ่ายตลาดช่วงเช้า 6 โมง'} variant="outlined" margin="normal" size="small" fullWidth/>
+        <TextField multiline rows={3} label="รายละเอียดการทำงาน" defaultValue={'นอกจากเสริฟก๋วยเตี๋ยวแล้ว ก็ล้างจาน เก็บกวาดร้าน ไปช่วยจ่ายตลาดช่วงเช้า 6 โมง'} variant="outlined" margin="normal" size="small" fullWidth />
         <Divider />
         <h3 >คุณสมบัติของผู้สมัคร และแบบสอบถาม </h3>
         <Row>
@@ -543,8 +561,26 @@ export default class ManageJobInfomation extends Component {
             </RadioGroup>
           </FormControl>
         </Row>
-        <Divider/>
-      
+        <Divider />
+        <MdAddBox size="50px" color="green" onClick={this.addQuestion}/>
+        <FaMinusCircle size="40px" color="red" onClick={this.popQuestion}/>
+        
+        {this.state.additionalQuestion.map(item=>{
+          return <div id="additional-question-container">
+          <TextField  label="ตั้งคำถามเพิ่มเติมสำหรับผู้สมัคร" defaultValue={''} variant="outlined" margin="normal" size="small" fullWidth />
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">รูปแบบคำตอบที่ต้องการ </FormLabel>
+            <RadioGroup aria-label="socialinsurance" name="exp"  >
+              <FormGroup row>
+                <FormControlLabel value="1" control={<Radio />} label="ใช่ - ไม่ใช่" />
+                <FormControlLabel value="2" control={<Radio />} label="ให้เลือกตอบเป็นระดับ ประกอบด้วย พอใช้ - ปานกลาง - ดี" />
+                <FormControlLabel value="3" control={<Radio />} label="ให้เขียนคำตอบ" />
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </div>
+        })}
+        
       </form>
     </div>;
   }
