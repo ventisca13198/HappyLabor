@@ -56,7 +56,10 @@ function HorizontalLabelPositionBelowStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
   let history = useHistory();
-  const childRef = React.useRef();
+  const childSelectPackageRef = React.useRef();
+  const childManageLogoRef = React.useRef();
+  const childManageJobInfomationRef = React.useRef();
+  const childPreviewPostRef = React.useRef();
 
   const handleNext = async () => {
     if (await callChildFunc("next")) {
@@ -76,7 +79,7 @@ function HorizontalLabelPositionBelowStepper() {
 
   const handleFinish = async () => {
     console.log("handleFinish");
-    var isSuccess = await childRef.current.finishStep();
+    var isSuccess = await childPreviewPostRef.current.finishStep();
     if (isSuccess) {
       await history.push("/home");
     }
@@ -84,39 +87,70 @@ function HorizontalLabelPositionBelowStepper() {
 
   const callChildFunc = (btnEvent) => {
     let isSuccess = false;
-    switch (childRef.current.constructor.name) {
-      case "SelectPackage":
-        console.log("current SelectPackage");
-        if (btnEvent == "next") {
-          // isSuccess = childRef.current.nextStep(btnEvent);
-          isSuccess = childRef.current.nextStep();
-        } else {
-          isSuccess = childRef.current.backStep();
-        }
-        break;
-      case "ManageLogo":
-        console.log("current ManageLogo");
-        if (btnEvent == "next") {
-          isSuccess = childRef.current.nextStep();
-        } else {
-          isSuccess = childRef.current.backStep();
-        }
-        break;
-      case "ManageJobInfomation":
-        console.log("current ManageJobInfomation");
-        isSuccess = true;
-        break;
-      case "PreviewPost":
-        console.log("current PreviewPost");
-        if (btnEvent == "next") {
-          isSuccess = childRef.current.nextStep();
-        } else {
-          isSuccess = childRef.current.backStep();
-        }
-        break;
-      default:
-        console.log("current default");
+    console.log("childSelectPackageRef : ", childSelectPackageRef);
+    console.log("childManageLogoRef : ", childManageLogoRef);
+    console.log("childManageJobInfomationRef : ", childManageJobInfomationRef);
+    console.log("childPreviewPostRef : ", childPreviewPostRef);
+
+    if (childSelectPackageRef.current) {
+      console.log("if childSelectPackageRef");
+      if (btnEvent == "next") {
+        isSuccess = childSelectPackageRef.current.nextStep();
+      } else {
+        isSuccess = childSelectPackageRef.current.backStep();
+      }
+    } else if (childManageLogoRef.current) {
+      console.log("if childManageLogoRef");
+      if (btnEvent == "next") {
+        isSuccess = childManageLogoRef.current.nextStep();
+      } else {
+        isSuccess = childManageLogoRef.current.backStep();
+      }
+    } else if (childManageJobInfomationRef.current) {
+      console.log("if childManageJobInfomationRef");
+      isSuccess = true;
+    } else if (childPreviewPostRef.current) {
+      console.log("if childPreviewPostRef");
+      if (btnEvent == "next") {
+        // isSuccess = childPreviewPostRef.current.nextStep();
+      } else {
+        isSuccess = childPreviewPostRef.current.backStep();
+      }
     }
+
+    // switch (childRef.current.constructor.name) {
+    //   case "SelectPackage":
+    //     console.log("current SelectPackage");
+    //     if (btnEvent == "next") {
+    //       // isSuccess = childRef.current.nextStep(btnEvent);
+    //       isSuccess = childRef.current.nextStep();
+    //     } else {
+    //       isSuccess = childRef.current.backStep();
+    //     }
+    //     break;
+    //   case "ManageLogo":
+    //     console.log("current ManageLogo");
+    //     if (btnEvent == "next") {
+    //       isSuccess = childRef.current.nextStep();
+    //     } else {
+    //       isSuccess = childRef.current.backStep();
+    //     }
+    //     break;
+    //   case "ManageJobInfomation":
+    //     console.log("current ManageJobInfomation");
+    //     isSuccess = true;
+    //     break;
+    //   case "PreviewPost":
+    //     console.log("current PreviewPost");
+    //     if (btnEvent == "next") {
+    //       isSuccess = childRef.current.nextStep();
+    //     } else {
+    //       isSuccess = childRef.current.backStep();
+    //     }
+    //     break;
+    //   default:
+    //     console.log("current default");
+    // }
     return isSuccess;
   };
 
@@ -142,10 +176,12 @@ function HorizontalLabelPositionBelowStepper() {
         ) : (
           <div>
             <Typography className={classes.instructions}>
-              {activeStep == 0 && <SelectPackage ref={childRef} />}
-              {activeStep == 1 && <ManageLogo ref={childRef} />}
-              {activeStep == 2 && <ManageJobInfomation ref={childRef} />}
-              {activeStep == 3 && <PreviewPost ref={childRef} />}
+              {activeStep == 0 && <SelectPackage ref={childSelectPackageRef} />}
+              {activeStep == 1 && <ManageLogo ref={childManageLogoRef} />}
+              {activeStep == 2 && (
+                <ManageJobInfomation ref={childManageJobInfomationRef} />
+              )}
+              {activeStep == 3 && <PreviewPost ref={childPreviewPostRef} />}
             </Typography>
             <div style={{ float: "right", marginTop: 20 }}>
               <Button
