@@ -96,7 +96,7 @@ export default class Alljobs extends Component {
                         type="submit"
                         size="md"
                         block
-                        style={{ maxWidth: 150 }}
+                        style={{ maxWidth: 150 ,backgroundColor:'#007fc3'}}
                       >
                         Search
                       </Button>
@@ -198,7 +198,7 @@ export default class Alljobs extends Component {
                         </Col>
                         <Col style={{ textAlign: "end" }}>
                           <Link to="/detail">
-                            <Button size={"md"} style={{ fontWeight: "bold" }}>
+                            <Button size={"md"} style={{ fontWeight: "bold" ,backgroundColor:'#007fc3'}}>
                               Detail
                             </Button>
                           </Link>

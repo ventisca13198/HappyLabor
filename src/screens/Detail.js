@@ -187,7 +187,7 @@ export default class Detail extends Component {
               <strong>Login to apply for this job. </strong>
             </Row>
             <Row>
-              <Button variant="primary" size="lg">
+              <Button variant="primary" size="lg" style={{backgroundColor:'#007fc3'}}>
                 Login
               </Button>
             </Row>
