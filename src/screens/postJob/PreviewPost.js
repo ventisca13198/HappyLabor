@@ -24,7 +24,7 @@ export default class PreviewPost extends Component {
     return (
       <Styles>
         <div>
-          PreviewPost {JSON.stringify(postJobData)}
+          {/* PreviewPost {JSON.stringify(postJobData)} */}
           <Card>
             <Card.Header
               className="text-center"
