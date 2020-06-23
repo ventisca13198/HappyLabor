@@ -32,7 +32,9 @@ function getSteps() {
   ];
 }
 
-function getStepContent(stepIndex) {
+function getStepContent(stepIndex, handleNext) {
+  console.log("getStepContent " + stepIndex);
+
   switch (stepIndex) {
     case 0:
       return <SelectPackage />;
@@ -52,16 +54,56 @@ function HorizontalLabelPositionBelowStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  const childRef = React.useRef();
+
+  const handleNext = async () => {
+    if (await callChildFunc("next")) {
+      await setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    }
   };
 
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  const handleBack = async () => {
+    if (await callChildFunc("back")) {
+      await setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    }
   };
 
   const handleReset = () => {
     setActiveStep(0);
+  };
+
+  const callChildFunc = (btnEvent) => {
+    let isSuccess = false;
+    switch (childRef.current.constructor.name) {
+      case "SelectPackage":
+        console.log("current SelectPackage");
+        if (btnEvent == "next") {
+          // isSuccess = childRef.current.nextStep(btnEvent);
+          isSuccess = childRef.current.nextStep();
+        } else {
+          isSuccess = childRef.current.backStep();
+        }
+        break;
+      case "ManageLogo":
+        console.log("current ManageLogo");
+        if (btnEvent == "next") {
+          isSuccess = childRef.current.nextStep();
+        } else {
+          isSuccess = childRef.current.backStep();
+        }
+        break;
+      case "ManageJobInfomation":
+        console.log("current ManageJobInfomation");
+        isSuccess = true;
+        break;
+      case "PreviewPost":
+        console.log("current PreviewPost");
+        isSuccess = true;
+        break;
+      default:
+        console.log("current default");
+    }
+    return isSuccess;
   };
 
   return (
@@ -84,7 +126,10 @@ function HorizontalLabelPositionBelowStepper() {
         ) : (
           <div>
             <Typography className={classes.instructions}>
-              {getStepContent(activeStep)}
+              {activeStep == 0 && <SelectPackage ref={childRef} />}
+              {activeStep == 1 && <ManageLogo ref={childRef} />}
+              {activeStep == 2 && <ManageJobInfomation ref={childRef} />}
+              {activeStep == 3 && <PreviewPost ref={childRef} />}
             </Typography>
             <div style={{ float: "right", marginTop: 20 }}>
               <Button

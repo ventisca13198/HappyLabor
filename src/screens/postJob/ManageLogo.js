@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Card, Form, Button, Row, Col, Container } from "react-bootstrap";
+import { postJobTempData } from "./postJobTempData";
 
 export default class ManageLogo extends Component {
   constructor(props) {
@@ -12,23 +13,7 @@ export default class ManageLogo extends Component {
       imagepostjob3: null,
       imagepostjob4: null,
     };
-    this.selectLogoFileInput = this.selectLogoFileInput.bind(this);
-    this.selectBannerFileInput = this.selectBannerFileInput.bind(this);
-  }
 
-  selectLogoFileInput(event) {
-    if (event.target.files[0]) {
-      this.setState({
-        logoFileInput: URL.createObjectURL(event.target.files[0]),
-      });
-    }
-  }
-  selectBannerFileInput(event) {
-    if (event.target.files[0]) {
-      this.setState({
-        bannerFileInput: URL.createObjectURL(event.target.files[0]),
-      });
-    }
   }
 
   selectImagepostjob(event, index) {
@@ -37,6 +22,16 @@ export default class ManageLogo extends Component {
 
     if (event.target.files[0]) {
       switch (index) {
+        case "logo":
+          this.setState({
+            logoFileInput: URL.createObjectURL(event.target.files[0]),
+          });
+          break;
+        case "banner":
+          this.setState({
+            bannerFileInput: URL.createObjectURL(event.target.files[0]),
+          });
+          break;
         case "1":
           this.setState({
             imagepostjob1: URL.createObjectURL(event.target.files[0]),
@@ -88,7 +83,9 @@ export default class ManageLogo extends Component {
                     <input
                       type="file"
                       id="logoFileInput"
-                      onChange={this.selectLogoFileInput}
+                      onChange={(event) =>
+                        this.selectImagepostjob(event, "logo")
+                      }
                       style={{ display: "none" }}
                     />
                     <img
@@ -116,7 +113,9 @@ export default class ManageLogo extends Component {
                     <input
                       type="file"
                       id="BannerFileInput"
-                      onChange={this.selectBannerFileInput}
+                      onChange={(event) =>
+                        this.selectImagepostjob(event, "banner")
+                      }
                       style={{ display: "none" }}
                     />
                     <img
@@ -284,4 +283,15 @@ export default class ManageLogo extends Component {
       </div>
     );
   }
+
+  nextStep = () => {
+    console.log("ManageLogo nextStep");
+    return true;
+  };
+
+  backStep = () => {
+    console.log("ManageLogo backStep");
+    return true;
+  };
+
 }
