@@ -51,7 +51,7 @@ export default class ManageJobInfomation extends Component {
           className="text-center"
           style={{
             color: "#fff",
-            backgroundColor: "#007bff",
+            backgroundColor: "#007fc3",
             fontWeight: "bold",
           }}
           as="h3"

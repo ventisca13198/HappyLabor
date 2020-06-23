@@ -207,7 +207,8 @@ export default class Home extends Component {
                           type="submit"
                           size="md"
                           block
-                          style={{ maxWidth: 300 }}
+                          style={{ maxWidth: 300 ,backgroundColor:"#007fc3"}}
+                          
                         >
                           Search
                         </Button>
@@ -397,7 +398,7 @@ export default class Home extends Component {
                         <Link
                         to={`/detail/${job.jobId}`}
                         >
-                          <Button size={"md"} style={{ fontWeight: "bold" }}>
+                          <Button size={"md"} style={{ fontWeight: "bold" ,backgroundColor:'#007fc3'}}>
                             Detail
                           </Button>
                         </Link>
@@ -465,7 +466,7 @@ export default class Home extends Component {
                     (Podcast) Being a Scaffolding Erector in Thailand
                   </div>
                 </Card>
-                <Button style={{ alignSelf: "center", marginTop: 15 }}>
+                <Button style={{ alignSelf: "center", marginTop: 15 ,backgroundColor:'#007fc3'}}>
                   View all
                 </Button>
               </Col>
