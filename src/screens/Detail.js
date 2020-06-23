@@ -8,6 +8,7 @@ import { GrMapLocation } from "react-icons/gr";
 import { MdLocationOn } from "react-icons/md";
 import { GiWhiteBook } from "react-icons/gi";
 import { BsFillPersonFill } from "react-icons/bs";
+import Gallery from "react-grid-gallery";
 // import ImageGallery from 'react-image-gallery';
 
 // import "~react-image-gallery/styles/scss/image-gallery.scss";
@@ -36,15 +37,46 @@ const Styles = styled.div`
 
 `;
 
+const IMAGES = [
+  {
+    src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+    thumbnail:
+      "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
+    thumbnailWidth: 320,
+    thumbnailHeight: 174,
+    isSelected: true,
+    caption: "After Rain (Jeshu John - designerspics.com)",
+  },
+  {
+    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+    thumbnail:
+      "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+    tags: [
+      { value: "Ocean", title: "Ocean" },
+      { value: "People", title: "People" },
+    ],
+    caption: "Boats (Jeshu John - designerspics.com)",
+  },
+
+  {
+    src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+    thumbnail:
+      "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+    thumbnailWidth: 320,
+    thumbnailHeight: 212,
+  },
+];
 export default class Detail extends Component {
   state = {
     job: this.props.location,
   };
   render() {
-
-
     console.log(this.props.match.params.id);
-    const job = jobs.find(element => (element.jobId === this.props.match.params.id))
+    const job = jobs.find(
+      (element) => element.jobId === this.props.match.params.id
+    );
     console.log(job.gallery.map((element) => ({ src: element })));
     return (
       <Styles>
@@ -81,6 +113,7 @@ export default class Detail extends Component {
         <Row className="row container-boxed">
           <Col md={8}>
             <h3>Job Overview</h3>
+
             <Row
               round
               className="row"
@@ -139,6 +172,11 @@ export default class Detail extends Component {
                   </div>
                 );
               })}
+            </Row>
+            <Row>
+              <Col>
+                <Gallery images={job.gallery} />
+              </Col>
             </Row>
 
             {/* <Lightbox showImageModifiers={false} thumbnailWidth='150px' thumbnailHeight='150px' images={job.gallery.map(element=>({src:element,title:'',description:''}))}/> */}

@@ -70,9 +70,21 @@ export const jobs = [
     logo: "images/job1_logo.jpg",
     banner: "images/job1_ban.jpg",
     gallery: [
-      "images/job1_pic1.jpg",
-      "images/job1_pic2.jpg",
-      "images/job1_pic3.jpg",
+      {
+        src: "images/job1_pic1.jpg",
+        thumbnail: "images/job1_pic1.jpg",
+        isSelected: false,
+      },
+      {
+        src: "images/job1_pic2.jpg",
+        thumbnail: "images/job1_pic2.jpg",
+        isSelected: false,
+      },
+      {
+        src: "images/job1_pic3.jpg",
+        thumbnail: "images/job1_pic3.jpg",
+        isSelected: false,
+      },
     ],
 
     info:
@@ -123,11 +135,7 @@ export const jobs = [
     jobCategory: "Construction",
     logo: "",
     banner: "images/job2_ban.jpg",
-    gallery: [
-      "images/job2_pic1.jpg",
-      "images/job2_pic2.jpg",
-      "images/job2_pic3.jpg",
-    ],
+    gallery: [],
 
     info:
       "รับสมัครคนงานก่อสร้าง ชายหญิง คู่ผัวเมียได้หมด งานตึกสูง (เชื่อมเหล็กได้จะพิจารณาเป็นพิเศษ) ค่าแรง 350-550 ที่พักฟรี น้ำไฟฟรี มีเงินเบิกให้ทุกวัน มีรถรับส่ง ฟรีอาหารกลางวัน",
@@ -178,9 +186,21 @@ export const jobs = [
     logo: "images/job3_ban.png",
     banner: "",
     gallery: [
-      "images/job3_pic1.jpg",
-      "images/job3_pic2.jpg",
-      "images/job3_pic3.jpg",
+      {
+        src: "images/job3_pic1.jpg",
+        thumbnail: "images/job3_pic1.jpg",
+        isSelected: false,
+      },
+      {
+        src: "images/job3_pic2.jpg",
+        thumbnail: "images/job3_pic2.jpg",
+        isSelected: false,
+      },
+      {
+        src: "images/job3_pic3.jpg",
+        thumbnail: "images/job3_pic3.jpg",
+        isSelected: false,
+      },
     ],
 
     info:
@@ -232,7 +252,18 @@ export const jobs = [
     jobCategory: "Agriculture",
     logo: "images/job4_logo.png",
     banner: "images/job4_ban.jpg",
-    gallery: ["images/job4_pic1.jpg", "images/job4_pic2.jpg"],
+    gallery: [
+      {
+        src: "images/job4_pic1.jpg",
+        thumbnail: "images/job4_pic1.jpg",
+        isSelected: false,
+      },
+      {
+        src: "images/job4_pic2.jpg",
+        thumbnail: "images/job4_pic2.jpg",
+        isSelected: false,
+      },
+    ],
 
     info:
       "งานที่ทำ รีดนม2เวลาเช้าเย็น ให้อาหาร4ครั้ง อาบน้ำให้โคตอนบ่าย มั่นดูแลความสะอาดจากมูลโค\nเป็นที่ใช้แรงงานหนัก ต้องสกปรก ต้องแบก งานเกษตรงานกรรมกร\nเพศชาย/หญิง อายุ20ขึ้นไป สัญชาติไทย หรือ พม่า,กัมพูชา ที่สื่อสารภาษาไทยรู้เรื่อง\nเงินเดือนขั้นต่ำหลักพันถึงหมื่น สามารถมาเป็นคู่ กลุ่ม หรือครอบครัวก็ได้ \nเงินเดือนจะแตกต่างกันไป\nมีบ้าน ทีวี ตู้เย็น ค่าไฟค่าน้ำฟรี\nมูลสัตว์แบ่งเจ้าของคนละครึ่ง",
@@ -282,7 +313,13 @@ export const jobs = [
     jobCategory: "Agriculture",
     logo: "images/job5_logo.png",
     banner: "images/job5_ban.gif",
-    gallery: ["images/job5_pic1.jpg"],
+    gallery: [
+      {
+        src: "images/job5_pic1.jpg",
+        thumbnail: "images/job5_pic1.jpg",
+        isSelected: false,
+      },
+    ],
 
     info:
       "รายละเอียดงาน \n- ปฏิบัติงานตามความสามารถ และมีความเหมาะสม\n- งานที่มีความชำนาญและเคยผ่านงานมา\n- งานอื่นๆ ตามที่ได้รับมอบหมายจากผู้บังคับบัญชา\n- ทำงานวันจันทร์-ศุกร์ เวลา 8:00-18.00น.",
@@ -312,7 +349,7 @@ export const jobs = [
       {
         title: "สนใจติดต่อ",
         detail:
-          "คุณอิทธิพล 081-960-1461 (ไม่สะดวกทางอีเมล และเว็บ ช่วยโทรติดต่อ)\"\n\"ขอเพียงขยัน เปิดใจเรียนรู้ เข้าใจสัตว์ ก็เพียงพอแล้ว",
+          'คุณอิทธิพล 081-960-1461 (ไม่สะดวกทางอีเมล และเว็บ ช่วยโทรติดต่อ)"\n"ขอเพียงขยัน เปิดใจเรียนรู้ เข้าใจสัตว์ ก็เพียงพอแล้ว',
         titleEn: "",
         detailEn: "",
       },
@@ -332,7 +369,24 @@ export const jobs = [
     jobCategory: "Health",
     logo: "images/job6_logo.png",
     banner: "images/job6_ban.jpg",
-    gallery: ["images/job6_pic1.jpg,images/job6_pic2.jpg,images/job6_pic3.jpg"],
+    gallery: [{
+      src: "images/job6_pic1.jpg",
+      thumbnail:
+        "images/job6_pic1.jpg",
+      isSelected: false,
+    },
+    {
+      src: "images/job6_pic2.jpg",
+      thumbnail:
+        "images/job6_pic2.jpg",
+      isSelected: false,
+    },
+    {
+      src: "images/job6_pic3.jpg",
+      thumbnail:
+        "images/job6_pic3.jpg",
+      isSelected: false,
+    },],
 
     info:
       "ลักษณะการทำงาน\nแนะนำสินค้าแว่นตา ให้ลูกค้าที่มีปัญหาสายตา โดยจะได้รับการสอนและอบรมก่อนการปฏิบัติงาน\nหมวดงาน\nเจ้าหน้าที่ขาย-การตลาด / พนักงานขาย-การตลาด\nอื่นๆ\nณสมบัติผู้สมัคร\n1. มาทำงานเช้าได้\n2. รักในงานขาย มีความตั้งใจ ขยัน อดทน\n3. พูด,อ่านภาษาไทยได้\n4. เขียนภาษาไทยได้จะพิจารณาเป็นพิเศษ",
@@ -355,7 +409,8 @@ export const jobs = [
     discription: [
       {
         title: "สวัสดิการ / ข้อมูลเพิ่มเติม",
-        detail: "อาหารเช้า,เบี้ยขยัน,คอมมิชชั่น,ชุดฟอร์ม,งานสังสรรค์ และท่องเที่ยวประจำปี,แว่นตา,เงินสะสม",
+        detail:
+          "อาหารเช้า,เบี้ยขยัน,คอมมิชชั่น,ชุดฟอร์ม,งานสังสรรค์ และท่องเที่ยวประจำปี,แว่นตา,เงินสะสม",
         titleEn: "",
         detailEn: "",
       },
@@ -401,5 +456,4 @@ export const companies = [
     name: "บริษัท สมาร์ท วิชั่น (ไทยแลนด์) จำกัด",
     business: "Health",
   },
-  
 ];
