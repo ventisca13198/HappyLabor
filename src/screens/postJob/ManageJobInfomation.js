@@ -14,8 +14,16 @@ export default class ManageJobInfomation extends Component {
     super(props);
     this.state = {
       additionalQuestion: [{ question: "" }],
-      useProfileAddress: true
+      useProfileAddress: true,
+      checkState: []
     };
+    for (var i = 0; i < 20; i++) {
+      this.state.checkState.push({
+        ['check' + i]: false
+      });
+
+      console.log(this.state)
+    }
   }
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.checked });
@@ -37,7 +45,7 @@ export default class ManageJobInfomation extends Component {
 
   render() {
 
-    return <div style={{margin:'10px',padding:'10px'}}>
+    return <div style={{ margin: '10px', padding: '10px' }}>
 
       <h3>ข้อมูลผู้ประกอบการ และการลงประกาศ</h3>
       <form noValidate autoComplete="off">
@@ -56,8 +64,8 @@ export default class ManageJobInfomation extends Component {
         <FormControlLabel
           control={
             <Switch
-            checked={this.state.useProfileAddress}
-            onChange={this.handleChange}
+              checked={this.state.useProfileAddress}
+              onChange={this.handleChange}
               name="useProfileAddress"
               color="primary"
             />
@@ -68,16 +76,16 @@ export default class ManageJobInfomation extends Component {
 
         <Row>
           <Col>
-            <TextField label="ที่อยู่ที่ทำงาน" defaultValue={'555'} variant="outlined" margin="normal" fullWidth disabled={this.state.useProfileAddress}/>
+            <TextField label="ที่อยู่ที่ทำงาน" defaultValue={'555'} variant="outlined" margin="normal" fullWidth disabled={this.state.useProfileAddress} />
           </Col>
           <Col>
-            <TextField label="ซอย" defaultValue={'วัดจันทร์'} variant="outlined" margin="normal" fullWidth disabled={this.state.useProfileAddress}/>
+            <TextField label="ซอย" defaultValue={'วัดจันทร์'} variant="outlined" margin="normal" fullWidth disabled={this.state.useProfileAddress} />
           </Col>
         </Row>
 
         <Row>
           <Col>
-            <TextField label="ถนน" defaultValue={'สาธุประดิษฐ์'} variant="outlined" margin="normal" fullWidth disabled={this.state.useProfileAddress}/>
+            <TextField label="ถนน" defaultValue={'สาธุประดิษฐ์'} variant="outlined" margin="normal" fullWidth disabled={this.state.useProfileAddress} />
           </Col>
           <Col>
             <FormControl variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}>
@@ -135,19 +143,19 @@ export default class ManageJobInfomation extends Component {
 
         <Row>
           <Col>
-            <TextField label="สถานที่ใกล้เคียงที่สังเกตได้" defaultValue={'ร้านกวยเตี๋ยวจานยักษ์'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}/>
+            <TextField label="สถานที่ใกล้เคียงที่สังเกตได้" defaultValue={'ร้านกวยเตี๋ยวจานยักษ์'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress} />
           </Col>
           <Col>
-            <TextField label="เบอร์ติดต่อ" defaultValue={'081 315 6485'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}/>
+            <TextField label="เบอร์ติดต่อ" defaultValue={'081 315 6485'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress} />
           </Col>
         </Row>
 
         <Row>
           <Col>
-            <TextField label="Line ID" defaultValue={'big noodle'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}/>
+            <TextField label="Line ID" defaultValue={'big noodle'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress} />
           </Col>
           <Col>
-            <TextField label="Facebook ID" defaultValue={'ร้านกวยเตี๋ยวจานยักษ์'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}/>
+            <TextField label="Facebook ID" defaultValue={'ร้านกวยเตี๋ยวจานยักษ์'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress} />
           </Col>
         </Row>
 
@@ -160,7 +168,7 @@ export default class ManageJobInfomation extends Component {
 
 
 
-        <Divider style={{margin:'20px'}}/>
+        <Divider style={{ margin: '20px' }} />
         <h3 >ข้อมูลรายละเอียดตำแหน่งที่ลงประกาศ </h3>
         <Row>
           <Col>
@@ -236,19 +244,23 @@ export default class ManageJobInfomation extends Component {
             <FormLabel component="legend">สัญชาติที่รับ </FormLabel>
             <FormGroup row>
               <FormControlLabel
-                control={<Checkbox checked={true} />}
+                control={<Checkbox  checked={this.state.checkState.check0}
+                onChange={this.handleChange} />}
                 label="ลาว"
               />
               <FormControlLabel
-                control={<Checkbox checked={true} />}
+                control={<Checkbox checked={this.state.checkState.check1}
+                onChange={this.handleChange} />}
                 label="พม่า"
               />
               <FormControlLabel
-                control={<Checkbox checked={true} />}
+                control={<Checkbox checked={this.state.checkState.check2}
+                onChange={this.handleChange} />}
                 label="เขมร"
               />
               <FormControlLabel
-                control={<Checkbox checked={false} />}
+                control={<Checkbox checked={this.state.checkState.check3}
+                onChange={this.handleChange} />}
                 label="อื่นๆ"
               />
               <TextField label="โปรดระบุ" defaultValue={''} variant="outlined" margin="normal" size="small" />
@@ -262,32 +274,35 @@ export default class ManageJobInfomation extends Component {
             <FormGroup>
               <FormGroup row>
                 <FormControlLabel
-                  control={<Checkbox checked={false} />}
+                  control={<Checkbox checked={this.state.checkState.check4}
+                  onChange={this.handleChange} />}
                   label="ชาย"
                 />
                 <TextField label="จำนวนคน" defaultValue={''} variant="outlined" margin="normal" size="small" />
               </FormGroup>
               <FormGroup row>
                 <FormControlLabel
-                  control={<Checkbox checked={true} />}
+                  control={<Checkbox checked={this.state.checkState.check5}
+                  onChange={this.handleChange} />}
                   label="หญิง"
                 />
                 <TextField label="จำนวนคน" defaultValue={'1'} variant="outlined" margin="normal" size="small" />
               </FormGroup>
               <FormControlLabel
-                control={<Checkbox checked={false} />}
+                control={<Checkbox checked={this.state.checkState.check6}
+                onChange={this.handleChange} />}
                 label="คู่สามี-ภรรยา"
               />
               <FormGroup row>
                 <FormControlLabel
-                  control={<Checkbox checked={false} />}
+                  control={<Checkbox checked={this.state.checkState.check7} onChange={this.handleChange} />}
                   label="ไม่ระบุเพศ"
                 />
                 <TextField label="จำนวนคน" defaultValue={''} variant="outlined" margin="normal" size="small" />
               </FormGroup>
               <FormGroup row>
                 <FormControlLabel
-                  control={<Checkbox checked={false} />}
+                  control={<Checkbox checked={this.state.checkState.check8} onChange={this.handleChange} />}
                   label="อื่นๆ"
                 />
                 <TextField label="โปรดระบุ" defaultValue={''} variant="outlined" margin="normal" size="small" />
@@ -465,43 +480,43 @@ export default class ManageJobInfomation extends Component {
             <FormLabel component="legend">สวัสดิการเพิ่มเติม </FormLabel>
             <FormGroup row>
               <FormControlLabel
-                control={<Checkbox checked={false} />}
+                control={<Checkbox checked={this.state.checkState.check9} onChange={this.handleChange} />}
                 label="ฟรีห้องพัก"
               />
               <FormControlLabel
-                control={<Checkbox checked={false} />}
+                control={<Checkbox checked={this.state.checkState.check10} onChange={this.handleChange} />}
                 label="ทีวี"
               />
               <FormControlLabel
-                control={<Checkbox checked={false} />}
+                control={<Checkbox checked={this.state.checkState.check11} onChange={this.handleChange} />}
                 label="พัดลม"
               />
               <FormControlLabel
-                control={<Checkbox checked={false} />}
+                control={<Checkbox checked={this.state.checkState.check12} onChange={this.handleChange} />}
                 label="หม้อหุงข้าว"
               />
               <FormControlLabel
-                control={<Checkbox checked={false} />}
+                control={<Checkbox checked={this.state.checkState.check13} onChange={this.handleChange} />}
                 label="ตู้เย็น"
               />
               <FormControlLabel
-                control={<Checkbox checked={false} />}
+                control={<Checkbox checked={this.state.checkState.check14} onChange={this.handleChange} />}
                 label="ฟรีค่าน้ำ"
               />
               <FormControlLabel
-                control={<Checkbox checked={false} />}
+                control={<Checkbox checked={this.state.checkState.check15} onChange={this.handleChange} />}
                 label="ฟรีค่าไฟฟ้า"
               />
               <FormControlLabel
-                control={<Checkbox checked={false} />}
+                control={<Checkbox checked={this.state.checkState.check16} onChange={this.handleChange} />}
                 label="wifi"
               />
               <FormControlLabel
-                control={<Checkbox checked={false} />}
+                control={<Checkbox checked={this.state.checkState.check17} onChange={this.handleChange} />}
                 label="อาหารกลางวัน"
               />
               <FormControlLabel
-                control={<Checkbox checked={false} />}
+                control={<Checkbox checked={this.state.checkState.check18} onChange={this.handleChange} />}
                 label="อาหาร 3 มื้อ"
               />
 
@@ -510,7 +525,7 @@ export default class ManageJobInfomation extends Component {
           </FormControl>
         </Row>
         <TextField multiline rows={3} label="รายละเอียดการทำงาน" defaultValue={'นอกจากเสริฟก๋วยเตี๋ยวแล้ว ก็ล้างจาน เก็บกวาดร้าน ไปช่วยจ่ายตลาดช่วงเช้า 6 โมง'} variant="outlined" margin="normal" size="small" fullWidth />
-        <Divider style={{margin:'20px'}}/>
+        <Divider style={{ margin: '20px' }} />
         <h3 >คุณสมบัติของผู้สมัคร และแบบสอบถาม </h3>
         <Row>
           <FormControl component="fieldset" >
@@ -607,7 +622,7 @@ export default class ManageJobInfomation extends Component {
             </RadioGroup>
           </FormControl>
         </Row>
-        <Divider style={{margin:'20px'}}/>
+        <Divider style={{ margin: '20px' }} />
         <MdAddBox size="50px" color="green" onClick={this.addQuestion} />
         <FaMinusCircle size="40px" color="red" onClick={this.popQuestion} />
 
