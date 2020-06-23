@@ -3,11 +3,11 @@ import { Navbar, Nav, Image, Row, Col, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ReactCountryFlag from "react-country-flag";
-import NavBarPopup from "./NavBarPopup";
-const Styles = styled.div`
-  .text-nav {
+
+const StylesPop = styled.div`
+  .text-nav-pop {
     textdecoration: none;
-    color: #fff;
+    color: #000;
     font-size: 1rem;
     font-weight: bold;
   }
@@ -16,8 +16,8 @@ const Styles = styled.div`
     border: 1px solid white;
   }
 
-  .text-country-selected {
-    color: #fff;
+  .text-country-selected-pop {
+    color: #000;
     font-size: 1rem;
     font-weight: bold;
     padding-left: 10px;
@@ -42,32 +42,15 @@ const Styles = styled.div`
   }
 `;
 
-export default class NavigationBar extends Component {
-  state = {
-    isTop: true,
-  };
-  componentDidMount() {
-    document.addEventListener("scroll", () => {
-      const isTop = window.scrollY < 300;
-      if (isTop !== this.state.isTop) {
-        this.setState({ isTop });
-      }
-    });
-  }
+export default class NavBarPopup extends Component {
   render() {
     return (
-      <Styles>
-        {this.state.isTop ? (
-          ""
-        ) : (
-          <NavBarPopup
-            style={{ zIndex: 10000}}
-          />
-        )}
+      <StylesPop>
+        
         <div
           style={{
-            backgroundColor: "rgba(0,0,0,0)",
-            position: "absolute",
+            backgroundColor: "rgba(255,255,255,1)",
+            position: "fixed",
             top: 0,
             width: "100%",
             zIndex: 99999,
@@ -82,6 +65,7 @@ export default class NavigationBar extends Component {
             }}
           >
             <Row>
+            {/* <h2 style={{ position: 'fixed', top: 0 ,color:'white'}}>Scroll {this.state.isTop ? 'down' : 'up'}!</h2> */}
               <Col style={{ left: 20, color: "#fff" }}>
                 <div
                   style={{
@@ -90,7 +74,7 @@ export default class NavigationBar extends Component {
                     padding: 10,
                   }}
                 >
-                  <Link to="/postJob" className="text-nav">
+                  <Link to="/postJob" className="text-nav-pop">
                     Post Job/หาคนทำงาน
                   </Link>
                 </div>
@@ -99,7 +83,7 @@ export default class NavigationBar extends Component {
                 <Dropdown>
                   <Dropdown.Toggle variant="link" id="dropdown-basic">
                     <ReactCountryFlag countryCode="TH" svg />
-                    <span className="text-country-selected">ไทย</span>
+                    <span className="text-country-selected-pop">ไทย</span>
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
@@ -140,7 +124,7 @@ export default class NavigationBar extends Component {
                 <Image
                   src="images/logo6.png"
                   rounded
-                  style={{ height: "70px" }}
+                  style={{ height: "30px" }}
                 />
               </Link>
             </Navbar.Brand>
@@ -152,22 +136,22 @@ export default class NavigationBar extends Component {
             >
               <Nav>
                 <Nav.Link>
-                  <Link to="/jobs" className="text-nav">
+                  <Link to="/jobs" className="text-nav-pop">
                     JOBS
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/company" className="text-nav">
+                  <Link to="/company" className="text-nav-pop">
                     BUSINESS-OWNER
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/news" className="text-nav">
+                  <Link to="/news" className="text-nav-pop">
                     NEWS
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/postJob" className="text-nav">
+                  <Link to="/postJob" className="text-nav-pop">
                     POST-JOB
                   </Link>
                 </Nav.Link>
@@ -188,7 +172,7 @@ export default class NavigationBar extends Component {
             </Navbar.Collapse>
           </Navbar>
         </div>
-      </Styles>
+      </StylesPop>
     );
   }
 }
