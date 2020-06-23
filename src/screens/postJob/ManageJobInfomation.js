@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Switch, FormControlLabel, InputLabel, Select, Divider, Grid,FormLabel ,FormControl,FormGroup ,Checkbox   } from '@material-ui/core';
+import { Card, Switch, FormControlLabel, InputLabel, Select, Divider, Grid, FormLabel, FormControl, FormGroup, Checkbox, RadioGroup, Radio } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import TextField from '@material-ui/core/TextField';
@@ -8,7 +8,11 @@ import { Row, Col } from "react-bootstrap";
 
 
 export default class ManageJobInfomation extends Component {
+
   render() {
+
+
+
 
     return <div>
 
@@ -163,24 +167,89 @@ export default class ManageJobInfomation extends Component {
             <TextField label="กรณีเลือกอื่นๆ โปรดระบุ" defaultValue={''} variant="outlined" margin="normal" fullWidth />
           </Col>
         </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">สัญชาติที่รับ </FormLabel>
+            <FormGroup row>
+              <FormControlLabel
+                control={<Checkbox checked={true} />}
+                label="ลาว"
+              />
+              <FormControlLabel
+                control={<Checkbox checked={true} />}
+                label="พม่า"
+              />
+              <FormControlLabel
+                control={<Checkbox checked={true} />}
+                label="เขมร"
+              />
+              <FormControlLabel
+                control={<Checkbox checked={false} />}
+                label="อื่นๆ"
+              />
+              <TextField label="โปรดระบุ" defaultValue={''} variant="outlined" margin="normal" size="small" />
+            </FormGroup>
 
-        <FormControl component="fieldset" >
-          <FormLabel component="legend">สัญชาติที่รับ </FormLabel>
-          <FormGroup row>
-            <FormControlLabel
-              control={<Checkbox checked={true}  name="gilad" />}
-              label="ลาว"
-            />
-            <FormControlLabel
-              control={<Checkbox checked={true}  name="jason" />}
-              label="พม่า"
-            />
-            <FormControlLabel
-              control={<Checkbox checked={true}  name="antoine" />}
-              label="เขมร"
-            />
-          </FormGroup>
-        </FormControl>
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">จำนวนคนที่รับ </FormLabel>
+            <FormGroup>
+              <FormGroup row>
+                <FormControlLabel
+                  control={<Checkbox checked={false} />}
+                  label="ชาย"
+                />
+                <TextField label="จำนวนคน" defaultValue={''} variant="outlined" margin="normal" size="small" />
+              </FormGroup>
+              <FormGroup row>
+                <FormControlLabel
+                  control={<Checkbox checked={true} />}
+                  label="หญิง"
+                />
+                <TextField label="จำนวนคน" defaultValue={'1'} variant="outlined" margin="normal" size="small" />
+              </FormGroup>
+              <FormControlLabel
+                control={<Checkbox checked={false} />}
+                label="คู่สามี-ภรรยา"
+              />
+              <FormGroup row>
+                <FormControlLabel
+                  control={<Checkbox checked={false} />}
+                  label="ไม่ระบุเพศ"
+                />
+                <TextField label="จำนวนคน" defaultValue={''} variant="outlined" margin="normal" size="small" />
+              </FormGroup>
+              <FormGroup row>
+                <FormControlLabel
+                  control={<Checkbox checked={false} />}
+                  label="อื่นๆ"
+                />
+                <TextField label="โปรดระบุ" defaultValue={''} variant="outlined" margin="normal" size="small" />
+                <TextField label="จำนวนคน" defaultValue={''} variant="outlined" margin="normal" size="small" />
+              </FormGroup>
+            </FormGroup>
+
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset">
+            <FormLabel component="legend">ช่วงอายุที่ต้องการ</FormLabel>
+            <RadioGroup aria-label="gender" name="gender1"  >
+              <FormControlLabel value="female" control={<Radio />} label="ระบุอายุเริ่มต้น" />
+              <TextField label="อายุเริ่มต้น" defaultValue={''} variant="outlined" margin="normal" size="small" />
+              <FormControlLabel value="male" control={<Radio />} label="ไม่ระบุ" />
+              <FormGroup row>
+                <FormControlLabel value="other" control={<Radio />} label="ระบุช่วงอายุ" />
+                <TextField label="อายุ" defaultValue={''} variant="outlined" margin="normal" size="small" />
+
+                <TextField label="อายุ" defaultValue={''} variant="outlined" margin="normal" size="small" />
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+
       </form>
     </div>;
   }
