@@ -49,6 +49,17 @@ const Styles = styled.div`
     justify-content: center;
     margin-bottom: 15px;
   }
+  .span-pop {
+    background-color: rgba(0, 0, 0, 0.5);
+    white-space: pre-wrap;
+    width: 100%;
+    height: 100%;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   html,
   body {
     overflow: hidden;
@@ -470,7 +481,9 @@ export default class Home extends Component {
                     backgroundImage: `url(images/jobRec1a.jpg) `,
                   }}
                 >
-                  <span style={{backgroundColor:"rgba(0,0,0,0)",whiteSpace: "pre-wrap"}}>{"งานก่อสร้าง\nงานช่าง,งานใช้แรงงาน"}</span>
+                  <span className="span-pop">
+                    {"งานก่อสร้าง\nงานช่าง,งานใช้แรงงาน"}
+                  </span>
                 </div>
               </Col>
               <Col lg>
@@ -480,7 +493,9 @@ export default class Home extends Component {
                     backgroundImage: `url(images/jobRec2a.jpg) `,
                   }}
                 >
-                  <span style={{backgroundColor:"rgba(0,0,0,0)",whiteSpace: "pre-wrap"}}>{"งานรับใช้ตามบ้าน\nงานแม่บ้าน,คนสวน"}</span>
+                  <span className="span-pop">
+                    {"งานรับใช้ตามบ้าน\nงานแม่บ้าน,คนสวน"}
+                  </span>
                 </div>
               </Col>
               <Col lg>
@@ -490,7 +505,9 @@ export default class Home extends Component {
                     backgroundImage: `url(images/jobRec3a.jpg) `,
                   }}
                 >
-                  <span style={{backgroundColor:"rgba(0,0,0,0)",whiteSpace: "pre-wrap"}}>{"งานร้านอาหาร\nงานครัว,พนักงานเสิร์ฟ"}</span>
+                  <span className="span-pop">
+                    {"งานร้านอาหาร\nงานครัว,พนักงานเสิร์ฟ"}
+                  </span>
                 </div>
               </Col>
             </Row>
@@ -520,7 +537,9 @@ export default class Home extends Component {
                     backgroundImage: `url(images/jobRec4a.jpg) `,
                   }}
                 >
-                  <span style={{backgroundColor:"rgba(0,0,0,0)",whiteSpace: "pre-wrap"}}>{"งานดูแลเด็ก\nงานดูแลผู้สูงอายุ\nงานดูแลคนป่วย"}</span>
+                  <span className="span-pop">
+                    {"งานดูแลเด็ก\nงานดูแลผู้สูงอายุ\nงานดูแลคนป่วย"}
+                  </span>
                 </div>
               </Col>
               <Col lg>
@@ -530,7 +549,9 @@ export default class Home extends Component {
                     backgroundImage: `url(images/jobRec5a.jpg) `,
                   }}
                 >
-                  <span style={{backgroundColor:"rgba(0,0,0,0)",whiteSpace: "pre-wrap"}}>{"งานเกษตรกรรม\nงานในฟาร์ม,ดูแลสัตว์"}</span>
+                  <span className="span-pop">
+                    {"งานเกษตรกรรม\nงานในฟาร์ม,ดูแลสัตว์"}
+                  </span>
                 </div>
               </Col>
               <Col lg>
@@ -540,7 +561,9 @@ export default class Home extends Component {
                     backgroundImage: `url(images/jobRec6a.jpg) `,
                   }}
                 >
-                  <span style={{backgroundColor:"rgba(0,0,0,0)",whiteSpace: "pre-wrap"}}>{"งานพนักงานโรงงาน\nงานการผลิต"}</span>
+                  <span className="span-pop">
+                    {"งานพนักงานโรงงาน\nงานการผลิต"}
+                  </span>
                 </div>
               </Col>
             </Row>
