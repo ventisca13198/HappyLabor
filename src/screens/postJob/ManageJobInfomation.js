@@ -13,15 +13,21 @@ export default class ManageJobInfomation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      additionalQuestion: [{ question: "" }]
+      additionalQuestion: [{ question: "" }],
+      useProfileAddress: true,
+      checked:{}
     };
   }
+  handleChange = (event) => {
+    this.setState({ [event.target.name]: event.target.checked });
+  };
 
   addQuestion = () => {
     this.setState(prevState => ({
       additionalQuestion: [...prevState.additionalQuestion, { question: "" }]
     }))
   }
+
 
   popQuestion = () => {
     this.setState(prevState => ({
@@ -32,7 +38,7 @@ export default class ManageJobInfomation extends Component {
 
   render() {
 
-    return <div>
+    return <div style={{margin:'10px',padding:'10px'}}>
 
       <h3>ข้อมูลผู้ประกอบการ และการลงประกาศ</h3>
       <form noValidate autoComplete="off">
@@ -51,9 +57,10 @@ export default class ManageJobInfomation extends Component {
         <FormControlLabel
           control={
             <Switch
-              name="checkedB"
+            checked={this.state.useProfileAddress}
+            onChange={this.handleChange}
+              name="useProfileAddress"
               color="primary"
-              checked={true}
             />
           }
           label="ที่ทำงานตามที่อยู่ผู้ประกอบการ"
@@ -62,19 +69,19 @@ export default class ManageJobInfomation extends Component {
 
         <Row>
           <Col>
-            <TextField label="ที่อยู่ที่ทำงาน" defaultValue={'555'} variant="outlined" margin="normal" fullWidth />
+            <TextField label="ที่อยู่ที่ทำงาน" defaultValue={'555'} variant="outlined" margin="normal" fullWidth disabled={this.state.useProfileAddress}/>
           </Col>
           <Col>
-            <TextField label="ซอย" defaultValue={'วัดจันทร์'} variant="outlined" margin="normal" fullWidth />
+            <TextField label="ซอย" defaultValue={'วัดจันทร์'} variant="outlined" margin="normal" fullWidth disabled={this.state.useProfileAddress}/>
           </Col>
         </Row>
 
         <Row>
           <Col>
-            <TextField label="ถนน" defaultValue={'สาธุประดิษฐ์'} variant="outlined" margin="normal" fullWidth />
+            <TextField label="ถนน" defaultValue={'สาธุประดิษฐ์'} variant="outlined" margin="normal" fullWidth disabled={this.state.useProfileAddress}/>
           </Col>
           <Col>
-            <FormControl variant="outlined" fullWidth margin="normal">
+            <FormControl variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}>
               <InputLabel htmlFor="outlined-age-native-simple">จังหวัด</InputLabel>
               <Select
                 native
@@ -93,7 +100,7 @@ export default class ManageJobInfomation extends Component {
 
         <Row>
           <Col>
-            <FormControl variant="outlined" fullWidth margin="normal">
+            <FormControl variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}>
               <InputLabel htmlFor="outlined-age-native-simple">ตำบล/แขวง</InputLabel>
               <Select
                 native
@@ -109,7 +116,7 @@ export default class ManageJobInfomation extends Component {
             </FormControl>
           </Col>
           <Col>
-            <FormControl variant="outlined" fullWidth margin="normal">
+            <FormControl variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}>
               <InputLabel htmlFor="outlined-age-native-simple">อำเภอ/เขต</InputLabel>
               <Select
                 native
@@ -129,19 +136,19 @@ export default class ManageJobInfomation extends Component {
 
         <Row>
           <Col>
-            <TextField label="สถานที่ใกล้เคียงที่สังเกตได้" defaultValue={'ร้านกวยเตี๋ยวจานยักษ์'} variant="outlined" fullWidth margin="normal" />
+            <TextField label="สถานที่ใกล้เคียงที่สังเกตได้" defaultValue={'ร้านกวยเตี๋ยวจานยักษ์'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}/>
           </Col>
           <Col>
-            <TextField label="เบอร์ติดต่อ" defaultValue={'081 315 6485'} variant="outlined" fullWidth margin="normal" />
+            <TextField label="เบอร์ติดต่อ" defaultValue={'081 315 6485'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}/>
           </Col>
         </Row>
 
         <Row>
           <Col>
-            <TextField label="Line ID" defaultValue={'big noodle'} variant="outlined" fullWidth margin="normal" />
+            <TextField label="Line ID" defaultValue={'big noodle'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}/>
           </Col>
           <Col>
-            <TextField label="Facebook ID" defaultValue={'ร้านกวยเตี๋ยวจานยักษ์'} variant="outlined" fullWidth margin="normal" />
+            <TextField label="Facebook ID" defaultValue={'ร้านกวยเตี๋ยวจานยักษ์'} variant="outlined" fullWidth margin="normal" disabled={this.state.useProfileAddress}/>
           </Col>
         </Row>
 
