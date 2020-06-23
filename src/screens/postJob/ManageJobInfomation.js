@@ -14,8 +14,7 @@ export default class ManageJobInfomation extends Component {
     super(props);
     this.state = {
       additionalQuestion: [{ question: "" }],
-      useProfileAddress: true,
-      checked:{}
+      useProfileAddress: true
     };
   }
   handleChange = (event) => {
