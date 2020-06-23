@@ -236,9 +236,12 @@ export default class ManageJobInfomation extends Component {
         <Row>
           <FormControl component="fieldset">
             <FormLabel component="legend">ช่วงอายุที่ต้องการ</FormLabel>
-            <RadioGroup aria-label="gender" name="gender1"  >
-              <FormControlLabel value="female" control={<Radio />} label="ระบุอายุเริ่มต้น" />
-              <TextField label="อายุเริ่มต้น" defaultValue={''} variant="outlined" margin="normal" size="small" />
+            <RadioGroup aria-label="age" name="age"  >
+              <FormGroup row>
+                <FormControlLabel value="female" control={<Radio />} label="ระบุอายุเริ่มต้น" />
+                <TextField label="อายุเริ่มต้น" defaultValue={''} variant="outlined" margin="normal" size="small" />
+              </FormGroup>
+
               <FormControlLabel value="male" control={<Radio />} label="ไม่ระบุ" />
               <FormGroup row>
                 <FormControlLabel value="other" control={<Radio />} label="ระบุช่วงอายุ" />
@@ -249,7 +252,299 @@ export default class ManageJobInfomation extends Component {
             </RadioGroup>
           </FormControl>
         </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ประสบการณ์ทำงานในตำแหน่งงาน </FormLabel>
+            <RadioGroup aria-label="exp" name="exp"  >
+              <FormGroup row>
+                <FormControlLabel value="no" control={<Radio />} label="ไม่จำเป็นต้องมีประสบการณ์" />
+                <FormGroup row>
+                  <FormControlLabel value="yes" control={<Radio />} label="มีประสบการณ์อย่างน้อย" />
+                  <TextField label="จำนวนปี" defaultValue={''} variant="outlined" margin="normal" size="small" />
+                </FormGroup>
 
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ประเภทการจ้างงาน </FormLabel>
+            <RadioGroup aria-label="type" name="exp"  >
+              <FormGroup >
+                <FormGroup row>
+                  <FormControlLabel value="day" control={<Radio />} label="รายวัน" />
+                  <TextField label="อัตราค่าจ้างต่อวัน" defaultValue={''} variant="outlined" margin="normal" size="small" />
+                </FormGroup>
+                <FormGroup row>
+                  <FormControlLabel value="month" control={<Radio />} label="รายเดือน" />
+                  <TextField label="อัตราค่าจ้างต่อเดือน" defaultValue={''} variant="outlined" margin="normal" size="small" />
+                </FormGroup>
+                <FormGroup row>
+                  <FormControlLabel value="hour" control={<Radio />} label="ตามช่วงเวลา(เข้ากะทำงาน)" />
+                  <TextField label="อัตราค่าจ้างต่อชั่วโมง" defaultValue={''} variant="outlined" margin="normal" size="small" />
+                </FormGroup>
+                <FormGroup row>
+
+                  <FormControlLabel value="other" control={<Radio />} label="อื่นๆ" />
+                  <TextField label="โปรดระบุ" defaultValue={''} variant="outlined" margin="normal" size="small" />
+                  <TextField label="อัตราค่าจ้าง" defaultValue={''} variant="outlined" margin="normal" size="small" />
+                </FormGroup>
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ประเภทการจ้างงาน </FormLabel>
+            <RadioGroup aria-label="workday" name="exp"  >
+              <FormGroup >
+                <FormGroup row>
+                  <FormControlLabel value="everyday" control={<Radio />} label="ทำงานทุกวัน ไม่มีวันหยุด หยุดเฉพาะวันนักขัตฤกษ์" />
+
+                </FormGroup>
+                <FormGroup row>
+                  <FormControlLabel value="6day" control={<Radio />} label="วันจันทร์ - วันเสาร์ หยุดเฉพาะวันอาทิตย์" />
+
+                </FormGroup>
+                <FormGroup row>
+                  <FormControlLabel value="weekday" control={<Radio />} label="วันจันทร์ - วันศุกร์ หยุดวันเสาร์ และ วันอาทิตย์" />
+
+                </FormGroup>
+                <FormGroup row>
+
+                  <FormControlLabel value="other" control={<Radio />} label="อื่นๆ" />
+                  <TextField label="โปรดระบุ" defaultValue={''} variant="outlined" margin="normal" size="small" />
+                </FormGroup>
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ช่วงเวลาเข้า-ออกงานในแต่ละวัน </FormLabel>
+            <RadioGroup aria-label="worktime" name="exp"  >
+              <FormGroup >
+
+                <FormControlLabel value="1" control={<Radio />} label="ทำงานตั้งแต่เวลา 8.00 น. - 17.30 น." />
+
+
+
+                <FormControlLabel value="2" control={<Radio />} label="ทำงานตั้งแต่เวลา 9.00 น. - 18.00 น." />
+
+
+                <FormGroup row>
+
+                  <FormControlLabel value="other" control={<Radio />} label="ช่วงเวลาอื่น โปรดระบุ" />
+                  <TextField label="เวลาเข้างาน" defaultValue={''} variant="outlined" margin="normal" size="small" />
+                  <TextField label="เวลาออกงาน" defaultValue={''} variant="outlined" margin="normal" size="small" />
+                </FormGroup>
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ค่าล่วงเวลา </FormLabel>
+            <RadioGroup aria-label="ot" name="exp"  >
+              <FormGroup row>
+
+                <FormControlLabel value="1" control={<Radio />} label="มี" />
+
+                <FormControlLabel value="2" control={<Radio />} label="ไม่มี" />
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">โบนัสประจำปี </FormLabel>
+            <RadioGroup aria-label="bonus" name="exp"  >
+              <FormGroup row>
+
+                <FormControlLabel value="1" control={<Radio />} label="มี" />
+
+                <FormControlLabel value="2" control={<Radio />} label="ไม่มี" />
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ประกันสังคม </FormLabel>
+            <RadioGroup aria-label="socialinsurance" name="exp"  >
+              <FormGroup row>
+
+                <FormControlLabel value="1" control={<Radio />} label="มี" />
+
+                <FormControlLabel value="2" control={<Radio />} label="ไม่มี" />
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ประกันสุขภาพ </FormLabel>
+            <RadioGroup aria-label="insurance" name="exp"  >
+              <FormGroup row>
+
+                <FormControlLabel value="1" control={<Radio />} label="มี" />
+
+                <FormControlLabel value="2" control={<Radio />} label="ไม่มี" />
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">สวัสดิการเพิ่มเติม </FormLabel>
+            <FormGroup row>
+              <FormControlLabel
+                control={<Checkbox checked={false} />}
+                label="ฟรีห้องพัก"
+              />
+              <FormControlLabel
+                control={<Checkbox checked={false} />}
+                label="ทีวี"
+              />
+              <FormControlLabel
+                control={<Checkbox checked={false} />}
+                label="พัดลม"
+              />
+              <FormControlLabel
+                control={<Checkbox checked={false} />}
+                label="หม้อหุงข้าว"
+              />
+              <FormControlLabel
+                control={<Checkbox checked={false} />}
+                label="ตู้เย็น"
+              />
+              <FormControlLabel
+                control={<Checkbox checked={false} />}
+                label="ฟรีค่าน้ำ"
+              />
+              <FormControlLabel
+                control={<Checkbox checked={false} />}
+                label="ฟรีค่าไฟฟ้า"
+              />
+              <FormControlLabel
+                control={<Checkbox checked={false} />}
+                label="wifi"
+              />
+              <FormControlLabel
+                control={<Checkbox checked={false} />}
+                label="อาหารกลางวัน"
+              />
+              <FormControlLabel
+                control={<Checkbox checked={false} />}
+                label="อาหาร 3 มื้อ"
+              />
+              
+            </FormGroup>
+
+          </FormControl>
+        </Row>
+        <TextField multiline rows={3} label="รายละเอียดการทำงาน" defaultValue={'นอกจากเสริฟก๋วยเตี๋ยวแล้ว ก็ล้างจาน เก็บกวาดร้าน ไปช่วยจ่ายตลาดช่วงเช้า 6 โมง'} variant="outlined" margin="normal" size="small" fullWidth/>
+        <Divider />
+        <h3 >คุณสมบัติของผู้สมัคร และแบบสอบถาม </h3>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ต้องการผู้มีใบอนุญาตทำงาน </FormLabel>
+            <RadioGroup aria-label="socialinsurance" name="exp"  >
+              <FormGroup row>
+                <FormControlLabel value="1" control={<Radio />} label="ไม่ใช่" />
+                <FormControlLabel value="2" control={<Radio />} label="ใช่" />
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ต้องการผู้ขับรถยนต์ได้ </FormLabel>
+            <RadioGroup aria-label="socialinsurance" name="exp"  >
+              <FormGroup row>
+                <FormControlLabel value="1" control={<Radio />} label="ไม่ใช่" />
+                <FormControlLabel value="2" control={<Radio />} label="ใช่" />
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ต้องการผู้ขับจักรยานยนต์ได้ </FormLabel>
+            <RadioGroup aria-label="socialinsurance" name="exp"  >
+              <FormGroup row>
+                <FormControlLabel value="1" control={<Radio />} label="ไม่ใช่" />
+                <FormControlLabel value="2" control={<Radio />} label="ใช่" />
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ต้องการผู้สื่อสารภาษาไทยได้ </FormLabel>
+            <RadioGroup aria-label="socialinsurance" name="exp"  >
+              <FormGroup row>
+                <FormControlLabel value="1" control={<Radio />} label="ไม่ใช่" />
+                <FormControlLabel value="2" control={<Radio />} label="ใช่" />
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Row>
+          <h6>กรุณาระบุความต้องการทักษะด้านภาษาไทย สำหรับกรณีตอบว่าใช่</h6>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ระดับการฟังภาษาไทย </FormLabel>
+            <RadioGroup aria-label="socialinsurance" name="exp"  >
+              <FormGroup row>
+                <FormControlLabel value="1" control={<Radio />} label="พอได้" />
+                <FormControlLabel value="2" control={<Radio />} label="ปานกลาง" />
+                <FormControlLabel value="3" control={<Radio />} label="ดี" />
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ระดับการพูดภาษาไทย </FormLabel>
+            <RadioGroup aria-label="socialinsurance" name="exp"  >
+              <FormGroup row>
+                <FormControlLabel value="1" control={<Radio />} label="พอได้" />
+                <FormControlLabel value="2" control={<Radio />} label="ปานกลาง" />
+                <FormControlLabel value="3" control={<Radio />} label="ดี" />
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ระดับการอ่านภาษาไทย </FormLabel>
+            <RadioGroup aria-label="socialinsurance" name="exp"  >
+              <FormGroup row>
+                <FormControlLabel value="1" control={<Radio />} label="พอได้" />
+                <FormControlLabel value="2" control={<Radio />} label="ปานกลาง" />
+                <FormControlLabel value="3" control={<Radio />} label="ดี" />
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Row>
+          <FormControl component="fieldset" >
+            <FormLabel component="legend">ระดับการเขียนภาษาไทย </FormLabel>
+            <RadioGroup aria-label="socialinsurance" name="exp"  >
+              <FormGroup row>
+                <FormControlLabel value="1" control={<Radio />} label="พอได้" />
+                <FormControlLabel value="2" control={<Radio />} label="ปานกลาง" />
+                <FormControlLabel value="3" control={<Radio />} label="ดี" />
+              </FormGroup>
+            </RadioGroup>
+          </FormControl>
+        </Row>
+        <Divider/>
+      
       </form>
     </div>;
   }
