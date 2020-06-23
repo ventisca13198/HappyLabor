@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { Card, Form, Button } from "react-bootstrap";
+import { ThemeConsumer } from "styled-components";
 
 export default class SelectPackage extends Component {
+  state = {
+    test: "1",
+  };
   render() {
     return (
       <div>
@@ -47,4 +51,18 @@ export default class SelectPackage extends Component {
       </div>
     );
   }
+
+  nextStep = () => {
+    console.log("SelectPackage nextStep");
+    return true;
+  };
+
+  backStep = () => {
+    console.log("SelectPackage backStep");
+    return false;
+  };
+  // nextStep = (btnEvent) => {
+  //   console.log("SelectPackage " + btnEvent);
+  //   return true;
+  // };
 }
