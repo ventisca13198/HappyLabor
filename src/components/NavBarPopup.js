@@ -3,7 +3,8 @@ import { Navbar, Nav, Image, Row, Col, Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ReactCountryFlag from "react-country-flag";
-import ScrollToTop from "./ScrollTotop";
+
+import { FaChevronRight } from "react-icons/fa";
 const StylesPop = styled.div`
   .text-nav-pop {
     textdecoration: none;
@@ -60,8 +61,8 @@ export default class NavBarPopup extends Component {
             style={{
               backgroundColor: "rgba(70,70,70,1)",
               width: "100%",
-              paddingLeft: "10%",
-              paddingRight: "10%",
+              // paddingLeft: "10%",
+              // paddingRight: "10%",
             }}
           >
             <Row>
@@ -82,7 +83,7 @@ export default class NavBarPopup extends Component {
                       fontSize: 14,
                     }}
                   >
-                    PostJob/หาคน
+                    ประกาศหาแรงงาน <FaChevronRight />
                   </Link>
                 </div>
               </Col>

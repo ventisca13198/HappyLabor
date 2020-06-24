@@ -124,12 +124,12 @@ export default class Home extends Component {
                   <Row style={{}}>
                     <Col
                       style={{
-                        fontSize: 46,
+                        fontSize: 36,
                         fontWeight: "bold",
                       }}
                     >
                       <span className="span-title">
-                        ตลาดนัดแรงงานใหญ่สุดในประเทศไทย
+                        ตลาดแรงงานอันดับ 1 ในไทย
                       </span>
                     </Col>
                   </Row>
@@ -140,7 +140,7 @@ export default class Home extends Component {
                       }}
                     >
                       <span className="span-title">
-                        หางานง่าย ตรงความต้องการ ในเวลาที่รวดเร็ว
+                        หางานง่าย ตรงใจ ได้งานเร็ว
                       </span>
                     </Col>
                   </Row>
@@ -279,7 +279,7 @@ export default class Home extends Component {
                           src={`images/OverseasOK.png`}
                           style={{ maxwidth: "100%", height: "auto" }}
                         ></Image>
-                        <div>คู่สามีภรรยา</div>
+                        <div>รับคู่สามีภรรยา</div>
                       </div>
                     </Col>
                   </Row>

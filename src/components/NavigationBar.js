@@ -5,6 +5,7 @@ import styled from "styled-components";
 import ReactCountryFlag from "react-country-flag";
 import NavBarPopup from "./NavBarPopup";
 import ScrollToTop from "./ScrollTotop";
+import { FaChevronRight } from "react-icons/fa";
 const Styles = styled.div`
   .text-nav {
     textdecoration: none;
@@ -120,8 +121,8 @@ export default class NavigationBar extends Component {
             style={{
               backgroundColor: "rgba(0,0,0,0.2)",
               width: "100%",
-              paddingLeft: "10%",
-              paddingRight: "10%",
+              // paddingLeft: "5%",
+              // paddingRight: "5%",
             }}
           >
             <Row>
@@ -141,7 +142,7 @@ export default class NavigationBar extends Component {
                       fontSize: 14,
                     }}
                   >
-                    PostJob/หาคน
+                    ประกาศหาแรงงาน <FaChevronRight/>
                   </Link>
                 </div>
               </Col>
