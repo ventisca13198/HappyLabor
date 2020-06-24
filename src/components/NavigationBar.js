@@ -1,5 +1,13 @@
 import React, { Component, useState } from "react";
-import { Navbar, Nav, Image, Row, Col, Dropdown } from "react-bootstrap";
+import {
+  Navbar,
+  Nav,
+  Image,
+  Row,
+  Col,
+  Dropdown,
+  Container,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ReactCountryFlag from "react-country-flag";
@@ -121,8 +129,8 @@ export default class NavigationBar extends Component {
             style={{
               backgroundColor: "rgba(0,0,0,0.2)",
               width: "100%",
-              // paddingLeft: "5%",
-              // paddingRight: "5%",
+              paddingLeft: "8%",
+              paddingRight: "8%",
             }}
           >
             <Row>
@@ -142,7 +150,7 @@ export default class NavigationBar extends Component {
                       fontSize: 14,
                     }}
                   >
-                    ประกาศหาแรงงาน <FaChevronRight/>
+                    ประกาศหาแรงงาน <FaChevronRight />
                   </Link>
                 </div>
               </Col>
@@ -187,7 +195,6 @@ export default class NavigationBar extends Component {
               </Col>
             </Row>
           </div>
-
           <Navbar
             expand="lg"
             style={{ paddingLeft: "11%", paddingRight: "11%" }}

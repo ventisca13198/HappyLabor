@@ -1,5 +1,13 @@
 import React, { Component } from "react";
-import { Form, Button, Image, Row, Col, Card } from "react-bootstrap";
+import {
+  Form,
+  Button,
+  Image,
+  Row,
+  Col,
+  Card,
+  Container,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Fade } from "react-slideshow-image";
 import styled from "styled-components";
@@ -206,7 +214,10 @@ export default class Home extends Component {
                           type="submit"
                           size="md"
                           block
-                          style={{ maxWidth: 300, backgroundColor: "#007fc3" }}
+                          style={{
+                            maxWidth: 300,
+                            backgroundColor: "#007fc3",
+                          }}
                         >
                           ค้นหา
                         </Button>
@@ -416,74 +427,81 @@ export default class Home extends Component {
                   marginLeft: 10,
                   marginRight: 10,
                   marginTop: 20,
-                  
+
                   paddingBottom: 20,
                   paddingTop: 20,
                   textAlign: "center",
                 }}
               >
-                <div style={{backgroundColor: "#d3f1ff",width:'100%',padding:10}}>
-                <h4>ข่าวสารและข้อมูล</h4>
-                <Card style={{ alignSelf: "center", marginTop: 20 }}>
-                  <Image
-                    src={`images/news1a.jpg`}
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <div className="text-news">
-                    ประธาน กมธ.แรงงาน วุฒิสภา
-                    ตรวจเยี่ยมศูนย์ปฏิบัติการรองรับสถานการณ์ว่างงานหลังโควิด.
-                  </div>
-                </Card>
-                <Card style={{ alignSelf: "center", marginTop: 20 }}>
-                  <Image
-                    src={`images/news2a.jpg`}
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <div className="text-news">
-                    ครม. ผ่อนปรนแรงงานต่างด้าว 3 สัญชาติ
-                    อยู่ในไทยและทำงานต่อได้อีก 2 เดือน
-                  </div>
-                </Card>
-                <Card style={{ alignSelf: "center", marginTop: 20 }}>
-                  <Image
-                    src={`images/news3a.jpg`}
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <div className="text-news">
-                    หางานมาทางนี้ เผยมีนายจ้างต้องการ "คนทำงาน" สูงถึง 55,093
-                    อัตรา
-                  </div>
-                </Card>
-                <Card style={{ alignSelf: "center", marginTop: 20 }}>
-                  <Image
-                    src={`images/news4a.jpg`}
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <div className="text-news">
-                    ก.แรงงาน ร่วมจิตอาสา จ้างงาน "ฟาร์มตัวอย่าง" สร้างรายได้
-                    คนละ 300 ต่อวัน
-                  </div>
-                </Card>
-                <Card style={{ alignSelf: "center", marginTop: 20 }}>
-                  <Image
-                    src={`images/news5a.jpg`}
-                    style={{ width: "100%", height: "auto" }}
-                  />
-                  <div className="text-news">
-                    ครม. เห็นชอบแรงงานต่างด้าวอยู่ไทยต่อได้ถึง 31 พ.ค.
-                    ช่วงสถานการณ์โควิด-19
-                  </div>
-                </Card>
-                <Button
+                <div
                   style={{
-                    alignSelf: "center",
-                    marginTop: 15,
-                    backgroundColor: "#007fc3",
+                    backgroundColor: "#d3f1ff",
+                    width: "100%",
+                    padding: 10,
                   }}
                 >
-                  ดูทั้งหมด
-                </Button>
-                </div></Col>
+                  <h4>ข่าวสารและข้อมูล</h4>
+                  <Card style={{ alignSelf: "center", marginTop: 20 }}>
+                    <Image
+                      src={`images/news1a.jpg`}
+                      style={{ width: "100%", height: "auto" }}
+                    />
+                    <div className="text-news">
+                      ประธาน กมธ.แรงงาน วุฒิสภา
+                      ตรวจเยี่ยมศูนย์ปฏิบัติการรองรับสถานการณ์ว่างงานหลังโควิด.
+                    </div>
+                  </Card>
+                  <Card style={{ alignSelf: "center", marginTop: 20 }}>
+                    <Image
+                      src={`images/news2a.jpg`}
+                      style={{ width: "100%", height: "auto" }}
+                    />
+                    <div className="text-news">
+                      ครม. ผ่อนปรนแรงงานต่างด้าว 3 สัญชาติ
+                      อยู่ในไทยและทำงานต่อได้อีก 2 เดือน
+                    </div>
+                  </Card>
+                  <Card style={{ alignSelf: "center", marginTop: 20 }}>
+                    <Image
+                      src={`images/news3a.jpg`}
+                      style={{ width: "100%", height: "auto" }}
+                    />
+                    <div className="text-news">
+                      หางานมาทางนี้ เผยมีนายจ้างต้องการ "คนทำงาน" สูงถึง 55,093
+                      อัตรา
+                    </div>
+                  </Card>
+                  <Card style={{ alignSelf: "center", marginTop: 20 }}>
+                    <Image
+                      src={`images/news4a.jpg`}
+                      style={{ width: "100%", height: "auto" }}
+                    />
+                    <div className="text-news">
+                      ก.แรงงาน ร่วมจิตอาสา จ้างงาน "ฟาร์มตัวอย่าง" สร้างรายได้
+                      คนละ 300 ต่อวัน
+                    </div>
+                  </Card>
+                  <Card style={{ alignSelf: "center", marginTop: 20 }}>
+                    <Image
+                      src={`images/news5a.jpg`}
+                      style={{ width: "100%", height: "auto" }}
+                    />
+                    <div className="text-news">
+                      ครม. เห็นชอบแรงงานต่างด้าวอยู่ไทยต่อได้ถึง 31 พ.ค.
+                      ช่วงสถานการณ์โควิด-19
+                    </div>
+                  </Card>
+                  <Button
+                    style={{
+                      alignSelf: "center",
+                      marginTop: 15,
+                      backgroundColor: "#007fc3",
+                    }}
+                  >
+                    ดูทั้งหมด
+                  </Button>
+                </div>
+              </Col>
             </Row>
           </div>
           <div
@@ -493,7 +511,8 @@ export default class Home extends Component {
               justifyContent: "center",
             }}
           >
-          <h4 style={{color:'#0085d0'}}>ประเภทงานยอดนิยม</h4></div>
+            <h4 style={{ color: "#0085d0" }}>ประเภทงานยอดนิยม</h4>
+          </div>
           <div
             style={{
               display: "flex",
@@ -507,7 +526,6 @@ export default class Home extends Component {
               textAlign: "center",
             }}
           >
-          
             <Row
               style={{
                 width: 1200,
