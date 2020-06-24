@@ -108,20 +108,20 @@ export default class Detail extends Component {
             <p>
               {job.companyName} <br />
               <div style={{ color: "#1380C0" }}>
-                <FaBookmark style={{marginRight:5}}/>
+                <FaBookmark style={{ marginRight: 5 }} />
                 {job.jobType}
                 <br />
               </div>
-              <GrMapLocation style={{marginRight:5}}/>
+              <GrMapLocation style={{ marginRight: 5 }} />
               {job.address}
               <br />
-              <MdLocationOn style={{marginRight:5}}/>
+              <MdLocationOn style={{ marginRight: 5 }} />
               {job.provinceTh}
               <br />
-              <FaRegCalendarAlt style={{marginRight:5}}/>
+              <FaRegCalendarAlt style={{ marginRight: 5 }} />
               {job.durationPost}
               <br />
-              <GiWhiteBook style={{marginRight:5}}/>
+              <GiWhiteBook style={{ marginRight: 5 }} />
               {job.jobCategory}
               <br />
             </p>
@@ -220,8 +220,13 @@ export default class Detail extends Component {
           </Col>
           <Col style={{ whiteSpace: "pre-wrap", margin: 20 }}>
             {/* company info */}
+            <img
+              src={job.logo}
+              style={{ maxwidth: "auto", height: 80 }}
+            />
             <h4>{job.companyName}</h4>
             <br />
+            
             <strong>ภาพรวมสถานประกอบการ</strong> <br />
             {job.profile}
             {/* <br />

@@ -60,13 +60,13 @@ export const jobs = [
     positionEn: "Construction Worker",
     companyName: "Khonconcrete Co.,Ltd.",
     companyId: "0001",
-    jobType: "Fulltime",
+    jobType: "รายวัน",
     address:
       "เลขที่ 371-373 หมู่ 2 ถ.มิตรภาพ ต.ศิลา อ.เมือง จ.ขอนแก่น 40000 โทรศัพท์ 043-342870 อัตโนมัติ 10 เลขหมาย โทรสาร 043-393748",
     provinceTh: "ขอนแก่น",
     provinceEn: "Khon Khan",
-    durationPost: "June 02, 2020 - July 02, 2020",
-    jobCategory: "Construction",
+    durationPost: "มิ.ย. 02, 2020 - ก.ค. 02, 2020",
+    jobCategory: "ก่อสร้าง",
     logo: "images/job1_logo.jpg",
     banner: "images/job1_ban.jpg",
     gallery: [
@@ -96,12 +96,12 @@ export const jobs = [
     profileEn: "",
 
     jobOverview: {
-      employerType: "Direct Hire",
-      industry: "Construction",
-      salary: "350-450 baht THB / Day",
-      thaiLevel: "intermediate skill of Listening/Speaking",
-      restrictedApplicants: "Thai, Myanma, Cambodia, Laos",
-      visa: "Yes",
+      employerType: "จ้างโดยตรง",
+      industry: "ก่อสร้าง",
+      salary: "350-450 บาท/วัน",
+      thaiLevel: "สามารถฟังและพูดไทยได้",
+      restrictedApplicants: "ไทย, พม่า, กัมพูชา, ลาว",
+      visa: "ต้องการ",
     },
     discription: [
       {
@@ -126,13 +126,13 @@ export const jobs = [
     positionEn: "Construction Worker",
     companyName: "Ritta Co.,Ltd.",
     companyId: "0002",
-    jobType: "Contract",
+    jobType: "งานเป็นกะ",
     address:
       "300 Romklao Road, Klongsamprawet, Latkrabang, Bangkok 10520, Thailand",
     provinceTh: "กรุงเทพฯ",
     provinceEn: "Bangkok",
-    durationPost: "June 17, 2020 - August 14, 2020",
-    jobCategory: "Construction",
+    durationPost: "มิ.ย. 17, 2020 - ส.ค. 14, 2020",
+    jobCategory: "ก่อสร้าง",
     logo: "",
     banner: "images/job2_ban.jpg",
     gallery: [],
@@ -147,12 +147,12 @@ export const jobs = [
     profileEn: "",
 
     jobOverview: {
-      employerType: "Direct Hire",
-      industry: "Construction",
-      salary: "350-550 baht THB / Day",
-      thaiLevel: "Listening",
-      restrictedApplicants: "Thai,Myanma,Cambodia",
-      visa: "No",
+      employerType: "จ้างโดยตรง",
+      industry: "ก่อสร้าง",
+      salary: "350-550 บาท/วัน",
+      thaiLevel: "สามารถสื่อสารไทยได้",
+      restrictedApplicants: "ไทย,พม่า,กัมพูชา",
+      visa: "ไม่จำเป็น",
     },
     discription: [
       {
@@ -177,12 +177,12 @@ export const jobs = [
     positionEn: "Trailer truck Driver",
     companyName: "SAIKOU CONSTRUCTION CO.,LTD.",
     companyId: "0003",
-    jobType: "Full Time",
+    jobType: "รายเดือน",
     address: "เลขที่ 135/278 หมู่ที่ 2\nต.ไทรม้า , อ.เมือง , จ.นนทบุรี 11100",
     provinceTh: "นนทบุรี",
     provinceEn: "Nonthaburi",
-    durationPost: "June 1, 2020 - August 30, 2020",
-    jobCategory: "Construction",
+    durationPost: "มิ.ย. 1, 2020 - ส.ค. 30, 2020",
+    jobCategory: "ก่อสร้าง",
     logo: "images/job3_ban.png",
     banner: "",
     gallery: [
@@ -214,12 +214,12 @@ export const jobs = [
     profileEn: "",
 
     jobOverview: {
-      employerType: "Direct Hire",
-      industry: "Construction",
-      salary: "35000 Baht THB/Month",
-      thaiLevel: "Read/Write",
-      restrictedApplicants: "Thai,Loas",
-      visa: "Yes",
+      employerType: "จ้างโดยตรง",
+      industry: "ก่อสร้าง",
+      salary: "35000 บาท/เดือน",
+      thaiLevel: "อ่าน เขียน ไทยได้",
+      restrictedApplicants: "ไทย,ลาว",
+      visa: "ต้องการ",
     },
     discription: [
       {
@@ -244,12 +244,12 @@ export const jobs = [
     positionEn: "Dairy Farm Worker",
     companyName: "อ.ส.ค. สำนักงานภาคเหนือตอนบน (อิทธิพลฟาร์ม)",
     companyId: "0004",
-    jobType: "Full Time",
+    jobType: "รายวัน",
     address: "122 ถนนห้วยแก้ว ต.ช้างเผือก อ.เมือง จ.เชียงใหม่ 50300",
     provinceTh: "เชียงใหม่",
     provinceEn: "Chiang Mai",
     durationPost: "June 20, 2020 - August 20, 2020",
-    jobCategory: "Agriculture",
+    jobCategory: "เกษตรกรรม",
     logo: "images/job4_logo.png",
     banner: "images/job4_ban.jpg",
     gallery: [
@@ -275,12 +275,12 @@ export const jobs = [
     profileEn: "",
 
     jobOverview: {
-      employerType: "Direct Hire",
+      employerType: "จ้างโดยตรง",
       industry: "Construction",
       salary: "400-700 บาท/ต่อวัน ขึ้นอยู่กับความชำนาญ",
       thaiLevel: "สื่อสารภาษาไทยได้",
-      restrictedApplicants: "Thai,Myanmar,Cambodia",
-      visa: "Yes",
+      restrictedApplicants: "ไทย,พม่า,กัมพูชา",
+      visa: "ต้องการ",
     },
     discription: [
       {
@@ -302,15 +302,15 @@ export const jobs = [
   {
     jobId: "0005",
     position: "แม่บ้าน",
-    positionEn: "Dairy Farm Worker",
+    positionEn: "House Keeper",
     companyName: "Best TWP GROUP (Thailand) Co., Ltd.",
     companyId: "0005",
-    jobType: "Part Time",
+    jobType: "งานเป็นกะ",
     address: "999/9 Central World Building 29Fl. Rama 1 Rd.,",
     provinceTh: "กรุงเทพ",
     provinceEn: "Bangkok",
-    durationPost: "June 20, 2020 - August 20, 2020",
-    jobCategory: "Agriculture",
+    durationPost: "มิ.ย. 20, 2020 - ส.ค. 20, 2020",
+    jobCategory: "แม่บ้าน",
     logo: "images/job5_logo.png",
     banner: "images/job5_ban.gif",
     gallery: [
@@ -332,12 +332,12 @@ export const jobs = [
     profileEn: "",
 
     jobOverview: {
-      employerType: "Direct Hire",
-      industry: "Construction",
+      employerType: "ผ่านตัวแทน",
+      industry: "บริการ",
       salary: "500-600 บาท/ต่อวัน",
       thaiLevel: "สื่อสารภาษาไทยได้",
-      restrictedApplicants: "Thai,Laos",
-      visa: "Yes",
+      restrictedApplicants: "ไทย,ลาว",
+      visa: "ไม่จำเป็น",
     },
     discription: [
       {
@@ -361,12 +361,12 @@ export const jobs = [
     positionEn: "Sales (Foreign workers)",
     companyName: "บริษัท สมาร์ท วิชั่น (ไทยแลนด์) จำกัด",
     companyId: "0006",
-    jobType: "Part Time",
+    jobType: "รายวัน",
     address: "1811 1813 จรัญสนิทวงศ์ Bang Phlat, Bangkok 10700",
     provinceTh: "กรุงเทพ",
     provinceEn: "Bangkok",
     durationPost: "June 20, 2020 - August 20, 2020",
-    jobCategory: "Health",
+    jobCategory: "ตัวแทนขาย",
     logo: "images/job6_logo.png",
     banner: "images/job6_ban.jpg",
     gallery: [{
@@ -399,12 +399,12 @@ export const jobs = [
     profileEn: "",
 
     jobOverview: {
-      employerType: "Direct Hire",
-      industry: "Construction",
+      employerType: "จ้างโดยตรง",
+      industry: "สุขภาพ",
       salary: "500-600 บาท/ต่อวัน",
       thaiLevel: "สื่อสารภาษาไทยได้",
-      restrictedApplicants: "Thai,Laos",
-      visa: "Yes",
+      restrictedApplicants: "ไทย,ลาว",
+      visa: "ต้องการ",
     },
     discription: [
       {
