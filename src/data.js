@@ -183,7 +183,7 @@ export const jobs = [
     provinceEn: "Nonthaburi",
     durationPost: "มิ.ย. 1, 2020 - ส.ค. 30, 2020",
     jobCategory: "ก่อสร้าง",
-    logo: "images/job3_ban.png",
+    logo: "images/job3_logo.png",
     banner: "",
     gallery: [
       {
@@ -250,7 +250,7 @@ export const jobs = [
     provinceEn: "Chiang Mai",
     durationPost: "June 20, 2020 - August 20, 2020",
     jobCategory: "เกษตรกรรม",
-    logo: "images/job4_logo.png",
+    logo: "images/job4_logo.jpg",
     banner: "images/job4_ban.jpg",
     gallery: [
       {
@@ -311,7 +311,7 @@ export const jobs = [
     provinceEn: "Bangkok",
     durationPost: "มิ.ย. 20, 2020 - ส.ค. 20, 2020",
     jobCategory: "แม่บ้าน",
-    logo: "images/job5_logo.png",
+    logo: "",
     banner: "images/job5_ban.gif",
     gallery: [
       {

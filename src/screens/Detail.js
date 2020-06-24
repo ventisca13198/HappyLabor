@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Button, Container } from "react-bootstrap";
+import { Row, Col, Button, Container,Image } from "react-bootstrap";
 import { jobs } from "../data.js";
 import styled from "styled-components";
 
@@ -220,7 +220,7 @@ export default class Detail extends Component {
           </Col>
           <Col style={{ whiteSpace: "pre-wrap", margin: 20 }}>
             {/* company info */}
-            <img
+            <Image
               src={job.logo}
               style={{ maxwidth: "auto", height: 80 }}
             />

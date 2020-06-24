@@ -42,7 +42,7 @@ export default class Footer extends Component {
                 for work in Thailand since 2020.
               </div>
             </Col>
-            <Col lg style={{ marginTop: 40 }}>
+            <Col lg style={{ marginTop: 40 }} className='d-none d-xs-none d-sm-none d-md-block'>
               <Row
                 style={{
                   marginBottom: 25,
@@ -73,7 +73,7 @@ export default class Footer extends Component {
                 <Col>Blog</Col>
               </Row>
             </Col>
-            <Col lg style={{ marginTop: 40 }}>
+            <Col lg style={{ marginTop: 40 }} className='d-none d-xs-none d-sm-none d-md-block'>
               <Row
                 style={{
                   marginBottom: 25,
@@ -126,9 +126,7 @@ export default class Footer extends Component {
                   (+66) 2-635-3555 Fax (+66) 2-635-3398
                 </Col>
               </Row>
-              <Row>
-                {/* <Col>http://www.si.chanwanich.com/</Col> */}
-              </Row>
+              <Row>{/* <Col>http://www.si.chanwanich.com/</Col> */}</Row>
               <Row style={{ marginTop: 20 }}>
                 <Col>
                   <div
@@ -178,7 +176,7 @@ export default class Footer extends Component {
               paddingTop: 10,
             }}
           >
-            2019 Owned and operated by Spectrum Consulting Japan G.K.
+            2020 Owned and operated by Happy Worker Co., Ltd.
           </div>
         </div>
       </Styles>

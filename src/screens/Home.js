@@ -388,7 +388,7 @@ export default class Home extends Component {
                     <Row style={{ paddingLeft: 15, paddingRight: 15 }}>
                       <Col>
                         <FaHeart />
-                        <span className="iconBottom">รายการโปรด</span>
+                        <span className="iconBottom">ถูกใจ</span>
                         <FaShareAlt />
                         <span className="iconBottom">แชร์</span>
                       </Col>
