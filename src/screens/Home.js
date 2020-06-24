@@ -493,7 +493,7 @@ export default class Home extends Component {
               justifyContent: "center",
             }}
           >
-          <h4>ข่าวสารและข้อมูล</h4></div>
+          <h4 style={{color:'#0085d0'}}>ประเภทงานยอดนิยม</h4></div>
           <div
             style={{
               display: "flex",
