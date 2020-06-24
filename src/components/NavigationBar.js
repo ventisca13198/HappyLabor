@@ -19,17 +19,18 @@ const Styles = styled.div`
 
   .text-country-selected {
     color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
+    fontWeight: 100,
+    fontSize: 14,
     padding-left: 10px;
     padding-right: 5px;
   }
 
   .text-country {
-    font-size: 1rem;
-    font-weight: bold;
     padding-left: 10px;
     padding-right: 5px;
+    
+    fontWeight: 100,
+    fontSize: 14,
   }
 
   .dropdown-toggle {
@@ -92,7 +93,15 @@ export default class NavigationBar extends Component {
         ) : (
           <div>
             <NavBarPopup style={{ zIndex: 10000 }} />
-            <div style={{ backgroundColor: "rgba(0,0,0,0)", zIndex: 1100,position:'fixed',bottom:30,right:30 }}>
+            <div
+              style={{
+                backgroundColor: "rgba(0,0,0,0)",
+                zIndex: 1100,
+                position: "fixed",
+                bottom: 30,
+                right: 30,
+              }}
+            >
               <ScrollToTop />
             </div>
           </div>
@@ -100,7 +109,7 @@ export default class NavigationBar extends Component {
 
         <div
           style={{
-            backgroundColor: "rgba(0,0,0,0.8)",
+            backgroundColor: "rgba(0,0,0,0.5)",
             position: "absolute",
             top: 0,
             width: "100%",
@@ -124,7 +133,14 @@ export default class NavigationBar extends Component {
                     padding: 10,
                   }}
                 >
-                  <Link to="/postJob" className="text-nav">
+                  <Link
+                    to="/postJob"
+                    className="text-nav"
+                    style={{
+                      fontWeight: 100,
+                      fontSize: 14,
+                    }}
+                  >
                     PostJob/หาคน
                   </Link>
                 </div>
@@ -133,7 +149,15 @@ export default class NavigationBar extends Component {
                 <Dropdown>
                   <Dropdown.Toggle variant="link" id="dropdown-basic">
                     <ReactCountryFlag countryCode="TH" svg />
-                    <span className="text-country-selected">ไทย</span>
+                    <span
+                      className="text-country-selected"
+                      style={{
+                        fontWeight: 100,
+                        fontSize: 14,
+                      }}
+                    >
+                      ไทย
+                    </span>
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
@@ -187,22 +211,12 @@ export default class NavigationBar extends Component {
               <Nav>
                 <Nav.Link>
                   <Link to="/jobs" className="text-nav">
-                    JOBS
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/company" className="text-nav">
-                    BUSINESS-OWNER
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/news" className="text-nav">
-                    NEWS
+                    หางาน
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
                   <Link to="/postJob" className="text-nav">
-                    POST-JOB
+                    ลงประกาศงาน
                   </Link>
                 </Nav.Link>
                 {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">

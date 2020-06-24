@@ -35,8 +35,7 @@ const Styles = styled.div`
   .text-news {
     text-align: left;
     padding: 10px;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 14px;
   }
   .populay-jobs {
     width: 95%;
@@ -130,7 +129,7 @@ export default class Home extends Component {
                       }}
                     >
                       <span className="span-title">
-                        Find your job in Thailand now!
+                        ตลาดนัดแรงงานใหญ่สุดในประเทศไทย
                       </span>
                     </Col>
                   </Row>
@@ -141,7 +140,7 @@ export default class Home extends Component {
                       }}
                     >
                       <span className="span-title">
-                        Foreigner friendly jobs across all industries
+                        หางานง่าย ตรงความต้องการ ในเวลาที่รวดเร็ว
                       </span>
                     </Col>
                   </Row>
@@ -161,7 +160,7 @@ export default class Home extends Component {
                           controlId="formBasicPassword"
                           style={{ maxWidth: 300 }}
                         >
-                          <Form.Control placeholder="Keyword" />
+                          <Form.Control placeholder="คำค้นหา" />
                         </Form.Group>
                       </Col>
                       <Col
@@ -176,7 +175,7 @@ export default class Home extends Component {
                           controlId="formBasicPassword"
                           style={{ maxWidth: 300 }}
                         >
-                          <Form.Control placeholder="Job Category" />
+                          <Form.Control placeholder="ประเภทงาน" />
                         </Form.Group>
                       </Col>
                       <Col
@@ -191,7 +190,7 @@ export default class Home extends Component {
                           controlId="formBasicPassword"
                           style={{ maxWidth: 300 }}
                         >
-                          <Form.Control placeholder="Job Location" />
+                          <Form.Control placeholder="สถานที่ทำงาน" />
                         </Form.Group>
                       </Col>
                       <Col
@@ -209,7 +208,7 @@ export default class Home extends Component {
                           block
                           style={{ maxWidth: 300, backgroundColor: "#007fc3" }}
                         >
-                          Search
+                          ค้นหา
                         </Button>
                       </Col>
                       <Col></Col>
@@ -248,7 +247,7 @@ export default class Home extends Component {
                           src={`images/iconPartTime.png`}
                           style={{ maxwidth: "100%", height: "auto" }}
                         ></Image>
-                        <div>Part Time</div>
+                        <div>งานเป็นกะ</div>
                       </div>
                     </Col>
                     <Col>
@@ -257,7 +256,7 @@ export default class Home extends Component {
                           src={`images/iconFullTime.png`}
                           style={{ maxwidth: "100%", height: "auto" }}
                         ></Image>
-                        <div>Full Time</div>
+                        <div>งานรายวัน</div>
                       </div>
                     </Col>
                   </Row>
@@ -271,7 +270,7 @@ export default class Home extends Component {
                           src={`images/iconVisaOffered.png`}
                           style={{ maxwidth: "100%", height: "auto" }}
                         ></Image>
-                        <div>Visa Offered</div>
+                        <div>งานรายเดือน</div>
                       </div>
                     </Col>
                     <Col>
@@ -280,7 +279,7 @@ export default class Home extends Component {
                           src={`images/OverseasOK.png`}
                           style={{ maxwidth: "100%", height: "auto" }}
                         ></Image>
-                        <div>Overseas OK</div>
+                        <div>คู่สามีภรรยา</div>
                       </div>
                     </Col>
                   </Row>
@@ -389,9 +388,9 @@ export default class Home extends Component {
                     <Row style={{ paddingLeft: 15, paddingRight: 15 }}>
                       <Col>
                         <FaHeart />
-                        <span className="iconBottom">Save</span>
+                        <span className="iconBottom">รายการโปรด</span>
                         <FaShareAlt />
-                        <span className="iconBottom">Share</span>
+                        <span className="iconBottom">แชร์</span>
                       </Col>
                       <Col style={{ textAlign: "end" }}>
                         <Link to={`/detail/${job.jobId}`}>
@@ -402,10 +401,10 @@ export default class Home extends Component {
                               backgroundColor: "#007fc3",
                             }}
                           >
-                            Detail
+                            รายละเอียด
                           </Button>
                         </Link>
-                        <div style={{ fontSize: 12 }}>6 hours ago</div>
+                        <div style={{ fontSize: 12 }}>6 ชม. ที่ผ่านมา</div>
                       </Col>
                     </Row>
                   </Card>
@@ -417,13 +416,14 @@ export default class Home extends Component {
                   marginLeft: 10,
                   marginRight: 10,
                   marginTop: 20,
-                  backgroundColor: "#d3f1ff",
+                  
                   paddingBottom: 20,
                   paddingTop: 20,
                   textAlign: "center",
                 }}
               >
-                <h4>News and Information</h4>
+                <div style={{backgroundColor: "#d3f1ff",width:'100%',padding:10}}>
+                <h4>ข่าวสารและข้อมูล</h4>
                 <Card style={{ alignSelf: "center", marginTop: 20 }}>
                   <Image
                     src={`images/news1a.jpg`}
@@ -481,12 +481,19 @@ export default class Home extends Component {
                     backgroundColor: "#007fc3",
                   }}
                 >
-                  View all
+                  ดูทั้งหมด
                 </Button>
-              </Col>
+                </div></Col>
             </Row>
           </div>
-
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+          <h4>ข่าวสารและข้อมูล</h4></div>
           <div
             style={{
               display: "flex",
@@ -494,12 +501,13 @@ export default class Home extends Component {
               justifyContent: "center",
 
               marginLeft: 20,
-              marginTop: 20,
+              // marginTop: 20,
               paddingBottom: 0,
-              paddingTop: 20,
+              // paddingTop: 20,
               textAlign: "center",
             }}
           >
+          
             <Row
               style={{
                 width: 1200,
@@ -564,7 +572,7 @@ export default class Home extends Component {
               style={{
                 width: 1200,
                 marginBottom: 20,
-                marginTop: 20,
+                // marginTop: 20,
                 fontSize: 24,
                 fontWeight: "bold",
                 color: "#fff",

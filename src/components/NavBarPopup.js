@@ -18,15 +18,15 @@ const StylesPop = styled.div`
 
   .text-country-selected-pop {
     color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
+    fontWeight: 100,
+    fontSize: 14,
     padding-left: 10px;
     padding-right: 5px;
   }
 
   .text-country {
-    font-size: 1rem;
-    font-weight: bold;
+    fontWeight: 100,
+    fontSize: 14,
     padding-left: 10px;
     padding-right: 5px;
   }
@@ -74,7 +74,14 @@ export default class NavBarPopup extends Component {
                     padding: 10,
                   }}
                 >
-                  <Link to="/postJob" className="text-nav-pop">
+                  <Link
+                    to="/postJob"
+                    className="text-nav-pop"
+                    style={{
+                      fontWeight: 100,
+                      fontSize: 14,
+                    }}
+                  >
                     PostJob/หาคน
                   </Link>
                 </div>
@@ -83,7 +90,15 @@ export default class NavBarPopup extends Component {
                 <Dropdown>
                   <Dropdown.Toggle variant="link" id="dropdown-basic">
                     <ReactCountryFlag countryCode="TH" svg />
-                    <span className="text-country-selected-pop">ไทย</span>
+                    <span
+                      className="text-country-selected-pop"
+                      style={{
+                        fontWeight: 100,
+                        fontSize: 14,
+                      }}
+                    >
+                      ไทย
+                    </span>
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
@@ -141,22 +156,12 @@ export default class NavBarPopup extends Component {
               <Nav>
                 <Nav.Link>
                   <Link to="/jobs" className="text-nav-pop">
-                    JOBS
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/company" className="text-nav-pop">
-                    BUSINESS-OWNER
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/news" className="text-nav-pop">
-                    NEWS
+                    หางาน
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
                   <Link to="/postJob" className="text-nav-pop">
-                    POST-JOB
+                    ลงประกาศงาน
                   </Link>
                 </Nav.Link>
                 {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">

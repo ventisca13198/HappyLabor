@@ -118,7 +118,7 @@ export default class Footer extends Component {
                 <Col>Contact Us</Col>
               </Row>
               <Row>
-                <Col>Chan Wanich Co., Ltd.</Col>
+                <Col>Happy Worker Co., Ltd.</Col>
               </Row>
               <Row>
                 <Col>
@@ -127,7 +127,7 @@ export default class Footer extends Component {
                 </Col>
               </Row>
               <Row>
-                <Col>http://www.si.chanwanich.com/</Col>
+                {/* <Col>http://www.si.chanwanich.com/</Col> */}
               </Row>
               <Row style={{ marginTop: 20 }}>
                 <Col>

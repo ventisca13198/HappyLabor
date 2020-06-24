@@ -1,16 +1,25 @@
 import React, { Component } from "react";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button, Container } from "react-bootstrap";
 import { jobs } from "../data.js";
 import styled from "styled-components";
 
-import { FaBookmark, FaRegCalendarAlt } from "react-icons/fa";
+import {
+  FaBookmark,
+  FaRegCalendarAlt,
+  FaRegBuilding,
+  FaAddressCard,
+  FaMoneyBillAlt,
+} from "react-icons/fa";
 import { GrMapLocation } from "react-icons/gr";
 import { MdLocationOn } from "react-icons/md";
 import { GiWhiteBook } from "react-icons/gi";
 import { BsFillPersonFill } from "react-icons/bs";
+import { IoMdChatboxes } from "react-icons/io";
 import Gallery from "react-grid-gallery";
-// import ImageGallery from 'react-image-gallery';
+import { TiWorld } from "react-icons/ti";
 
+// import ImageGallery from 'react-image-gallery';
+//
 // import "~react-image-gallery/styles/scss/image-gallery.scss";
 
 //  import "./image-gallery.scss";
@@ -30,6 +39,7 @@ const Styles = styled.div`
 }
 
 .job-overview-value {
+  margin-left : 5px;
   color: #404040;
   font-weight: bold;
 }
@@ -80,39 +90,47 @@ export default class Detail extends Component {
     console.log(job.gallery.map((element) => ({ src: element })));
     return (
       <Styles>
-        <div style={{ backgroundColor: "gray", height: "150px" }} />
         <div style={{ position: "relative", height: "154px", width: "100%" }} />
+
         <Row style={{ backgroundColor: "rgb(235,238,239)", margin: "0px" }}>
           <div
             className="container-boxed"
-            style={{ width: "100%", color: "#444444" }}
+            style={{
+              width: "100%",
+              color: "#444444",
+              paddingTop: 20,
+              paddingBottom: 20,
+              paddingLeft: 30,
+              paddingRight: 30,
+            }}
           >
             <h1>{job.position}</h1>
             <p>
               {job.companyName} <br />
               <div style={{ color: "#1380C0" }}>
-                <FaBookmark />
+                <FaBookmark style={{marginRight:5}}/>
                 {job.jobType}
                 <br />
               </div>
-              <GrMapLocation />
+              <GrMapLocation style={{marginRight:5}}/>
               {job.address}
               <br />
-              <MdLocationOn />
+              <MdLocationOn style={{marginRight:5}}/>
               {job.provinceTh}
               <br />
-              <FaRegCalendarAlt />
+              <FaRegCalendarAlt style={{marginRight:5}}/>
               {job.durationPost}
               <br />
-              <GiWhiteBook />
+              <GiWhiteBook style={{marginRight:5}}/>
               {job.jobCategory}
               <br />
             </p>
           </div>
         </Row>
+        {/* <Container> */}
         <Row className="row container-boxed">
-          <Col md={8}>
-            <h3>Job Overview</h3>
+          <Col md={8} style={{ margin: 20 }}>
+            <h3>ภาพรวมของงาน</h3>
 
             <Row
               round
@@ -120,60 +138,64 @@ export default class Detail extends Component {
               style={{
                 backgroundColor: "#DBF6F7",
                 borderRadius: 10,
-                padding: "20px",
+                padding: 20,
                 fontSize: "0.95em",
                 color: "#232323",
+                width: "100%",
               }}
             >
               <Col className="job-overview" md={4}>
-                <BsFillPersonFill size={28} color={"#00b0ff"} />
-                <span className="job-overview-value">Employer Type</span> <br />
+                <BsFillPersonFill size={20} color={"#00b0ff"} />
+                <span className="job-overview-value">ประเภทการจ้าง</span> <br />
                 {job.jobOverview.employerType}
               </Col>
               <Col className="job-overview" md={4}>
-                <BsFillPersonFill size={28} color={"#00b0ff"} />
-                <span className="job-overview-value">Industry</span> <br />
+                <FaRegBuilding size={20} color={"#00b0ff"} />
+                <span className="job-overview-value">ประเภทธุรกิจ</span> <br />
                 {job.jobOverview.industry}
               </Col>
               <Col className="job-overview" md={4}>
-                <BsFillPersonFill size={28} color={"#00b0ff"} />
-                <span className="job-overview-value">Salary</span> <br />
+                <FaMoneyBillAlt size={20} color={"#00b0ff"} />
+                <span className="job-overview-value">อัตราค่าจ้าง</span> <br />
                 {job.jobOverview.salary}
               </Col>
               <Col className="job-overview" md={4}>
-                <BsFillPersonFill size={28} color={"#00b0ff"} />
-                <span className="job-overview-value">Thai Level</span> <br />
+                <IoMdChatboxes size={20} color={"#00b0ff"} />
+                <span className="job-overview-value">สือสารภาษาไทย</span> <br />
                 {job.jobOverview.thaiLevel}
               </Col>
               <Col className="job-overview" md={4}>
-                <BsFillPersonFill size={28} color={"#00b0ff"} />
-                <span className="job-overview-value">
-                  Restricted to Domestic Applicants?
-                </span>{" "}
+                <TiWorld size={20} color={"#00b0ff"} />
+                <span className="job-overview-value">สัญชาติที่รับสมัคร</span>
                 <br />
                 {job.jobOverview.restrictedApplicants}
               </Col>
               <Col className="job-overview" md={4}>
-                <BsFillPersonFill size={28} color={"#00b0ff"} />
-                <span className="job-overview-value">
-                  Visa Sponsorship
-                </span>{" "}
-                <br />
+                <FaAddressCard size={20} color={"#00b0ff"} />
+                <span className="job-overview-value">ใบอนุญาต</span> <br />
                 {job.jobOverview.visa}
               </Col>
             </Row>
-            <Row>{job.info}</Row>
-            <Row>
+            <Row
+              style={{ whiteSpace: "pre-wrap", marginRight: 20, marginTop: 30 }}
+            >
+              {job.info}
+            </Row>
+            <Row style={{ whiteSpace: "pre-wrap", marginRight: 20 }}>
               {job.discription.map((element, index) => {
                 return (
                   <div>
-                    <h3 style={{ color: "#0085d0" }}>{element.title}</h3>
+                    <h3 style={{ color: "#0085d0", marginTop: 30 }}>
+                      {element.title}
+                    </h3>
                     {element.detail}
                   </div>
                 );
               })}
             </Row>
-            <Row>
+            <Row
+              style={{ whiteSpace: "pre-wrap", marginRight: 20, marginTop: 30 }}
+            >
               <Col>
                 <Gallery images={job.gallery} />
               </Col>
@@ -183,29 +205,34 @@ export default class Detail extends Component {
             {/* <Carousel views={job.gallery.map(element=>({source:element}))} /> */}
             {/* <ImageGallery items={job.gallery.map(element=>({original:element,thumbnail:element}))} /> */}
 
-            <Row>
-              <strong>Login to apply for this job. </strong>
+            <Row style={{ marginTop: 30 }}>
+              <strong>เข้าสู่ระบบ เพื่อสมัครงาน </strong>
             </Row>
-            <Row>
-              <Button variant="primary" size="lg" style={{backgroundColor:'#007fc3'}}>
-                Login
+            <Row style={{ marginTop: 15 }}>
+              <Button
+                variant="primary"
+                size="lg"
+                style={{ backgroundColor: "#007fc3" }}
+              >
+                เข้าสู่ระบบ
               </Button>
             </Row>
           </Col>
-          <Col md={4}>
+          <Col style={{ whiteSpace: "pre-wrap", margin: 20 }}>
             {/* company info */}
             <h4>{job.companyName}</h4>
             <br />
-            <strong>Company Profile</strong> <br />
+            <strong>ภาพรวมสถานประกอบการ</strong> <br />
             {job.profile}
-            <br />
-            <strong>
-              <a>Post a Review </a>
-            </strong>
-            If you have worked or interviewed at the company, we and other job
-            seekers would to hear about your experience
+            {/* <br />
+              <strong style={{marginTop:20}}>
+                <a>Post a Review </a>
+              </strong>
+              If you have worked or interviewed at the company, we and other job
+              seekers would to hear about your experience */}
           </Col>
         </Row>
+        {/* </Container> */}
       </Styles>
     );
   }
