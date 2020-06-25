@@ -55,6 +55,10 @@ const Styles = styled.div`
   font-weight: bold;
 }
 
+.edit-from{
+  width:fit-content
+}
+
 
 `;
 
@@ -76,7 +80,10 @@ class FormEdit extends Component {
     console.log(this.refs.userInput);
     var input = ReactDOM.findDOMNode(this.refs.userInput);
     console.log(input.value);
-    this.saveInput(input.value);
+    if (input.value !== "") {
+      this.saveInput(input.value);
+    }
+
     this.toggleEditing();
   }
 
@@ -93,39 +100,25 @@ class FormEdit extends Component {
   }
   render() {
     var userIsEditing = this.state.userIsEditing;
-    var label = this.props.label;
     if (userIsEditing) {
       return (
-        // <div>
-        //   <Col lg>
-        //     <div class="form-group">
-        //       <input
-        //         type="text"
-        //         class="form-control"
-        //         id="input-{ label }"
-        //         ref="userInput"
-        //       />
-        //     </div>
-        //   </Col>
-        //   <Col lg>
-        //     <FaSave onClick={this.handleInput} />
-        //   </Col>
-        // </div>
-        <InputGroup className="mb-3">
-          <FormControl
-            type="text"
-            id="input-{ label }"
-            ref="userInput"
-            placeholder={this.props.editable}
-            aria-label={this.props.editable}
-            aria-describedby="basic-addon2"
-          />
-          <InputGroup.Append>
-            <Button variant="outline-secondary" onClick={this.handleInput}>
-              ตกลง
-            </Button>
-          </InputGroup.Append>
-        </InputGroup>
+        <div className="edit-from">
+          <InputGroup className="mb-3">
+            <FormControl
+              type="text"
+              id="input-{ label }"
+              ref="userInput"
+              placeholder={this.props.editable}
+              aria-label={this.props.editable}
+              aria-describedby="basic-addon2"
+            />
+            <InputGroup.Append>
+              <Button variant="outline-secondary" onClick={this.handleInput}>
+                ตกลง
+              </Button>
+            </InputGroup.Append>
+          </InputGroup>
+        </div>
       );
     }
     return (
@@ -133,7 +126,7 @@ class FormEdit extends Component {
         <span> {this.state.editable}</span>
         <FaEdit
           onClick={this.toggleEditing}
-          style={{ marginLeft: 5, color: "red" }}
+          style={{ marginLeft: 5, color: "red", cursor: "pointer" }}
         />
       </>
     );
@@ -145,11 +138,6 @@ export default class EditPost extends Component {
     job: this.props.location,
   };
   render() {
-    console.log(this.props.match.params.id);
-    const job = jobs.find(
-      (element) => element.jobId === this.props.match.params.id
-    );
-    console.log(job.gallery.map((element) => ({ src: element })));
     return (
       <Styles>
         <div style={{ position: "relative", height: "154px", width: "100%" }} />
