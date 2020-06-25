@@ -161,7 +161,7 @@ export default class NavBarPopup extends Component {
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/postJob" className="text-nav-pop">
+                  <Link to={`/editPost/0001`} className="text-nav-pop">
                     ลงประกาศงาน
                   </Link>
                 </Nav.Link>
