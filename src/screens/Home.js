@@ -8,6 +8,7 @@ import {
   Card,
   Container,
 } from "react-bootstrap";
+import { withTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Fade } from "react-slideshow-image";
 import styled from "styled-components";
@@ -102,8 +103,9 @@ const properties = {
   },
 };
 
-export default class Home extends Component {
+class Home extends Component {
   render() {
+    const { t, i18n } = this.props;
     return (
       <Styles>
         <div style={{ overflow: "hidden", width: "100%" }}>
@@ -229,6 +231,7 @@ export default class Home extends Component {
               </div>
             ))}
           </Fade>
+          {/* {t('test')} */}
           <div
             style={{
               backgroundImage: `url(images/banner-home-icons-bg.jpg) `,
@@ -640,3 +643,5 @@ export default class Home extends Component {
     );
   }
 }
+
+export default withTranslation()(Home);
