@@ -1,4 +1,4 @@
-const jobCategory = [
+export const jobCategory = [
   {
     id: "0001",
     nameTh: "ก่อสร้าง",
@@ -15,7 +15,7 @@ const jobCategory = [
     nameEn: "Logistic",
   },
 ];
-const jobType = [
+export const jobType = [
   {
     id: "001",
     type: "Full Time",
@@ -30,7 +30,7 @@ const jobType = [
   },
 ];
 
-const location = [
+export const location = [
   {
     id: "0001",
     provinceTh: "กรุงเทพฯ",
@@ -38,57 +38,472 @@ const location = [
   },
   {
     id: "0002",
+    provinceTh: "ขอนแก่น",
+    provinceEn: "Khon Khan",
+  },
+  {
+    id: "0003",
+    provinceTh: "นนทบุรี",
+    provinceEn: "Nonthaburi",
+  },
+  {
+    id: "0004",
     provinceTh: "เชียงใหม่",
     provinceEn: "Chiang Mai",
   },
 ];
 
-const jobs = [
+export const jobs = [
   {
     jobId: "0001",
-    position: "Full Time International Preschool Teacher",
-    companyName: "MJ ONE Co., Ltd.",
-    jobType: "Full Time",
+    position: "คนงานก่อสร้าง",
+    positionEn: "Construction Worker",
+    companyName: "Khonconcrete Co.,Ltd.",
+    companyId: "0001",
+    jobType: "รายวัน",
     address:
-      "12 Krungthep kreetha Road, Thap Chang, Saphansung, Bangkok, Thailand 10250",
-    provinceTh: "กรุงเทพฯ",
-    provinceEn: "Bangkok",
-    durationPost: "June 17, 2020 - July 4, 2020",
-    jobCategory: "Construction",
+      "เลขที่ 371-373 หมู่ 2 ถ.มิตรภาพ ต.ศิลา อ.เมือง จ.ขอนแก่น 40000 โทรศัพท์ 043-342870 อัตโนมัติ 10 เลขหมาย โทรสาร 043-393748",
+    provinceTh: "ขอนแก่น",
+    provinceEn: "Khon Khan",
+    durationPost: "มิ.ย. 02, 2020 - ก.ค. 02, 2020",
+    jobCategory: "ก่อสร้าง",
+    logo: "images/job1_logo.jpg",
+    banner: "images/job1_ban.jpg",
+    gallery: [
+      {
+        original: "images/job1_pic1.jpg",
+        thumbnail: "images/job1_pic1.jpg",
+        isSelected: false,
+      },
+      {
+        original: "images/job1_pic2.jpg",
+        thumbnail: "images/job1_pic2.jpg",
+        isSelected: false,
+      },
+      {
+        original: "images/job1_pic3.jpg",
+        thumbnail: "images/job1_pic3.jpg",
+        isSelected: false,
+      },
+    ],
+
     info:
-      "We are now looking for qualified and active candidates to join and strengthen our business in the following positions.",
+      "ด่วน!!!รับจำนวนจำกัด รับสมัครคนงานทำงานช่างฉาบปูน ชาย-หญิง เทพื้นคอนกรีต 7 อัตรา\nมีที่พักฟรีใกล้ตัวเมืองขอนแก่นใกล้กับตัวบริษัท น้ำไฟออกเอง มีอาหารให้ 3 มื้อ\nยินดีรับเป็นกลุ่ม คู่ผัวเมียก็รับ ค่าแรงวันละ 350-450 บาท/วัน จ่ายเงินทุกวันที่ 15 และ 30 ของเดือน รับระยะยาว",
+    infoEn: "",
+
+    profile:
+      "บริษัท ขอนคอนกรีต จำกัด ได้เริ่มดำเนินการก่อตั้งเมื่อปี 2535 ในธุรกิจผลิตและจำหน่าย ผลิตภัณฑ์คอนกรีตประเภท แผ่นพื้นคอนกรีตอัดแรงสำเร็จรูป เสาเข็มคอนกรีตอัดแรงสำเร็จรูปขนาดต่างๆ คอนกรีตผสมเสร็จ และผลิตภัณฑ์อื่นๆ อีกมากมาย เช่น รั้วสำเร็จแบบโชว์ รางระบายน้ำ บ่อพัก งาน Precast ( ผนังสำเร็จรูป ) เป็นต้น โดยผลิตและจัดจำหน่ายภายในประเทศ ในแถบภาคตะวันออกเฉียงเหนือตอนบนซึ่งได้รับการตอบรับจากลูกค้า ทั้งด้านคุณภาพและการบริการก่อนและหลังการขายเป็นอย่างดี\nบริษัทฯ มีการสรรหาและคัดเลือกบุคลากรที่มีคุณภาพ เพื่อคอยให้บริการต่างๆ แก่ลูกค้า รวมบุคลากรทั้งสิ้นประมาณ 150 คน อีกทั้งมีการจัดฝึกอบรมโดยวิทยากรจากทั้งภายในและภายนอกบริษัทอย่างต่อเนื่อง เพื่อเพิ่มทักษะและความรู้ให้แก่พนักงาน ตั้งแต่ระดับปฏิบัติการจนถึงฝ่ายบริหาร เพื่อให้ลูกค้าได้รับสินค้าที่มีคุณภาพ การบริการที่ดีที่สุดจากเรา",
+    profileEn: "",
+
     jobOverview: {
-      employerType: "Direct Hire",
-      industry: "Construction",
-      salary: "230.000 yen JPY / Month",
-      thaiLevel: "Native level",
-      restrictedApplicants: "Myanma,Laos,Cambodia",
-      visa: "No",
+      employerType: "จ้างโดยตรง",
+      industry: "ก่อสร้าง",
+      salary: "350-450 บาท/วัน",
+      thaiLevel: "สามารถฟังและพูดไทยได้",
+      restrictedApplicants: "ไทย, พม่า, กัมพูชา, ลาว",
+      visa: "ต้องการ",
     },
     discription: [
       {
-        title:
-          "Benesse BE studio is seeking a native English teacher to teach at BL Kids International Preschool / Kindergarten in Takarazuka City.",
+        title: "ทำงาน 7.30-17.00 น. มีโอที หยุดวันอาทิตย์",
         detail:
-          "BL Kids International Preschool educational.\nIdeal candidates should have prior teaching experience especially with younger children.\nYou should be prepared to become an efficient and active member of a highly-motivated and creative team.",
+          "รับคนงานทำงานปูน ฉาบปูน ปูพื้นคอนกรีต แบกของยกของได้ ยินดีรับทั้งคนไทยและแรงงานต่างด้าว มาเป็นกลุ่มหรือคู่ผัวเมีย ก็รับทุกคน จนกว่าจะครบ \nทำงาน 7 โมงครึ่ง - 5 โมงเย็น มีค่าโอที 1.5 เท่าของค่าแรงต่อชั่วโมง\nค่าแรง 350-450 บาทต่อวัน (โอที 1.5 เท่า) มีการขึ้นเงินเดือนตามความสามารถ แบ่งจ่ายเงินทุกวันที่ 15 และ 30 ของทุกเดือน\nมีที่พักฟรี เป็นบ้านพักคนงาน 2 ห้องนอน ห้องกว้าง มีครัว มีสวนให้ปลูกต้นไม้ ปลูกผักหรือทำกิจกรรม ค่าน้ำค่าไฟออกเอง ตามบิลของการประปา ไฟฟ้า \nฟรีอาหาร 3 มื้อ (จันทร์ถึงเสาร์) \nพักในพื้นที่โรงงาน \nรับทั้งชายและหญิง ทุกสัญชาติ ขอแค่มีความตั้งใจ มีฝึกสอนงาน",
+        titleEn: "",
+        detailEn: "",
       },
       {
-        title:
-          "Working hours are between 8:00 and 17:00 (9:00-18:00), 5 days a week",
+        title: "ติดต่อ",
         detail:
-          "We are seeking instructors for our international team who:\n・Have a valid visa to work in Japan\n・Are naturally outgoing\n・Enjoy working with children\n・have teaching experience with preschool aged children",
+          "คุณอนุสร : 089-422-1803\nหรือที่อยู่บริษัท เลขที่ 371-373 หมู่ 2 ถ.มิตรภาพ ต.ศิลา อ.เมือง จ.ขอนแก่น 40000 โทรศัพท์ 043-342870 อัตโนมัติ 10 เลขหมาย โทรสาร 043-393748",
+        titleEn: "",
+        detailEn: "",
       },
     ],
+  },
+  {
+    jobId: "0002",
+    position: "คนงานก่อสร้าง",
+    positionEn: "Construction Worker",
+    companyName: "Ritta Co.,Ltd.",
+    companyId: "0002",
+    jobType: "งานเป็นกะ",
+    address:
+      "300 Romklao Road, Klongsamprawet, Latkrabang, Bangkok 10520, Thailand",
+    provinceTh: "กรุงเทพฯ",
+    provinceEn: "Bangkok",
+    durationPost: "มิ.ย. 17, 2020 - ส.ค. 14, 2020",
+    jobCategory: "ก่อสร้าง",
     logo: "",
-    banner: "",
+    banner: "images/job2_ban.jpg",
+    gallery: [],
+
+    info:
+      "รับสมัครคนงานก่อสร้าง ชายหญิง คู่ผัวเมียได้หมด งานตึกสูง (เชื่อมเหล็กได้จะพิจารณาเป็นพิเศษ) ค่าแรง 350-550 ที่พักฟรี น้ำไฟฟรี มีเงินเบิกให้ทุกวัน มีรถรับส่ง ฟรีอาหารกลางวัน",
+    infoEn:
+      "Recruiting construction workers, men or women or couple. High-rise building work (can do steel welding is an advantage), 350-550 Baht/day, free accommodation (free electric/water) payment can drawn every day. has transpotation service and free lunch",
+
     profile:
-      "One Answer For All Living\nMJ ONE is the group of company with the new concept from Major Development, one of the leading developer in high end condominium since 1999, a well-established real estate development company. We aim transform the individual desires and satisfy various needs.\nWe are now looking for qualified and active candidates to join and strengthen our business in the following positions.",
+      "ประวัติความเป็นมาบริษัท ฤทธา จำกัด ก่อตั้งเมื่อวันที่ 26 ตุลาคม 2530 ด้วยทุนจดทะเบียนหนึ่งล้านบาท และได้เพิ่มทุนจดทะเบียนเป็น 550 ล้านบาทเมื่อวันที่ 21 มกราคม 2548 \nบริษัท ฤทธา จำกัด เกิดจากการรวมตัวของวิศวกรไทยที่มีความรู้ ความสามารถ แนวคิด อุดมการณ์ และวิธีปฏิบัติที่สอดคล้องกัน เพื่อให้บริการทางวิชาชีพวิศวกรรม ด้านออกแบบและก่อสร้างอย่างมืออาชีพที่แท้จริง ผลงานที่ได้ปฏิบัติมามากกว่า 500,000 ล้านบาท เช่น งานก่อสร้างห้างสรรพสินค้าขนาดใหญ่ คอนโดมิเนียม อาคาร บ้าน ถนน สนามบิน โรงงาน โรงไฟฟ้า โรงพยาบาล ฯลฯ เป็นที่ยอมรับด้วยความพึงพอใจจากลูกค้าทั้งใน และต่างประเทศ บริษัท ฤทธา จำกัด ได้มายืนอยู่แถวหน้าของวงการอุตสาหกรรมก่อสร้างของประเทศไทยด้วยการดำเนินการที่มีธรรมาภิบาล ได้รับการรับรองระบบบริหารงานคุณภาพ (ISO9001) จากบูโร เวอริทัส เซอร์ทิฟิเคชั่น (Bureau Veritas Certification - BV) ภายใต้การรับรอง (Accreditation) ของ The National Accreditation Council of Thailand – NAC และ The United Kingdom Accreditation Service - UKAS\nปัจจุบันอาคารสำนักงานใหญ่บริษัท ฤทธา จำกัด ตั้งอยู่ริมถนนมอเตอร์เวย์ขาเข้า ใกล้กับทางเข้าสนามบินสุวรรณภูมิ อาคารหลังนี้ได้รับการรับรองโดย U.S. Green Building Council ให้เป็นอาคารประหยัดพลังงาน และเป็นมิตรกับสิ่งแวดล้อมตามระบบการจัดลำดับของ LEED (Leadership in Energy and Environmental Design) ระดับ GOLD เมื่อวันที่ 24 เมษายน 2554",
+    profileEn: "",
+
+    jobOverview: {
+      employerType: "จ้างโดยตรง",
+      industry: "ก่อสร้าง",
+      salary: "350-550 บาท/วัน",
+      thaiLevel: "สามารถสื่อสารไทยได้",
+      restrictedApplicants: "ไทย,พม่า,กัมพูชา",
+      visa: "ไม่จำเป็น",
+    },
+    discription: [
+      {
+        title: "ทำงานวันละ 8 ชั่วโมง แล้วแต่กะ ทำได้ทุกวัน",
+        detail:
+          "ต้องการคนงาน ทำงานสร้างคอนโดสูง 38 ชั้น \nสามารถทำงานเป็นกะได้ ขั้นต่ำ 8 ชั่วโมงต่อกะ \nค่าแรง 350-550 บาทต่อวัน (เชื่อมเหล็กชำนาญได้เพิ่มอีก 100 บาท)\nมีที่พักฟรี อยู่รวมกัน 4 คน/ห้อง ฟรีน้ำไฟ\nฟรีอาหารกลางวัน\nมีรถรับส่ง \nรับทั้งชายและหญิง ทั้งคนไทย พม่า กัมพูชา มาเป็นคู่ผัวเมียก็รับ",
+        titleEn: "",
+        detailEn: "",
+      },
+      {
+        title: "สนใจติดต่อ",
+        detail:
+          "คุณธนพล\nบริษัท ฤทธา จำกัด\n300 ถนนร่มเกล้า\nแขวงคลองสามประเวศ เขตลาดกระบัง กรุงเทพมหานคร 10520\nโทรศัพท์: 02-105-5000 ต่อ 6505, 091-119-1255\nแฟกซ์: 02-105-5000 ต่อ 6102\nเว็บไซต์: http://www.ritta.co.th",
+        titleEn: "",
+        detailEn: "",
+      },
+    ],
+  },
+  {
+    jobId: "0003",
+    position: "พนักงานขับรถเทรลเลอร์",
+    positionEn: "Trailer truck Driver",
+    companyName: "SAIKOU CONSTRUCTION CO.,LTD.",
+    companyId: "0003",
+    jobType: "รายเดือน",
+    address: "เลขที่ 135/278 หมู่ที่ 2\nต.ไทรม้า , อ.เมือง , จ.นนทบุรี 11100",
+    provinceTh: "นนทบุรี",
+    provinceEn: "Nonthaburi",
+    durationPost: "มิ.ย. 1, 2020 - ส.ค. 30, 2020",
+    jobCategory: "ก่อสร้าง",
+    logo: "images/job3_logo.png",
+    banner: "",
+    gallery: [
+      {
+        original: "images/job3_pic1.jpg",
+        thumbnail: "images/job3_pic1.jpg",
+        isSelected: false,
+      },
+      {
+        original: "images/job3_pic2.jpg",
+        thumbnail: "images/job3_pic2.jpg",
+        isSelected: false,
+      },
+      {
+        original: "images/job3_pic3.jpg",
+        thumbnail: "images/job3_pic3.jpg",
+        isSelected: false,
+      },
+    ],
+
+    info:
+      "รับสมัครพนักงานจัดส่ง (พจส.) รถเทรลเลอร์\n(มีประสบการณ์จะพิจารณาเป็นพิเศษ)\nคุณสมบัติ :\n1.ทุกเพศ อายุไม่เกิน 55 ปี\n2.มีใบขับขี่ ท.3 ขึ้นไป\n3.มีประสบการณ์ขับรถเทรลเลอร์มาก่อน\n4.พร้อมเริ่มงานได้ทันที\nติดต่อสอบถามเพิ่มเติม : ฝ่ายบุคคล\nTEL 092-2694429 / 085-111-0976\nสามารถสมัครได้ที่ 280/8 หมู่ที่ 9  ตำบลทับกวาง อำเภอแก่งคอย จังหวัดสระบุรี 18260\nhttps://goo.gl/maps/zZtrM7EPVVSQyTgr6",
+
+    infoEn: "",
+
+    profile:
+      "บริษัท Saikou Construction มุ่งเน้นเป็นอย่างมากในเรื่องการออกแบบ สร้างสรรค์ ความลงตัวทางด้านการออกแบบ สถาปัต และจินตนาการ ให้มีความสวยงาม อบอุ่น สะดุดตา รวมทั้งเรื่องของประโยชน์การใช้สอยพื้นที่ ให้สวยงามและมีประสิทธิภาพสูงสุด “พวกเรา บริษัท Saikou Construction” ยินดีเป็นที่ปรึกษาในด้านการออกแบบ และ ตกแต่งภายใน ตลอดจนควบคุมงานก่อสร้างแบบครบวงจร ด้วยสถาปนิก , มัณฑนากร และวิศวกร ที่มีประสบการณ์ในการทำงานจริงกว่า 10 ปี",
+
+    profileEn: "",
+
+    jobOverview: {
+      employerType: "จ้างโดยตรง",
+      industry: "ก่อสร้าง",
+      salary: "35000 บาท/เดือน",
+      thaiLevel: "อ่าน เขียน ไทยได้",
+      restrictedApplicants: "ไทย,ลาว",
+      visa: "ต้องการ",
+    },
+    discription: [
+      {
+        title: "รับพนักงานขับรถเทรลเลอร์ มีประสบการณ์จะพิจารณาเป็นพิเศษ",
+        detail:
+          "คุณสมบัติ :\n1.ทุกเพศ อายุไม่เกิน 55 ปี\n2.มีใบขับขี่ ท.3 ขึ้นไป\n3.มีประสบการณ์ขับรถเทรลเลอร์มาก่อน\n4.พร้อมเริ่มงานได้ทันที\n",
+        titleEn: "",
+        detailEn: "",
+      },
+      {
+        title: "ติดต่อสอบถามเพิ่มเติม",
+        detail:
+          "ติดต่อสอบถามเพิ่มเติม : ฝ่ายบุคคล\nTEL 092-2694429 / 085-111-0976\nสามารถสมัครได้ที่ 280/8 หมู่ที่ 9  ตำบลทับกวาง อำเภอแก่งคอย จังหวัดสระบุรี 18260\nhttps://goo.gl/maps/zZtrM7EPVVSQyTgr6",
+        titleEn: "",
+        detailEn: "",
+      },
+    ],
+  },
+  {
+    jobId: "0004",
+    position: "ผู้ดูแลฟาร์มโคนม(ใช้แรงงาน+ความรู้ที่จะสอนนิดหน่อย)",
+    positionEn: "Dairy Farm Worker",
+    companyName: "อ.ส.ค. สำนักงานภาคเหนือตอนบน (อิทธิพลฟาร์ม)",
+    companyId: "0004",
+    jobType: "รายวัน",
+    address: "122 ถนนห้วยแก้ว ต.ช้างเผือก อ.เมือง จ.เชียงใหม่ 50300",
+    provinceTh: "เชียงใหม่",
+    provinceEn: "Chiang Mai",
+    durationPost: "June 20, 2020 - August 20, 2020",
+    jobCategory: "เกษตรกรรม",
+    logo: "images/job4_logo.jpg",
+    banner: "images/job4_ban.jpg",
+    gallery: [
+      {
+        original: "images/job4_pic1.jpg",
+        thumbnail: "images/job4_pic1.jpg",
+        isSelected: false,
+      },
+      {
+        original: "images/job4_pic2.jpg",
+        thumbnail: "images/job4_pic2.jpg",
+        isSelected: false,
+      },
+    ],
+
+    info:
+      "งานที่ทำ รีดนม2เวลาเช้าเย็น ให้อาหาร4ครั้ง อาบน้ำให้โคตอนบ่าย มั่นดูแลความสะอาดจากมูลโค\nเป็นที่ใช้แรงงานหนัก ต้องสกปรก ต้องแบก งานเกษตรงานกรรมกร\nเพศชาย/หญิง อายุ20ขึ้นไป สัญชาติไทย หรือ พม่า,กัมพูชา ที่สื่อสารภาษาไทยรู้เรื่อง\nเงินเดือนขั้นต่ำหลักพันถึงหมื่น สามารถมาเป็นคู่ กลุ่ม หรือครอบครัวก็ได้ \nเงินเดือนจะแตกต่างกันไป\nมีบ้าน ทีวี ตู้เย็น ค่าไฟค่าน้ำฟรี\nมูลสัตว์แบ่งเจ้าของคนละครึ่ง",
+
+    infoEn: "",
+
+    profile: "ฟาร์มโคนม ขายส่งให้ อ.ส.ค. สำนักงานภาคเหนือตอนบน",
+
+    profileEn: "",
+
+    jobOverview: {
+      employerType: "จ้างโดยตรง",
+      industry: "Construction",
+      salary: "400-700 บาท/ต่อวัน ขึ้นอยู่กับความชำนาญ",
+      thaiLevel: "สื่อสารภาษาไทยได้",
+      restrictedApplicants: "ไทย,พม่า,กัมพูชา",
+      visa: "ต้องการ",
+    },
+    discription: [
+      {
+        title: "สวัสดิการ",
+        detail:
+          "บ้านพัก ทีวีตู้เย็น ค่าน้ำค่าไฟ\nเงินเดือน\nไม่ระบุ\nคุณสมบัติผู้สมัคร\nชาย หรือ หญิง อายุ 20 ถึง - ปี\nวุฒิการศึกษา ต่ำกว่ามัธยมศึกษาตอนปลาย\nไม่ต้องมีประสบการณ์\n1. ขยัน มีวินัย อดทน2. เปิดใจเรียนรู้\n3. เมตตาสัตว์ ไม่ทำร้าย\n4. มีปัญหาอะไรพูดคุยกัน ซื่อสัตย์ต่อกัน\n5. มีพละกำลัง\nร่างกายแข็งแรง\nสถานที่ปฏิบัติงาน\nตามที่อยู่บริษัท",
+        titleEn: "",
+        detailEn: "",
+      },
+      {
+        title: "สนใจติดต่อ",
+        detail:
+          "คุณอิทธิพล 081-960-1461 (ไม่สะดวกทางอีเมล และเว็บ ช่วยโทรติดต่อ)\nขอเพียงขยัน เปิดใจเรียนรู้ เข้าใจสัตว์ ก็เพียงพอแล้ว",
+        titleEn: "",
+        detailEn: "",
+      },
+    ],
+  },
+  {
+    jobId: "0005",
+    position: "แม่บ้าน",
+    positionEn: "House Keeper",
+    companyName: "Best TWP GROUP (Thailand) Co., Ltd.",
+    companyId: "0005",
+    jobType: "งานเป็นกะ",
+    address: "999/9 Central World Building 29Fl. Rama 1 Rd.,",
+    provinceTh: "กรุงเทพ",
+    provinceEn: "Bangkok",
+    durationPost: "มิ.ย. 20, 2020 - ส.ค. 20, 2020",
+    jobCategory: "แม่บ้าน",
+    logo: "",
+    banner: "images/job5_ban.gif",
+    gallery: [
+      {
+        original: "images/job5_pic1.jpg",
+        thumbnail: "images/job5_pic1.jpg",
+        isSelected: false,
+      },
+    ],
+
+    info:
+      "รายละเอียดงาน \n- ปฏิบัติงานตามความสามารถ และมีความเหมาะสม\n- งานที่มีความชำนาญและเคยผ่านงานมา\n- งานอื่นๆ ตามที่ได้รับมอบหมายจากผู้บังคับบัญชา\n- ทำงานวันจันทร์-ศุกร์ เวลา 8:00-18.00น.",
+
+    infoEn: "",
+
+    profile:
+      "ทางเราเป็นบริษัทนายหน้า ซื้อ ขาย เช่าคอนโดในเขตกรุงเทพมหานคร มีความเชียวชาญและชำนาญในการดูแลลูกค้า  ผู้ซึ่งต้องการหาที่อยู่ในเขตเมือง\nบริษัทมีประสบการณ์ไม่ต่ำกว่า 10 ปี ดังน้นจึงมีฐานลูกค้าอย่างกระจายทั่วถึง",
+
+    profileEn: "",
+
+    jobOverview: {
+      employerType: "ผ่านตัวแทน",
+      industry: "บริการ",
+      salary: "500-600 บาท/ต่อวัน",
+      thaiLevel: "สื่อสารภาษาไทยได้",
+      restrictedApplicants: "ไทย,ลาว",
+      visa: "ไม่จำเป็น",
+    },
+    discription: [
+      {
+        title: "สวัสดิการ",
+        detail: "เงินเดือน\nที่พักฟรี\nค่าโทรศัพท์\nเครื่องแบบพนักงาน",
+        titleEn: "",
+        detailEn: "",
+      },
+      {
+        title: "สนใจติดต่อ",
+        detail:
+          'คุณอิทธิพล 081-960-1461 (ไม่สะดวกทางอีเมล และเว็บ ช่วยโทรติดต่อ)"\n"ขอเพียงขยัน เปิดใจเรียนรู้ เข้าใจสัตว์ ก็เพียงพอแล้ว',
+        titleEn: "",
+        detailEn: "",
+      },
+    ],
+  },
+  {
+    jobId: "0006",
+    position: "พนักงานขาย (ต่างด้าว)",
+    positionEn: "Sales (Foreign workers)",
+    companyName: "บริษัท สมาร์ท วิชั่น (ไทยแลนด์) จำกัด",
+    companyId: "0006",
+    jobType: "รายวัน",
+    address: "1811 1813 จรัญสนิทวงศ์ Bang Phlat, Bangkok 10700",
+    provinceTh: "กรุงเทพ",
+    provinceEn: "Bangkok",
+    durationPost: "June 20, 2020 - August 20, 2020",
+    jobCategory: "ตัวแทนขาย",
+    logo: "images/job6_logo.png",
+    banner: "images/job6_ban.jpg",
+    gallery: [
+      {
+        original: "images/job6_pic1.jpg",
+        thumbnail: "images/job6_pic1.jpg",
+        isSelected: false,
+      },
+      {
+        original: "images/job6_pic2.jpg",
+        thumbnail: "images/job6_pic2.jpg",
+        isSelected: false,
+      },
+      {
+        original: "images/job6_pic3.jpg",
+        thumbnail: "images/job6_pic3.jpg",
+        isSelected: false,
+      },
+    ],
+
+    info:
+      "ลักษณะการทำงาน\nแนะนำสินค้าแว่นตา ให้ลูกค้าที่มีปัญหาสายตา โดยจะได้รับการสอนและอบรมก่อนการปฏิบัติงาน\nหมวดงาน\nเจ้าหน้าที่ขาย-การตลาด / พนักงานขาย-การตลาด\nอื่นๆ\nณสมบัติผู้สมัคร\n1. มาทำงานเช้าได้\n2. รักในงานขาย มีความตั้งใจ ขยัน อดทน\n3. พูด,อ่านภาษาไทยได้\n4. เขียนภาษาไทยได้จะพิจารณาเป็นพิเศษ",
+
+    infoEn: "",
+
+    profile:
+      "ทางเราเป็นบริษัทนายหน้า ซื้อ ขาย เช่าคอนโดในเขตกรุงเทพมหานคร มีความเชียวชาญและชำนาญในการดูแลลูกค้า  ผู้ซึ่งต้องการหาที่อยู่ในเขตเมือง\nบริษัทมีประสบการณ์ไม่ต่ำกว่า 10 ปี ดังน้นจึงมีฐานลูกค้าอย่างกระจายทั่วถึง",
+
+    profileEn: "",
+
+    jobOverview: {
+      employerType: "จ้างโดยตรง",
+      industry: "สุขภาพ",
+      salary: "500-600 บาท/ต่อวัน",
+      thaiLevel: "สื่อสารภาษาไทยได้",
+      restrictedApplicants: "ไทย,ลาว",
+      visa: "ต้องการ",
+    },
+    discription: [
+      {
+        title: "สวัสดิการ / ข้อมูลเพิ่มเติม",
+        detail:
+          "อาหารเช้า,เบี้ยขยัน,คอมมิชชั่น,ชุดฟอร์ม,งานสังสรรค์ และท่องเที่ยวประจำปี,แว่นตา,เงินสะสม",
+        titleEn: "",
+        detailEn: "",
+      },
+      {
+        title: "ติดต่อ - สอบถาม",
+        detail:
+          "บริษัท สมาร์ท วิชั่น (ไทยแลนด์) จำกัด\n1811,1813 ซอย จรัญสนิทวงศ์75 ถนนจรัญสนิทวงศ์\nแขวงบางพลัด เขตบางพลัด\nกรุงเทพมหานคร 10700",
+        titleEn: "",
+        detailEn: "",
+      },
+    ],
   },
 ];
 
-const companies = [
+export const companies = [
   {
     id: "0001",
-    name: "MJ ONE Co., Ltd.",
+    name: "Khonconcrete, Ltd.",
+    business: "Contruction",
+  },
+  {
+    id: "0002",
+    name: "Ritta Co.,Ltd.",
+    business: "Contruction",
+  },
+  {
+    id: "0003",
+    name: "SAIKOU CONSTRUCTION CO.,LTD.",
+    business: "Contruction",
+  },
+  {
+    id: "0004",
+    name: "อ.ส.ค. สำนักงานภาคเหนือตอนบน (อิทธิพลฟาร์ม)",
+    business: "Farm",
+  },
+  {
+    id: "0005",
+    name: "Best TWP GROUP (Thailand) Co., Ltd.",
+    business: "Service",
+  },
+  {
+    id: "0006",
+    name: "บริษัท สมาร์ท วิชั่น (ไทยแลนด์) จำกัด",
+    business: "Health",
+  },
+];
+
+export const happyPackage = [
+  {
+    id: "0001",
+    planTH: "แผนมาตรฐาน",
+    planEn: "",
+    price: "2,500 บาท",
+    feature: {
+      duration: 30,
+      news: true,
+      featureSearch: null,
+      postJob: null,
+      relatedJobs: null,
+      standardFeature: null,
+    },
+    description:
+      "การโพสต์ระดับมาตรฐานแสดงอยู่ในเว็บไซต์เป็นเวลา 30 วัน\nพร้อมคำบรรยายลักษณะงานแบบไม่ จำกัด (แทรกรูปภาพ, ภาพถ่าย, วิดีโอ) \nรวมอยู่ในการค้นหาที่เกี่ยวข้องทั้งหมด ข้อมูล ผู้ประกอบการ  คำถามคัดกรอง \nระบบติดตามผู้สมัครที่มีคุณสมบัติครบถ้วนและอื่น ๆ อีกมากมาย .",
+  },
+  {
+    id: "0002",
+    planTH: "แผนแนะนำ",
+    planEn: "",
+    price: "3,500 บาท",
+    feature: {
+      duration: 40,
+      news: true,
+      featureSearch: 15,
+      postJob: 10,
+      relatedJobs: 15,
+      standardFeature: true,
+    },
+    description:
+      "การโพสต์ที่มีเวลามากขึ้น ลักษณะเด่นในการค้นหาพิเศษ\nรวมถึงการโพสต์ระดับมาตรฐานแสดงอยู่ในเว็บไซต์เป็นเวลา 40 วัน\nพร้อมคำบรรยายลักษณะงานแบบไม่ จำกัด (แทรกรูปภาพ, ภาพถ่าย, วิดีโอ) \nรวมอยู่ในการค้นหาที่เกี่ยวข้องทั้งหมด ข้อมูล ผู้ประกอบการ  คำถามคัดกรอง \nระบบติดตามผู้สมัครที่มีคุณสมบัติครบถ้วนและอื่นๆ อีกมากมาย .",
+  },
+  {
+    id: "0003",
+    planTH: "แผนพิเศษ",
+    planEn: "",
+    price: "7,500 บาท",
+    feature: {
+      duration: 120,
+      news: true,
+      featureSearch: 30,
+      postJob: 20,
+      relatedJobs: 30,
+      standardFeature: true,
+    },
+    description:
+      "การโพสต์ที่มีเวลามากขึ้น ลักษณะเด่นในการค้นหาพิเศษ\nรวมถึงการโพสต์ระดับมาตรฐานแสดงอยู่ในเว็บไซต์เป็นเวลา 120 วัน\nพร้อมคำบรรยายลักษณะงานแบบไม่ จำกัด (แทรกรูปภาพ, ภาพถ่าย, วิดีโอ) \nรวมอยู่ในการค้นหาที่เกี่ยวข้องทั้งหมด ข้อมูล ผู้ประกอบการ  คำถามคัดกรอง \nระบบติดตามผู้สมัครที่มีคุณสมบัติครบถ้วนและอื่นๆ อีกมากมาย .",
   },
 ];

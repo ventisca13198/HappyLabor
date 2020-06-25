@@ -1,20 +1,19 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import {
   Navbar,
   Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
   Image,
   Row,
   Col,
   Dropdown,
+  Container,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import ReactCountryFlag from "react-country-flag";
-
+import NavBarPopup from "./NavBarPopup";
+import ScrollToTop from "./ScrollTotop";
+import { FaChevronRight } from "react-icons/fa";
 const Styles = styled.div`
   .text-nav {
     textdecoration: none;
@@ -29,17 +28,18 @@ const Styles = styled.div`
 
   .text-country-selected {
     color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
+    fontWeight: 100,
+    fontSize: 14,
     padding-left: 10px;
     padding-right: 5px;
   }
 
   .text-country {
-    font-size: 1rem;
-    font-weight: bold;
     padding-left: 10px;
     padding-right: 5px;
+    
+    fontWeight: 100,
+    fontSize: 14,
   }
 
   .dropdown-toggle {
@@ -48,28 +48,89 @@ const Styles = styled.div`
     text-decoration: none;
   }
 
+  .example-enter {
+    opacity: 0.01;
+  }
+
+  .example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 5000ms ease-in;
+  }
+
+  .example-leave {
+    opacity: 1;
+  }
+
+  .example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+  }
   .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 `;
 
 export default class NavigationBar extends Component {
+  state = {
+    isTop: true,
+    display: false,
+  };
+
+  componentDidMount() {
+    document.addEventListener("scroll", () => {
+      const isTopTemp = window.scrollY < 300;
+      if (isTopTemp !== this.state.isTop) {
+        this.setState({ isTop: isTopTemp });
+      }
+
+      if (isTopTemp == true) {
+        this.setState({
+          display: false,
+        });
+      } else {
+        this.setState({
+          display: true,
+        });
+      }
+    });
+  }
   render() {
     return (
       <Styles>
+        {this.state.isTop ? (
+          ""
+        ) : (
+          <div>
+            <NavBarPopup style={{ zIndex: 10000 }} />
+            <div
+              style={{
+                backgroundColor: "rgba(0,0,0,0)",
+                zIndex: 1100,
+                position: "fixed",
+                bottom: 30,
+                right: 30,
+              }}
+            >
+              <ScrollToTop />
+            </div>
+          </div>
+        )}
+
         <div
           style={{
-            backgroundColor: "rgba(255,255,255,0)",
+            backgroundColor: "rgba(0,0,0,0.5)",
             position: "absolute",
             top: 0,
             width: "100%",
-            zIndex: 99999,
+            zIndex: 1000,
           }}
         >
           <div
             style={{
               backgroundColor: "rgba(0,0,0,0.2)",
               width: "100%",
+              paddingLeft: "8%",
+              paddingRight: "8%",
             }}
           >
             <Row>
@@ -81,14 +142,31 @@ export default class NavigationBar extends Component {
                     padding: 10,
                   }}
                 >
-                  Employers/จัดหาคนเข้าทำงาน
+                  <Link
+                    to="/postJob"
+                    className="text-nav"
+                    style={{
+                      fontWeight: 100,
+                      fontSize: 14,
+                    }}
+                  >
+                    ประกาศหาแรงงาน <FaChevronRight />
+                  </Link>
                 </div>
               </Col>
               <Col style={{ textAlign: "right", right: 20 }}>
                 <Dropdown>
                   <Dropdown.Toggle variant="link" id="dropdown-basic">
                     <ReactCountryFlag countryCode="TH" svg />
-                    <span className="text-country-selected">ไทย</span>
+                    <span
+                      className="text-country-selected"
+                      style={{
+                        fontWeight: 100,
+                        fontSize: 14,
+                      }}
+                    >
+                      ไทย
+                    </span>
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
@@ -105,7 +183,7 @@ export default class NavigationBar extends Component {
                       <span className="text-country">ລາວ</span>
                     </Dropdown.Item>
                     <Dropdown.Item href="#/action-4">
-                      <ReactCountryFlag countryCode="MY" svg />
+                      <ReactCountryFlag countryCode="MM" svg />
                       <span className="text-country">မြန်မာဘာသာ</span>
                     </Dropdown.Item>
                     <Dropdown.Item href="#/action-5">
@@ -117,11 +195,19 @@ export default class NavigationBar extends Component {
               </Col>
             </Row>
           </div>
-
-          <Navbar expand="lg">
+          <Navbar
+            expand="lg"
+            style={{ paddingLeft: "11%", paddingRight: "11%" }}
+            // fixed="top"
+            // className="navbar navbar-default navbar-fixed-top"
+          >
             <Navbar.Brand>
               <Link to="/home">
-                <Image src="./images/logo.png" rounded />
+                <Image
+                  src="images/logo6.png"
+                  rounded
+                  style={{ height: "70px" }}
+                />
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -132,18 +218,13 @@ export default class NavigationBar extends Component {
             >
               <Nav>
                 <Nav.Link>
-                  <Link to="/home" className="text-nav">
-                    JOBS
+                  <Link to="/jobs" className="text-nav">
+                    หางาน
                   </Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/company" className="text-nav">
-                    COMPANIES
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/detail" className="text-nav">
-                    DETAIL
+                  <Link to="/postJob" className="text-nav">
+                    ลงประกาศงาน
                   </Link>
                 </Nav.Link>
                 {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">

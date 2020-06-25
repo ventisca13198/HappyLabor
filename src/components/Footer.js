@@ -1,17 +1,5 @@
 import React, { Component } from "react";
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Form,
-  FormControl,
-  Button,
-  Image,
-  Row,
-  Col,
-  DropdownButton,
-  Dropdown,
-} from "react-bootstrap";
+import { Image, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FaLinkedinIn, FaFacebookF, FaLine } from "react-icons/fa";
@@ -41,17 +29,20 @@ export default class Footer extends Component {
             <Col lg={2}></Col>
             <Col lg style={{ marginRight: 50, marginLeft: 50, marginTop: 40 }}>
               <Link to="/home">
-                <Image src="./images/logo.png" style={{ marginBottom: 25 }} />
+                <Image
+                  src="images/logo6.png"
+                  style={{ marginBottom: 25, height: "40px" }}
+                />
               </Link>
               <div>
                 <strong>“By foreigners for foreigners”</strong>
               </div>
               <div>
-                Jobs in Japan has been a key resource for foreigners looking for
-                work in Japan since 1998.
+                Jobs in Thailand has been a key resource for foreigners looking
+                for work in Thailand since 2020.
               </div>
             </Col>
-            <Col lg style={{ marginTop: 40 }}>
+            <Col lg style={{ marginTop: 40 }} className='d-none d-xs-none d-sm-none d-md-block'>
               <Row
                 style={{
                   marginBottom: 25,
@@ -82,7 +73,7 @@ export default class Footer extends Component {
                 <Col>Blog</Col>
               </Row>
             </Col>
-            <Col lg style={{ marginTop: 40 }}>
+            <Col lg style={{ marginTop: 40 }} className='d-none d-xs-none d-sm-none d-md-block'>
               <Row
                 style={{
                   marginBottom: 25,
@@ -103,7 +94,7 @@ export default class Footer extends Component {
                 <Col>Prices</Col>
               </Row>
               <Row>
-                <Col>Users Guide to JobsinJapan.com</Col>
+                <Col>Users Guide to HappyWorker.com</Col>
               </Row>
               <Row>
                 <Col>Website Terms of Use</Col>
@@ -127,17 +118,15 @@ export default class Footer extends Component {
                 <Col>Contact Us</Col>
               </Row>
               <Row>
-                <Col>Spectrum Consulting Japan G.K.</Col>
+                <Col>Happy Worker Co., Ltd.</Col>
               </Row>
               <Row>
                 <Col>
-                  Tokyo Office: C/O Global Village Media 1-7-20-B2 Yaesu,
-                  Chuo-ku, Tokyo
+                  Kongboonma Building 699 Silom Rd. Bangrak, Bangkok 10500 Tel.
+                  (+66) 2-635-3555 Fax (+66) 2-635-3398
                 </Col>
               </Row>
-              <Row>
-                <Col>info@jobsinjapan.com</Col>
-              </Row>
+              <Row>{/* <Col>http://www.si.chanwanich.com/</Col> */}</Row>
               <Row style={{ marginTop: 20 }}>
                 <Col>
                   <div
@@ -187,7 +176,7 @@ export default class Footer extends Component {
               paddingTop: 10,
             }}
           >
-            2019 Owned and operated by Spectrum Consulting Japan G.K.
+            2020 Owned and operated by Happy Worker Co., Ltd.
           </div>
         </div>
       </Styles>
