@@ -457,7 +457,7 @@ export const companies = [
   },
 ];
 
-export const package = [
+export const happyPackage = [
   {
     id: "0001",
     planTH: "แผนมาตรฐาน",
