@@ -1,5 +1,13 @@
 import React, { Component } from "react";
-import { Row, Col, Button, Container, Image } from "react-bootstrap";
+import {
+  Row,
+  Col,
+  Button,
+  Container,
+  Image,
+  InputGroup,
+  FormControl,
+} from "react-bootstrap";
 import { jobs } from "../../data.js";
 import styled from "styled-components";
 import ReactDOM from "react-dom";
@@ -88,21 +96,36 @@ class FormEdit extends Component {
     var label = this.props.label;
     if (userIsEditing) {
       return (
-        <div>
-          <Col lg>
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                id="input-{ label }"
-                ref="userInput"
-              />
-            </div>
-          </Col>
-          <Col lg>
-            <FaSave onClick={this.handleInput} />
-          </Col>
-        </div>
+        // <div>
+        //   <Col lg>
+        //     <div class="form-group">
+        //       <input
+        //         type="text"
+        //         class="form-control"
+        //         id="input-{ label }"
+        //         ref="userInput"
+        //       />
+        //     </div>
+        //   </Col>
+        //   <Col lg>
+        //     <FaSave onClick={this.handleInput} />
+        //   </Col>
+        // </div>
+        <InputGroup className="mb-3">
+          <FormControl
+            type="text"
+            id="input-{ label }"
+            ref="userInput"
+            placeholder={this.props.editable}
+            aria-label={this.props.editable}
+            aria-describedby="basic-addon2"
+          />
+          <InputGroup.Append>
+            <Button variant="outline-secondary" onClick={this.handleInput}>
+              ตกลง
+            </Button>
+          </InputGroup.Append>
+        </InputGroup>
       );
     }
     return (
