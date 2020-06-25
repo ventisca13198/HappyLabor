@@ -124,7 +124,7 @@ class FormEdit extends Component {
     return (
       <>
         <span> {this.state.editable}</span>
-        <FaEdit
+        <FaEdit size={16}
           onClick={this.toggleEditing}
           style={{ marginLeft: 5, color: "red", cursor: "pointer" }}
         />
