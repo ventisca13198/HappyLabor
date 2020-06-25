@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Row, Col, Button, Container,Image } from "react-bootstrap";
+import { Row, Col, Button, Container, Image } from "react-bootstrap";
 import { jobs } from "../data.js";
 import styled from "styled-components";
 
+import ImageGallery from "react-image-gallery";
 import {
   FaBookmark,
   FaRegCalendarAlt,
@@ -15,7 +16,7 @@ import { MdLocationOn } from "react-icons/md";
 import { GiWhiteBook } from "react-icons/gi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { IoMdChatboxes } from "react-icons/io";
-import Gallery from "react-grid-gallery";
+// import Gallery from "react-grid-gallery";
 import { TiWorld } from "react-icons/ti";
 
 // import ImageGallery from 'react-image-gallery';
@@ -47,37 +48,6 @@ const Styles = styled.div`
 
 `;
 
-const IMAGES = [
-  {
-    src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-    thumbnail:
-      "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-    thumbnailWidth: 320,
-    thumbnailHeight: 174,
-    isSelected: true,
-    caption: "After Rain (Jeshu John - designerspics.com)",
-  },
-  {
-    src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-    thumbnail:
-      "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-    thumbnailWidth: 320,
-    thumbnailHeight: 212,
-    tags: [
-      { value: "Ocean", title: "Ocean" },
-      { value: "People", title: "People" },
-    ],
-    caption: "Boats (Jeshu John - designerspics.com)",
-  },
-
-  {
-    src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-    thumbnail:
-      "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-    thumbnailWidth: 320,
-    thumbnailHeight: 212,
-  },
-];
 export default class Detail extends Component {
   state = {
     job: this.props.location,
@@ -197,7 +167,7 @@ export default class Detail extends Component {
               style={{ whiteSpace: "pre-wrap", marginRight: 20, marginTop: 30 }}
             >
               <Col>
-                <Gallery images={job.gallery} />
+                {job.gallery.length==0 ? "" : <ImageGallery items={job.gallery} />}
               </Col>
             </Row>
 
@@ -220,13 +190,9 @@ export default class Detail extends Component {
           </Col>
           <Col style={{ whiteSpace: "pre-wrap", margin: 20 }}>
             {/* company info */}
-            <Image
-              src={job.logo}
-              style={{ maxwidth: "auto", height: 80 }}
-            />
+            <Image src={job.logo} style={{ maxwidth: "auto", height: 80 }} />
             <h4>{job.companyName}</h4>
             <br />
-            
             <strong>ภาพรวมสถานประกอบการ</strong> <br />
             {job.profile}
             {/* <br />

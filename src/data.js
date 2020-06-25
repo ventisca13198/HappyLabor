@@ -71,17 +71,17 @@ export const jobs = [
     banner: "images/job1_ban.jpg",
     gallery: [
       {
-        src: "images/job1_pic1.jpg",
+        original: "images/job1_pic1.jpg",
         thumbnail: "images/job1_pic1.jpg",
         isSelected: false,
       },
       {
-        src: "images/job1_pic2.jpg",
+        original: "images/job1_pic2.jpg",
         thumbnail: "images/job1_pic2.jpg",
         isSelected: false,
       },
       {
-        src: "images/job1_pic3.jpg",
+        original: "images/job1_pic3.jpg",
         thumbnail: "images/job1_pic3.jpg",
         isSelected: false,
       },
@@ -187,17 +187,17 @@ export const jobs = [
     banner: "",
     gallery: [
       {
-        src: "images/job3_pic1.jpg",
+        original: "images/job3_pic1.jpg",
         thumbnail: "images/job3_pic1.jpg",
         isSelected: false,
       },
       {
-        src: "images/job3_pic2.jpg",
+        original: "images/job3_pic2.jpg",
         thumbnail: "images/job3_pic2.jpg",
         isSelected: false,
       },
       {
-        src: "images/job3_pic3.jpg",
+        original: "images/job3_pic3.jpg",
         thumbnail: "images/job3_pic3.jpg",
         isSelected: false,
       },
@@ -254,12 +254,12 @@ export const jobs = [
     banner: "images/job4_ban.jpg",
     gallery: [
       {
-        src: "images/job4_pic1.jpg",
+        original: "images/job4_pic1.jpg",
         thumbnail: "images/job4_pic1.jpg",
         isSelected: false,
       },
       {
-        src: "images/job4_pic2.jpg",
+        original: "images/job4_pic2.jpg",
         thumbnail: "images/job4_pic2.jpg",
         isSelected: false,
       },
@@ -315,7 +315,7 @@ export const jobs = [
     banner: "images/job5_ban.gif",
     gallery: [
       {
-        src: "images/job5_pic1.jpg",
+        original: "images/job5_pic1.jpg",
         thumbnail: "images/job5_pic1.jpg",
         isSelected: false,
       },
@@ -370,19 +370,19 @@ export const jobs = [
     logo: "images/job6_logo.png",
     banner: "images/job6_ban.jpg",
     gallery: [{
-      src: "images/job6_pic1.jpg",
+      original: "images/job6_pic1.jpg",
       thumbnail:
         "images/job6_pic1.jpg",
       isSelected: false,
     },
     {
-      src: "images/job6_pic2.jpg",
+      original: "images/job6_pic2.jpg",
       thumbnail:
         "images/job6_pic2.jpg",
       isSelected: false,
     },
     {
-      src: "images/job6_pic3.jpg",
+      original: "images/job6_pic3.jpg",
       thumbnail:
         "images/job6_pic3.jpg",
       isSelected: false,
