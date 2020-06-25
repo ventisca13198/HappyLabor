@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Row, Col, Button, Container, Image } from "react-bootstrap";
-import { jobs } from "../data.js";
+import { jobs } from "../../data.js";
 import styled from "styled-components";
-
+import ReactDOM from "react-dom";
 import ImageGallery from "react-image-gallery";
 import {
   FaBookmark,
@@ -10,14 +10,22 @@ import {
   FaRegBuilding,
   FaAddressCard,
   FaMoneyBillAlt,
+  FaEdit,
+  FaSave,
 } from "react-icons/fa";
 import { GrMapLocation } from "react-icons/gr";
-import { MdLocationOn } from "react-icons/md";
+import { MdLocationOn, MdDone } from "react-icons/md";
 import { GiWhiteBook } from "react-icons/gi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { IoMdChatboxes } from "react-icons/io";
 // import Gallery from "react-grid-gallery";
 import { TiWorld } from "react-icons/ti";
+
+// import ImageGallery from 'react-image-gallery';
+//
+// import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+//  import "./image-gallery.scss";
 
 const Styles = styled.div`
 .container-boxed {
@@ -42,7 +50,74 @@ const Styles = styled.div`
 
 `;
 
-export default class Detail extends Component {
+class FormEdit extends Component {
+  state = {
+    editable: "",
+  };
+  constructor(props) {
+    super(props);
+    this.toggleEditing = this.toggleEditing.bind(this);
+    this.saveInput = this.saveInput.bind(this);
+    this.handleInput = this.handleInput.bind(this);
+    this.state = {
+      editable: props.editable,
+    };
+  }
+
+  handleInput() {
+    console.log(this.refs.userInput);
+    var input = ReactDOM.findDOMNode(this.refs.userInput);
+    console.log(input.value);
+    this.saveInput(input.value);
+    this.toggleEditing();
+  }
+
+  toggleEditing() {
+    var userIsEditing = !this.state.userIsEditing;
+    this.setState({
+      userIsEditing: userIsEditing,
+    });
+  }
+  saveInput(input) {
+    this.setState({
+      editable: input,
+    });
+  }
+  render() {
+    var userIsEditing = this.state.userIsEditing;
+    var label = this.props.label;
+    if (userIsEditing) {
+      return (
+        <div>
+          <Col lg>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="input-{ label }"
+                ref="userInput"
+              />
+            </div>
+          </Col>
+          <Col lg>
+            <FaSave onClick={this.handleInput} />
+          </Col>
+        </div>
+      );
+    }
+    return (
+      <>
+        <span> {this.state.editable}</span>
+        <FaEdit
+          onClick={this.toggleEditing}
+          style={{ marginLeft: 5, color: "red" }}
+        />
+      </>
+    );
+  }
+}
+
+export default class EditPost extends Component {
   state = {
     job: this.props.location,
   };
@@ -68,25 +143,27 @@ export default class Detail extends Component {
               paddingRight: 30,
             }}
           >
-            <h1>{job.position}</h1>
+            <h1>
+              <FormEdit editable="แก้ไขตำแหน่งงาน" />
+            </h1>
             <p>
-              {job.companyName} <br />
+              <FormEdit editable="แก้ไขชื่อสถานประกอบการ" /> <br />
               <div style={{ color: "#1380C0" }}>
                 <FaBookmark style={{ marginRight: 5 }} />
-                {job.jobType}
+                <FormEdit editable="แก้ไขลักษณะสัญญาจ้างงาน" />
                 <br />
               </div>
               <GrMapLocation style={{ marginRight: 5 }} />
-              {job.address}
+              <FormEdit editable="แก้ไขที่อยู่กิจการ" />
               <br />
               <MdLocationOn style={{ marginRight: 5 }} />
-              {job.provinceTh}
+              <FormEdit editable="แก้ไขจังหวัดที่ตั้งกิจการ" />
               <br />
               <FaRegCalendarAlt style={{ marginRight: 5 }} />
-              {job.durationPost}
+              <FormEdit editable="แก้ไขระยะเวลาการโพสต์" />
               <br />
               <GiWhiteBook style={{ marginRight: 5 }} />
-              {job.jobCategory}
+              <FormEdit editable="แก้ไขประเภทงาน" />
               <br />
             </p>
           </div>
@@ -111,84 +188,64 @@ export default class Detail extends Component {
               <Col className="job-overview" md={4}>
                 <BsFillPersonFill size={20} color={"#00b0ff"} />
                 <span className="job-overview-value">ประเภทการจ้าง</span> <br />
-                {job.jobOverview.employerType}
+                <FormEdit editable="แก้ไข" />
               </Col>
               <Col className="job-overview" md={4}>
                 <FaRegBuilding size={20} color={"#00b0ff"} />
                 <span className="job-overview-value">ประเภทธุรกิจ</span> <br />
-                {job.jobOverview.industry}
+                <FormEdit editable="แก้ไข" />
               </Col>
               <Col className="job-overview" md={4}>
                 <FaMoneyBillAlt size={20} color={"#00b0ff"} />
                 <span className="job-overview-value">อัตราค่าจ้าง</span> <br />
-                {job.jobOverview.salary}
+                <FormEdit editable="แก้ไข" />
               </Col>
               <Col className="job-overview" md={4}>
                 <IoMdChatboxes size={20} color={"#00b0ff"} />
                 <span className="job-overview-value">สือสารภาษาไทย</span> <br />
-                {job.jobOverview.thaiLevel}
+                <FormEdit editable="แก้ไข" />
               </Col>
               <Col className="job-overview" md={4}>
                 <TiWorld size={20} color={"#00b0ff"} />
                 <span className="job-overview-value">สัญชาติที่รับสมัคร</span>
                 <br />
-                {job.jobOverview.restrictedApplicants}
+                <FormEdit editable="แก้ไข" />
               </Col>
               <Col className="job-overview" md={4}>
                 <FaAddressCard size={20} color={"#00b0ff"} />
                 <span className="job-overview-value">ใบอนุญาต</span> <br />
-                {job.jobOverview.visa}
+                <FormEdit editable="แก้ไข" />
               </Col>
             </Row>
             <Row
               style={{ whiteSpace: "pre-wrap", marginRight: 20, marginTop: 30 }}
             >
-              {job.info}
+              <FormEdit editable="แก้ไขข้อมูลแบบย่อ" />
             </Row>
             <Row style={{ whiteSpace: "pre-wrap", marginRight: 20 }}>
-              {job.discription.map((element, index) => {
-                return (
-                  <div>
-                    <h3 style={{ color: "#0085d0", marginTop: 30 }}>
-                      {element.title}
-                    </h3>
-                    {element.detail}
-                  </div>
-                );
-              })}
+              <div>
+                <h3 style={{ color: "#0085d0", marginTop: 30 }}>
+                  <FormEdit editable="แก้ไขหัวข้อ" />
+                </h3>
+                <FormEdit editable="คำอธิบายงาน" />
+              </div>
             </Row>
             <Row
               style={{ whiteSpace: "pre-wrap", marginRight: 20, marginTop: 30 }}
-            >
-              <Col>
-                {job.gallery.length==0 ? "" : <ImageGallery items={job.gallery} />}
-              </Col>
-            </Row>
+            ></Row>
 
             {/* <Lightbox showImageModifiers={false} thumbnailWidth='150px' thumbnailHeight='150px' images={job.gallery.map(element=>({src:element,title:'',description:''}))}/> */}
             {/* <Carousel views={job.gallery.map(element=>({source:element}))} /> */}
             {/* <ImageGallery items={job.gallery.map(element=>({original:element,thumbnail:element}))} /> */}
-
-            <Row style={{ marginTop: 30 }}>
-              <strong>เข้าสู่ระบบ เพื่อสมัครงาน </strong>
-            </Row>
-            <Row style={{ marginTop: 15 }}>
-              <Button
-                variant="primary"
-                size="lg"
-                style={{ backgroundColor: "#007fc3" }}
-              >
-                เข้าสู่ระบบ
-              </Button>
-            </Row>
           </Col>
           <Col style={{ whiteSpace: "pre-wrap", margin: 20 }}>
             {/* company info */}
-            <Image src={job.logo} style={{ maxwidth: "auto", height: 80 }} />
-            <h4>{job.companyName}</h4>
+            <h4>
+              <FormEdit editable="แก้ไขชื่อชื่อบริษัท" /> <br />
+            </h4>
             <br />
-            <strong>ภาพรวมสถานประกอบการ</strong> <br />
-            {job.profile}
+            <FormEdit editable="แก้ไขภาพรวมบริษัท" />
+
             {/* <br />
               <strong style={{marginTop:20}}>
                 <a>Post a Review </a>
