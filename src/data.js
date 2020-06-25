@@ -369,24 +369,23 @@ export const jobs = [
     jobCategory: "ตัวแทนขาย",
     logo: "images/job6_logo.png",
     banner: "images/job6_ban.jpg",
-    gallery: [{
-      original: "images/job6_pic1.jpg",
-      thumbnail:
-        "images/job6_pic1.jpg",
-      isSelected: false,
-    },
-    {
-      original: "images/job6_pic2.jpg",
-      thumbnail:
-        "images/job6_pic2.jpg",
-      isSelected: false,
-    },
-    {
-      original: "images/job6_pic3.jpg",
-      thumbnail:
-        "images/job6_pic3.jpg",
-      isSelected: false,
-    },],
+    gallery: [
+      {
+        original: "images/job6_pic1.jpg",
+        thumbnail: "images/job6_pic1.jpg",
+        isSelected: false,
+      },
+      {
+        original: "images/job6_pic2.jpg",
+        thumbnail: "images/job6_pic2.jpg",
+        isSelected: false,
+      },
+      {
+        original: "images/job6_pic3.jpg",
+        thumbnail: "images/job6_pic3.jpg",
+        isSelected: false,
+      },
+    ],
 
     info:
       "ลักษณะการทำงาน\nแนะนำสินค้าแว่นตา ให้ลูกค้าที่มีปัญหาสายตา โดยจะได้รับการสอนและอบรมก่อนการปฏิบัติงาน\nหมวดงาน\nเจ้าหน้าที่ขาย-การตลาด / พนักงานขาย-การตลาด\nอื่นๆ\nณสมบัติผู้สมัคร\n1. มาทำงานเช้าได้\n2. รักในงานขาย มีความตั้งใจ ขยัน อดทน\n3. พูด,อ่านภาษาไทยได้\n4. เขียนภาษาไทยได้จะพิจารณาเป็นพิเศษ",
@@ -455,5 +454,56 @@ export const companies = [
     id: "0006",
     name: "บริษัท สมาร์ท วิชั่น (ไทยแลนด์) จำกัด",
     business: "Health",
+  },
+];
+
+export const package = [
+  {
+    id: "0001",
+    planTH: "แผนมาตรฐาน",
+    planEn: "",
+    price: "2,500 บาท",
+    feature: {
+      duration: 30,
+      news: true,
+      featureSearch: null,
+      postJob: null,
+      relatedJobs: null,
+      standardFeature: null,
+    },
+    description:
+      "การโพสต์ระดับมาตรฐานแสดงอยู่ในเว็บไซต์เป็นเวลา 30 วัน\nพร้อมคำบรรยายลักษณะงานแบบไม่ จำกัด (แทรกรูปภาพ, ภาพถ่าย, วิดีโอ) \nรวมอยู่ในการค้นหาที่เกี่ยวข้องทั้งหมด ข้อมูล ผู้ประกอบการ  คำถามคัดกรอง \nระบบติดตามผู้สมัครที่มีคุณสมบัติครบถ้วนและอื่น ๆ อีกมากมาย .",
+  },
+  {
+    id: "0002",
+    planTH: "แผนแนะนำ",
+    planEn: "",
+    price: "3,500 บาท",
+    feature: {
+      duration: 40,
+      news: true,
+      featureSearch: 15,
+      postJob: 10,
+      relatedJobs: 15,
+      standardFeature: true,
+    },
+    description:
+      "การโพสต์ที่มีเวลามากขึ้น ลักษณะเด่นในการค้นหาพิเศษ\nรวมถึงการโพสต์ระดับมาตรฐานแสดงอยู่ในเว็บไซต์เป็นเวลา 40 วัน\nพร้อมคำบรรยายลักษณะงานแบบไม่ จำกัด (แทรกรูปภาพ, ภาพถ่าย, วิดีโอ) \nรวมอยู่ในการค้นหาที่เกี่ยวข้องทั้งหมด ข้อมูล ผู้ประกอบการ  คำถามคัดกรอง \nระบบติดตามผู้สมัครที่มีคุณสมบัติครบถ้วนและอื่นๆ อีกมากมาย .",
+  },
+  {
+    id: "0003",
+    planTH: "แผนพิเศษ",
+    planEn: "",
+    price: "7,500 บาท",
+    feature: {
+      duration: 120,
+      news: true,
+      featureSearch: 30,
+      postJob: 20,
+      relatedJobs: 30,
+      standardFeature: true,
+    },
+    description:
+      "การโพสต์ที่มีเวลามากขึ้น ลักษณะเด่นในการค้นหาพิเศษ\nรวมถึงการโพสต์ระดับมาตรฐานแสดงอยู่ในเว็บไซต์เป็นเวลา 120 วัน\nพร้อมคำบรรยายลักษณะงานแบบไม่ จำกัด (แทรกรูปภาพ, ภาพถ่าย, วิดีโอ) \nรวมอยู่ในการค้นหาที่เกี่ยวข้องทั้งหมด ข้อมูล ผู้ประกอบการ  คำถามคัดกรอง \nระบบติดตามผู้สมัครที่มีคุณสมบัติครบถ้วนและอื่นๆ อีกมากมาย .",
   },
 ];
