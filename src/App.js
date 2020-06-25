@@ -5,6 +5,7 @@ import Home from "./screens/Home";
 import Detail from "./screens/Detail";
 import Alljobs from "./screens/Alljobs";
 import PostJob from "./screens/postJob/PostJob";
+import Package from "./screens/Package";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
 import EditPost from "./screens/postJob/EditPost";
@@ -28,6 +29,9 @@ function App() {
               <PostJob />
             </Route>
             <Route path="/editPost/:id" component={EditPost} />
+            <Route path="/package">
+              <Package />
+            </Route>
             <Route path="/">
               <Home />
             </Route>

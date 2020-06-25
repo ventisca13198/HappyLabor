@@ -143,7 +143,7 @@ export default class NavigationBar extends Component {
                   }}
                 >
                   <Link
-                    to="/postJob"
+                    to="/package"
                     className="text-nav"
                     style={{
                       fontWeight: 100,
